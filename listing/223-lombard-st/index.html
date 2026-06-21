@@ -7,31 +7,45 @@
 <meta property="og:title" content="223 Lombard St — $69,000">
 <meta property="og:description" content="For Sale — 223 Lombard St">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateListing", "name": "223 Lombard St", "description": "For Sale \u2014 223 Lombard St", "offers": {"@type": "Offer", "price": 69000.0, "priceCurrency": "USD"}}</script>
+<meta property="og:url" content="https://listings.kan.realtor/listing/223-lombard-st/">
+<meta property="og:image" content="https://listings.kan.realtor/listing/223-lombard-st/photos/00.jpg">
+<meta name="twitter:image" content="https://listings.kan.realtor/listing/223-lombard-st/photos/00.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateListing", "name": "223 Lombard St", "description": "For Sale \u2014 223 Lombard St", "url": "https://listings.kan.realtor/listing/223-lombard-st/", "image": "https://listings.kan.realtor/listing/223-lombard-st/photos/00.jpg", "offers": {"@type": "Offer", "price": 69000.0, "priceCurrency": "USD"}}</script>
 <style>
   :root { --brand:#012169; --deep:#0a1733; --gold:#c8a45c; --gold-soft:#e6cf9e;
            --serif:'Cormorant Garamond',Georgia,serif; --ui:'DM Sans',system-ui,Arial,sans-serif; }
   * { box-sizing:border-box; margin:0; }
-  body { font-family:var(--ui); color:#1a1a1a; background:#fdfdfd; padding-top:60px; }
-  /* ── Moxi-matched top nav ── */
-  nav.topnav { position:fixed; top:0; left:0; right:0; height:60px; z-index:100; background:var(--brand);
-    display:flex; align-items:center; gap:18px; padding:0 22px; }
-  nav.topnav .brand img { height:34px; display:block; }
-  nav.topnav .menu { display:flex; gap:22px; margin-left:auto; }
-  nav.topnav .menu a { color:#fff; text-decoration:none; font-size:14px; font-weight:500; letter-spacing:.3px; }
-  nav.topnav .menu a:hover { color:var(--gold-soft); }
-  nav.topnav .navtoggle { display:none; margin-left:auto; background:none; border:0; color:#fff; font-size:24px; cursor:pointer; }
-  @media (max-width:760px) {
-    nav.topnav .navtoggle { display:block; }
-    nav.topnav .menu { position:absolute; top:60px; left:0; right:0; flex-direction:column; gap:0; background:var(--brand); margin:0; display:none; }
-    nav.topnav .menu.open { display:flex; }
-    nav.topnav .menu a { padding:14px 22px; border-top:1px solid rgba(255,255,255,.12); }
+  body { font-family:var(--ui); color:#1a1a1a; background:#fdfdfd; padding-top:60px; padding-bottom:78px; }
+  a { text-decoration:none; }
+  /* ── Coldwell Banker corporate bar (fixed top) ── */
+  .cbbar { position:fixed; top:0; left:0; right:0; height:60px; z-index:200; background:var(--brand);
+    display:flex; align-items:center; padding:0 26px; }
+  .cbbar .cblogo img { height:32px; display:block; }
+  .cbbar .cbnav { margin-left:auto; display:flex; align-items:center; gap:34px; }
+  .cbbar .cbnav a { color:#fff; font-size:13px; font-weight:500; letter-spacing:.6px; text-transform:uppercase; }
+  .cbbar .cbnav a:hover { color:var(--gold-soft); }
+  .cbbar .acct { display:flex; align-items:center; color:#fff; }
+  /* ── agent nav (fixed bottom) ── */
+  .anav { position:fixed; bottom:0; left:0; right:0; min-height:78px; z-index:200; background:rgba(13,27,42,.97);
+    display:flex; align-items:center; padding:0 30px; }
+  .anav .brand { font-family:var(--serif); color:var(--gold); font-size:23px; font-weight:600; letter-spacing:.5px; }
+  .anav .brand i { font-style:italic; }
+  .anav .amenu { margin-left:auto; display:flex; align-items:center; gap:30px; }
+  .anav .amenu a { color:#fff; font-size:13px; font-weight:500; letter-spacing:.7px; text-transform:uppercase; }
+  .anav .amenu a:hover { color:var(--gold-soft); }
+  .anav .amenu a.rental { border:1px solid rgba(255,255,255,.55); padding:10px 18px; }
+  .anav .amenu a.rental:hover { border-color:var(--gold); color:var(--gold); }
+  .anav .amenu a.cta { background:var(--gold); color:var(--deep); font-weight:700; padding:11px 22px; }
+  .anav .amenu a.cta:hover { background:var(--gold-soft); color:var(--deep); }
+  .anav .anavtoggle { display:none; margin-left:auto; background:none; border:0; color:#fff; font-size:24px; cursor:pointer; }
+  @media (max-width:900px) {
+    .anav .anavtoggle { display:block; }
+    .anav .amenu { position:absolute; bottom:78px; left:0; right:0; flex-direction:column; align-items:stretch; gap:0;
+      background:rgba(13,27,42,.99); margin:0; display:none; }
+    .anav.open .amenu { display:flex; }
+    .anav .amenu a { padding:15px 26px; border-top:1px solid rgba(255,255,255,.12); }
+    .anav .amenu a.rental, .anav .amenu a.cta { border-radius:0; text-align:center; }
   }
-  /* ── agent strip (kept below the nav so listings stay personal) ── */
-  .agentbar { background:#fff; border-bottom:1px solid #e7e9ee; padding:12px 22px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
-  .agentbar img.face { height:48px; width:48px; border-radius:50%; object-fit:cover; border:2px solid var(--brand); }
-  .agentbar .who b { display:block; font-size:16px; color:var(--brand); letter-spacing:.3px; }
-  .agentbar .who span { font-size:12px; color:#64748b; }
   main { max-width:1060px; margin:0 auto; padding:26px 18px 50px; }
   h1 { font-family:var(--serif); color:var(--brand); font-size:34px; font-weight:600; margin:8px 0 18px; }
   h2.sect { font-family:var(--serif); color:var(--brand); font-size:26px; font-weight:600; border-bottom:2px solid var(--gold); padding-bottom:6px; margin:30px 0 14px; }
@@ -68,7 +82,7 @@
   .thumbs { display:flex; gap:8px; overflow-x:auto; margin-top:8px; padding-bottom:4px; }
   .thumbs img { width:92px; height:64px; object-fit:cover; border-radius:6px; cursor:pointer; opacity:.6; flex:0 0 auto; }
   .thumbs img.on { opacity:1; outline:3px solid var(--brand); }
-  .lightbox { position:fixed; inset:0; background:rgba(5,10,25,.93); display:none; align-items:center; justify-content:center; z-index:50; cursor:zoom-out; }
+  .lightbox { position:fixed; inset:0; background:rgba(5,10,25,.93); display:none; align-items:center; justify-content:center; z-index:300; cursor:zoom-out; }
   .lightbox.open { display:flex; }
   .lightbox img { max-width:94vw; max-height:92vh; object-fit:contain; }
   .featlist { columns:2; column-gap:30px; list-style:none; padding:0; font-family:var(--ui); font-size:14px; }
@@ -89,18 +103,18 @@
   .calc .row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
   .calc .out { font-size:22px; font-weight:700; color:var(--brand); margin-top:12px; }
   .calc .sub { font-size:11px; color:#94a3b8; margin-top:4px; }
-  footer { background:var(--deep); color:#cbd5e1; font-size:12px; padding:20px 22px; text-align:center; font-family:var(--ui); }
-  footer img { height:30px; filter:brightness(0) invert(1); opacity:.85; display:block; margin:0 auto 8px; }
+  footer { background:#080f18; color:#cbd5e1; padding:34px 22px 28px; text-align:center; font-family:var(--ui); }
+  footer .fbrand { font-family:var(--serif); color:var(--gold); font-size:22px; font-weight:600; margin-bottom:14px; }
+  footer .fnav, footer .fprof { display:flex; flex-wrap:wrap; justify-content:center; gap:8px 22px; margin-bottom:12px; }
+  footer .fnav a { color:#cbd5e1; font-size:13px; }
+  footer .fprof a { color:var(--gold-soft); font-size:13px; }
+  footer .fnav a:hover, footer .fprof a:hover { color:#fff; }
+  footer .fcopy { font-size:11px; color:#8a97aa; margin-top:10px; line-height:1.6; }
 </style></head><body>
-<nav class="topnav">
-  <a class="brand" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Bayram Onder Kan — Coldwell Banker"
+<div class="cbbar">
+  <a class="cblogo" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Coldwell Banker"
      onerror="this.onerror=null;this.src='../../assets/logo.png'"></a>
-  <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('navmenu').classList.toggle('open')">☰</button>
-  <div class="menu" id="navmenu"><a href="https://kan.realtor/#search">Search Homes</a><a href="../../">My Listings</a><a href="https://kan.realtor/#neighborhoods">Areas</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#tools">Tools</a><a href="https://kan.realtor/#contact">Contact</a></div>
-</nav>
-<div class="agentbar">
-  <img class="face" src="../../assets/headshot.jpg" alt="Bayram Onder Kan" onerror="this.style.display='none'">
-  <div class="who"><b>Bayram Onder Kan</b><span>REALTOR® · Coldwell Banker Realty · Pittsburgh, PA</span></div>
+  <nav class="cbnav"><a href="https://kan.realtor/ab/3145525/about-coldwell-banker">About Coldwell Banker</a><a href="https://kan.realtor/ab/3145525/cbgl">Coldwell Banker Global Luxury</a><a class="acct" href="https://kan.realtor/" aria-label="Account"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-5 0-9 2.5-9 6v2h18v-2c0-3.5-4-6-9-6z"/></svg></a></nav>
 </div>
 <main>
 <a href="../../" style="font-family:var(--ui);font-size:13px;color:var(--brand)">← All listings</a>
@@ -172,10 +186,20 @@ mCalc();
 </script>
 </main>
 <footer>
-  <img src="../../assets/cb_logo.png" alt="Coldwell Banker" onerror="this.style.display='none'">
-  Bayram Onder Kan · REALTOR® · Coldwell Banker Realty · Pittsburgh, PA · Equal Housing Opportunity ⌂<br>
-  Information deemed reliable but not guaranteed. Updated 2026-06-21.
+  <div class="fbrand">Bayram Önder <i>KAN</i></div>
+  <nav class="fnav"><a href="https://kan.realtor/#search">Search</a><a href="https://kan.realtor/#listings">Listings</a><a href="https://kan.realtor/#neighborhoods">Areas</a><a href="https://kan.realtor/#tools">Tools</a><a href="https://kan.realtor/#testimonials">Reviews</a><a href="https://kan.realtor/#blog">Blog</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#contact">Contact</a><a href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737">Rental Application</a></nav>
+  <nav class="fprof"><a href="https://www.realtor.com/realestateagents/6520c5af4d827819b1640b9f" target="_blank" rel="noopener">Realtor.com</a><a href="https://www.homes.com/real-estate-agents/bayram-kan/wkzg5ek/" target="_blank" rel="noopener">Homes.com</a><a href="https://www.coldwellbanker.com/pa/pittsburgh/agents/bayram-onder-kan/aid-P00200000GMuX71NMu0PDgRNKFiZeBVDSiAI7yPA" target="_blank" rel="noopener">Coldwell Banker</a></nav>
+  <div class="fcopy">© 2026 Bayram Önder Kan · Coldwell Banker Realty · Equal Housing Opportunity ⌂<br>
+    Information deemed reliable but not guaranteed. Updated 2026-06-21.</div>
 </footer>
+<nav class="anav" id="anav">
+  <a class="brand" href="https://kan.realtor/">Bayram Önder <i>KAN</i></a>
+  <button class="anavtoggle" aria-label="Menu" onclick="document.getElementById('anav').classList.toggle('open')">☰</button>
+  <div class="amenu"><a href="https://kan.realtor/#search">Search Homes</a><a href="https://kan.realtor/#listings">My Listings</a><a href="https://kan.realtor/#neighborhoods">Areas</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#tools">Tools</a>
+    <a class="rental" href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737" target="_blank" rel="noopener">Rental Application</a>
+    <a class="cta" href="https://kan.realtor/#contact">Contact</a>
+  </div>
+</nav>
 <script data-goatcounter="https://kanrealtor.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </body></html>
