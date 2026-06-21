@@ -92,9 +92,9 @@
     <div class="carousel">
   <img class="main" id="cMain" src="photos/000.jpg" alt="3021 Zephyr Ave" onclick="lbOpen()">
   <button class="nav prev" onclick="go(cur-1)">‹</button><button class="nav next" onclick="go(cur+1)">›</button>
-  <span class="cnt" id="cCnt">1 / 12</span>
+  <span class="cnt" id="cCnt">1 / 18</span>
 </div>
-<div class="thumbs" id="cThumbs"><img src='photos/000.jpg' class='on' onclick='go(0)' loading='lazy' alt='photo 1'><img src='photos/001.jpg' class='' onclick='go(1)' loading='lazy' alt='photo 2'><img src='photos/002.jpg' class='' onclick='go(2)' loading='lazy' alt='photo 3'><img src='photos/003.jpg' class='' onclick='go(3)' loading='lazy' alt='photo 4'><img src='photos/004.jpg' class='' onclick='go(4)' loading='lazy' alt='photo 5'><img src='photos/005.jpg' class='' onclick='go(5)' loading='lazy' alt='photo 6'><img src='photos/006.jpg' class='' onclick='go(6)' loading='lazy' alt='photo 7'><img src='photos/007.jpg' class='' onclick='go(7)' loading='lazy' alt='photo 8'><img src='photos/008.jpg' class='' onclick='go(8)' loading='lazy' alt='photo 9'><img src='photos/009.jpg' class='' onclick='go(9)' loading='lazy' alt='photo 10'><img src='photos/010.jpg' class='' onclick='go(10)' loading='lazy' alt='photo 11'><img src='photos/011.jpg' class='' onclick='go(11)' loading='lazy' alt='photo 12'></div>
+<div class="thumbs" id="cThumbs"><img src='photos/000.jpg' class='on' onclick='go(0)' loading='lazy' alt='photo 1'><img src='photos/001.jpg' class='' onclick='go(1)' loading='lazy' alt='photo 2'><img src='photos/002.jpg' class='' onclick='go(2)' loading='lazy' alt='photo 3'><img src='photos/003.jpg' class='' onclick='go(3)' loading='lazy' alt='photo 4'><img src='photos/004.jpg' class='' onclick='go(4)' loading='lazy' alt='photo 5'><img src='photos/005.jpg' class='' onclick='go(5)' loading='lazy' alt='photo 6'><img src='photos/006.jpg' class='' onclick='go(6)' loading='lazy' alt='photo 7'><img src='photos/007.jpg' class='' onclick='go(7)' loading='lazy' alt='photo 8'><img src='photos/008.jpg' class='' onclick='go(8)' loading='lazy' alt='photo 9'><img src='photos/009.jpg' class='' onclick='go(9)' loading='lazy' alt='photo 10'><img src='photos/010.jpg' class='' onclick='go(10)' loading='lazy' alt='photo 11'><img src='photos/011.jpg' class='' onclick='go(11)' loading='lazy' alt='photo 12'><img src='photos/012.jpg' class='' onclick='go(12)' loading='lazy' alt='photo 13'><img src='photos/013.jpg' class='' onclick='go(13)' loading='lazy' alt='photo 14'><img src='photos/014.jpg' class='' onclick='go(14)' loading='lazy' alt='photo 15'><img src='photos/015.jpg' class='' onclick='go(15)' loading='lazy' alt='photo 16'><img src='photos/016.jpg' class='' onclick='go(16)' loading='lazy' alt='photo 17'><img src='photos/all_floors_3021_zephyr_avenue_pittsburgh_with_dim.png' class='' onclick='go(17)' loading='lazy' alt='photo 18'></div>
 <div class="lightbox" id="lb" onclick="lbClose()"><img id="lbImg" src="photos/000.jpg" alt="photo"></div>
     
     
@@ -126,7 +126,7 @@
 </div>
 <script>
 let cur=0;
-const imgs=["000.jpg", "001.jpg", "002.jpg", "003.jpg", "004.jpg", "005.jpg", "006.jpg", "007.jpg", "008.jpg", "009.jpg", "010.jpg", "011.jpg"];
+const imgs=["000.jpg", "001.jpg", "002.jpg", "003.jpg", "004.jpg", "005.jpg", "006.jpg", "007.jpg", "008.jpg", "009.jpg", "010.jpg", "011.jpg", "012.jpg", "013.jpg", "014.jpg", "015.jpg", "016.jpg", "all_floors_3021_zephyr_avenue_pittsburgh_with_dim.png"];
 function go(i){if(!imgs.length)return;cur=(i+imgs.length)%imgs.length;
   document.getElementById('cMain').src='photos/'+imgs[cur];
   document.getElementById('lbImg').src='photos/'+imgs[cur];

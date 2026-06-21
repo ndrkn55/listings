@@ -90,12 +90,12 @@
 <div class="lay">
   <div>
     <div class="carousel">
-  <img class="main" id="cMain" src="photos/1705_Vacant_property-pg1.jpg" alt="1707 Grandview Ave" onclick="lbOpen()">
-  <button class="nav prev" onclick="go(cur-1)">‹</button><button class="nav next" onclick="go(cur+1)">›</button>
-  <span class="cnt" id="cCnt">1 / 5</span>
+  <img class="main" id="cMain" src="photos/1707_Grandview_Ave.jpg" alt="1707 Grandview Ave" onclick="lbOpen()">
+  
+  <span class="cnt" id="cCnt">1 / 1</span>
 </div>
-<div class="thumbs" id="cThumbs"><img src='photos/1705_Vacant_property-pg1.jpg' class='on' onclick='go(0)' loading='lazy' alt='photo 1'><img src='photos/1705_Vacant_property-pg2.jpg' class='' onclick='go(1)' loading='lazy' alt='photo 2'><img src='photos/1707_Grandview_Ave.jpg' class='' onclick='go(2)' loading='lazy' alt='photo 3'><img src='photos/scheduleA.jpg' class='' onclick='go(3)' loading='lazy' alt='photo 4'><img src='photos/scheduleB.jpg' class='' onclick='go(4)' loading='lazy' alt='photo 5'></div>
-<div class="lightbox" id="lb" onclick="lbClose()"><img id="lbImg" src="photos/1705_Vacant_property-pg1.jpg" alt="photo"></div>
+<div class="thumbs" id="cThumbs"><img src='photos/1707_Grandview_Ave.jpg' class='on' onclick='go(0)' loading='lazy' alt='photo 1'></div>
+<div class="lightbox" id="lb" onclick="lbClose()"><img id="lbImg" src="photos/1707_Grandview_Ave.jpg" alt="photo"></div>
     
     
     
@@ -115,7 +115,7 @@
 </div>
 <script>
 let cur=0;
-const imgs=["1705_Vacant_property-pg1.jpg", "1705_Vacant_property-pg2.jpg", "1707_Grandview_Ave.jpg", "scheduleA.jpg", "scheduleB.jpg"];
+const imgs=["1707_Grandview_Ave.jpg"];
 function go(i){if(!imgs.length)return;cur=(i+imgs.length)%imgs.length;
   document.getElementById('cMain').src='photos/'+imgs[cur];
   document.getElementById('lbImg').src='photos/'+imgs[cur];

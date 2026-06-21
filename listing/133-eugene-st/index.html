@@ -90,12 +90,12 @@
 <div class="lay">
   <div>
     <div class="carousel">
-  <img class="main" id="cMain" src="photos/basement.jpg" alt="133 Eugene St" onclick="lbOpen()">
+  <img class="main" id="cMain" src="photos/cover.jpg" alt="133 Eugene St" onclick="lbOpen()">
   <button class="nav prev" onclick="go(cur-1)">‹</button><button class="nav next" onclick="go(cur+1)">›</button>
-  <span class="cnt" id="cCnt">1 / 12</span>
+  <span class="cnt" id="cCnt">1 / 4</span>
 </div>
-<div class="thumbs" id="cThumbs"><img src='photos/basement.jpg' class='on' onclick='go(0)' loading='lazy' alt='photo 1'><img src='photos/bathroom.jpg' class='' onclick='go(1)' loading='lazy' alt='photo 2'><img src='photos/bedroom1-1.jpg' class='' onclick='go(2)' loading='lazy' alt='photo 3'><img src='photos/bedroom1-2.jpg' class='' onclick='go(3)' loading='lazy' alt='photo 4'><img src='photos/bedroom2-1.jpg' class='' onclick='go(4)' loading='lazy' alt='photo 5'><img src='photos/bedroom2-2.jpg' class='' onclick='go(5)' loading='lazy' alt='photo 6'><img src='photos/cover.jpg' class='' onclick='go(6)' loading='lazy' alt='photo 7'><img src='photos/diningroom.jpg' class='' onclick='go(7)' loading='lazy' alt='photo 8'><img src='photos/exterior-back.jpg' class='' onclick='go(8)' loading='lazy' alt='photo 9'><img src='photos/exterior-front1.jpg' class='' onclick='go(9)' loading='lazy' alt='photo 10'><img src='photos/exterior-front2.jpg' class='' onclick='go(10)' loading='lazy' alt='photo 11'><img src='photos/exterior-side.jpg' class='' onclick='go(11)' loading='lazy' alt='photo 12'></div>
-<div class="lightbox" id="lb" onclick="lbClose()"><img id="lbImg" src="photos/basement.jpg" alt="photo"></div>
+<div class="thumbs" id="cThumbs"><img src='photos/cover.jpg' class='on' onclick='go(0)' loading='lazy' alt='photo 1'><img src='photos/exterior-back.jpg' class='' onclick='go(1)' loading='lazy' alt='photo 2'><img src='photos/exterior-front1.jpg' class='' onclick='go(2)' loading='lazy' alt='photo 3'><img src='photos/exterior-front2.jpg' class='' onclick='go(3)' loading='lazy' alt='photo 4'></div>
+<div class="lightbox" id="lb" onclick="lbClose()"><img id="lbImg" src="photos/cover.jpg" alt="photo"></div>
     
     
     
@@ -115,7 +115,7 @@
 </div>
 <script>
 let cur=0;
-const imgs=["basement.jpg", "bathroom.jpg", "bedroom1-1.jpg", "bedroom1-2.jpg", "bedroom2-1.jpg", "bedroom2-2.jpg", "cover.jpg", "diningroom.jpg", "exterior-back.jpg", "exterior-front1.jpg", "exterior-front2.jpg", "exterior-side.jpg"];
+const imgs=["cover.jpg", "exterior-back.jpg", "exterior-front1.jpg", "exterior-front2.jpg"];
 function go(i){if(!imgs.length)return;cur=(i+imgs.length)%imgs.length;
   document.getElementById('cMain').src='photos/'+imgs[cur];
   document.getElementById('lbImg').src='photos/'+imgs[cur];
