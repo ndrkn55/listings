@@ -118,6 +118,24 @@
   .langtoggle a.on { background:var(--gold); color:var(--deep); }
   .langtoggle a:not(.on):hover { color:var(--gold-soft); }
   @media (max-width:900px) { .langtoggle { bottom:86px; } }
+  /* ── neighborhood section ── */
+  .nbhd { margin-top:10px; }
+  .nbhd .nsub { font-family:var(--serif); color:var(--brand); font-size:19px; font-weight:600; margin:22px 0 6px; }
+  .nstats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:2px; background:#e2e8f0;
+    border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; margin:6px 0 18px; }
+  .nstat { background:#fff; padding:12px 14px; }
+  .nstat b { display:block; font-size:19px; color:var(--brand); font-weight:700; }
+  .nstat span { font-size:11px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
+  .nbhd-more { display:inline-block; margin-top:10px; color:var(--brand); font-weight:700; font-size:14px; }
+  /* ── neighborhoods index ── */
+  .ngrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+  .ncard { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:16px 18px; color:inherit;
+    box-shadow:0 1px 3px rgba(2,6,23,.06); }
+  .ncard:hover { box-shadow:0 4px 14px rgba(2,6,23,.14); }
+  .ncard-nm { font-family:var(--serif); color:var(--brand); font-size:21px; font-weight:600; }
+  .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
+  .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
+  .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
 </style></head><body>
 <div class="cbbar">
   <a class="cblogo" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Coldwell Banker"
@@ -146,7 +164,16 @@
     <h2 class="sect">Location</h2>
 <div class="mapbox"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
   src="https://www.google.com/maps?q=1265%20Norberry%20Ct%2018%2C%20Pittsburgh%20area%2C%20PA&output=embed"></iframe></div>
-    
+    <div class="nbhd">
+  <h2 class="sect">Living in Cranberry Township</h2>
+  <div class='nstats' aria-label="Quick facts"><div class='nstat'><b>~34,000</b><span>Population</span></div><div class='nstat'><b>~$421,000</b><span>Median home value</span></div><div class='nstat'><b>~$125,100</b><span>Median household income</span></div><div class='nstat'><b>~40</b><span>Median age</span></div><div class='nstat'><b>Seneca Valley (top-rated)</b><span>School district</span></div><div class='nstat'><b>Butler County</b><span>County</span></div><div class='nstat'><b>~20 mi</b><span>Near Downtown</span></div></div>
+  <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry Township is one of the Pittsburgh region&#x27;s most sought-after suburbs, in Butler County about 20 miles north of Downtown at the I-79 / Pennsylvania Turnpike crossroads. It&#x27;s a thriving, growing community of about 34,000 known for top schools, abundant shopping, corporate campuses and family-friendly amenities.</p>
+  <h3 class='nsub'>Schools &amp; Education</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry is served by the highly regarded Seneca Valley School District, one of the largest and most respected districts in western Pennsylvania.</p>
+  <h3 class='nsub'>Healthcare &amp; Shopping</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry is a regional retail and healthcare hub: major shopping along the Route 19 corridor, extensive dining, and UPMC and AHN facilities including the UPMC Lemieux Sports Complex, the Pittsburgh Penguins&#x27; practice rink.</p>
+  <h3 class='nsub'>Dining, Parks &amp; Attractions</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Sprawling parks such as North Boundary Park (with its pool and waterslides) and Cranberry Community Park offer trails, athletic fields and pools, and the township hosts community events year-round.</p>
+  <h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry combines strong schools, steady appreciation and deep amenities, which supports durable demand and resale — though that quality comes at the region&#x27;s higher price points. A local agent can help you weigh value, taxes and the right neighborhood within the township.</p>
+  <a class='nbhd-more' href='../../neighborhoods/'>See all neighborhoods →</a>
+</div>
     
   </div>
   <div class="agentcard">
@@ -184,7 +211,7 @@ mCalc();
 </main>
 <footer>
   <div class="fbrand">Bayram Önder <i>KAN</i></div>
-  <nav class="fnav"><a href="https://kan.realtor/#search">Search</a><a href="https://kan.realtor/#listings">Listings</a><a href="https://kan.realtor/#neighborhoods">Areas</a><a href="https://kan.realtor/#tools">Tools</a><a href="https://kan.realtor/#testimonials">Reviews</a><a href="https://kan.realtor/#blog">Blog</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#contact">Contact</a><a href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737">Rental Application</a></nav>
+  <nav class="fnav"><a href="https://kan.realtor/#search">Search</a><a href="https://kan.realtor/#listings">Listings</a><a href="../../neighborhoods/">Areas</a><a href="https://kan.realtor/#tools">Tools</a><a href="https://kan.realtor/#testimonials">Reviews</a><a href="../../blog/">Blog</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#contact">Contact</a><a href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737">Rental Application</a></nav>
   <nav class="fprof"><a href="https://www.realtor.com/realestateagents/6520c5af4d827819b1640b9f" target="_blank" rel="noopener">Realtor.com</a><a href="https://www.homes.com/real-estate-agents/bayram-kan/wkzg5ek/" target="_blank" rel="noopener">Homes.com</a><a href="https://www.coldwellbanker.com/pa/pittsburgh/agents/bayram-onder-kan/aid-P00200000GMuX71NMu0PDgRNKFiZeBVDSiAI7yPA" target="_blank" rel="noopener">Coldwell Banker</a></nav>
   <div class="fcopy">© 2026 Bayram Önder Kan · Coldwell Banker Realty · Equal Housing Opportunity ⌂<br>
     Information deemed reliable but not guaranteed. Updated 2026-06-21.</div>
@@ -192,7 +219,7 @@ mCalc();
 <nav class="anav" id="anav">
   <a class="brand" href="https://kan.realtor/">Bayram Önder <i>KAN</i></a>
   <button class="anavtoggle" aria-label="Menu" onclick="document.getElementById('anav').classList.toggle('open')">☰</button>
-  <div class="amenu"><a href="https://kan.realtor/#search">Search Homes</a><a href="https://kan.realtor/#listings">My Listings</a><a href="https://kan.realtor/#neighborhoods">Areas</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#tools">Tools</a>
+  <div class="amenu"><a href="https://kan.realtor/#search">Search Homes</a><a href="https://kan.realtor/#listings">My Listings</a><a href="../../neighborhoods/">Areas</a><a href="../../blog/">Blog</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#tools">Tools</a>
     <a class="rental" href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737" target="_blank" rel="noopener">Rental Application</a>
     <a class="cta" href="https://kan.realtor/#contact">Contact</a>
   </div>

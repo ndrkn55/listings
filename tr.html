@@ -111,6 +111,24 @@
   .langtoggle a.on { background:var(--gold); color:var(--deep); }
   .langtoggle a:not(.on):hover { color:var(--gold-soft); }
   @media (max-width:900px) { .langtoggle { bottom:86px; } }
+  /* ── neighborhood section ── */
+  .nbhd { margin-top:10px; }
+  .nbhd .nsub { font-family:var(--serif); color:var(--brand); font-size:19px; font-weight:600; margin:22px 0 6px; }
+  .nstats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:2px; background:#e2e8f0;
+    border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; margin:6px 0 18px; }
+  .nstat { background:#fff; padding:12px 14px; }
+  .nstat b { display:block; font-size:19px; color:var(--brand); font-weight:700; }
+  .nstat span { font-size:11px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
+  .nbhd-more { display:inline-block; margin-top:10px; color:var(--brand); font-weight:700; font-size:14px; }
+  /* ── neighborhoods index ── */
+  .ngrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+  .ncard { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:16px 18px; color:inherit;
+    box-shadow:0 1px 3px rgba(2,6,23,.06); }
+  .ncard:hover { box-shadow:0 4px 14px rgba(2,6,23,.14); }
+  .ncard-nm { font-family:var(--serif); color:var(--brand); font-size:21px; font-weight:600; }
+  .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
+  .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
+  .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
 </style></head><body>
 <div class="cbbar">
   <a class="cblogo" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Coldwell Banker"
@@ -119,65 +137,65 @@
 </div>
 <main>
 <h1>Benim İlanlarım</h1><h2 class='sect'>Müsait</h2><div class='grid'><a class="card" href="listing/207-cedar-ln/tr.html">
-  <div class="ph" style="background-image:url('listing/207-cedar-ln/photos/000.png')"><span class="badge ">Yakında Müşteri Kabulü Başlayacak</span></div>
+  <div class="ph" style="background-image:url('listing/207-cedar-ln/photos/000.png')"><span class="badge ">Çok Yakında</span></div>
   <div class="nfo">
     <div class="price">&nbsp;</div>
     <div class="addr">207 Cedar Ln</div>
     <div class="facts">Mobil Ev</div>
   </div></a><a class="card" href="listing/601-allegheny-ave/tr.html">
-  <div class="ph" style="background-image:url('listing/601-allegheny-ave/photos/property%20photo%20601%20Allegheny%20Ave.jpg')"><span class="badge ">Satışta</span></div>
+  <div class="ph" style="background-image:url('listing/601-allegheny-ave/photos/property%20photo%20601%20Allegheny%20Ave.jpg')"><span class="badge ">Satılık</span></div>
   <div class="nfo">
     <div class="price">$295,000</div>
     <div class="addr">601 Allegheny Ave</div>
-    <div class="facts">1446 m² · Daire · MLS# 1707529</div>
+    <div class="facts">1446 sqft · Daire · MLS# 1707529</div>
   </div></a><a class="card" href="listing/3021-zephyr-ave/tr.html">
-  <div class="ph" style="background-image:url('listing/3021-zephyr-ave/photos/000.jpg')"><span class="badge ">Satışta</span></div>
+  <div class="ph" style="background-image:url('listing/3021-zephyr-ave/photos/000.jpg')"><span class="badge ">Satılık</span></div>
   <div class="nfo">
     <div class="price">$125,000</div>
     <div class="addr">3021 Zephyr Ave</div>
-    <div class="facts">4 bd · 2 ba · 2090 m² · Müstakil Ev</div>
+    <div class="facts">4 bd · 2 ba · 2090 sqft · Müstakil Ev</div>
   </div></a><a class="card" href="listing/2708-garbett-st/tr.html">
-  <div class="ph" style="background-image:url('listing/2708-garbett-st/photos/00.JPG')"><span class="badge ">Satışta</span></div>
+  <div class="ph" style="background-image:url('listing/2708-garbett-st/photos/00.JPG')"><span class="badge ">Satılık</span></div>
   <div class="nfo">
     <div class="price">$15,000</div>
     <div class="addr">2708 Garbett St</div>
-    <div class="facts">2 bd · 1 ba · 1280 m² · Müstakil Ev · MLS# 1682824</div>
+    <div class="facts">2 bd · 1 ba · 1280 sqft · Müstakil Ev · MLS# 1682824</div>
   </div></a><a class="card" href="listing/223-lombard-st/tr.html">
-  <div class="ph" style="background-image:url('listing/223-lombard-st/photos/00.jpg')"><span class="badge ">Satışta</span></div>
+  <div class="ph" style="background-image:url('listing/223-lombard-st/photos/00.jpg')"><span class="badge ">Satılık</span></div>
   <div class="nfo">
     <div class="price">$69,000</div>
     <div class="addr">223 Lombard St</div>
-    <div class="facts">1268 m² · Müstakil Ev</div>
+    <div class="facts">1268 sqft · Müstakil Ev</div>
   </div></a></div><h2 class='sect'>Sözleşme Altında</h2><div class='grid'><a class="card" href="listing/445-n-school-st/tr.html">
   <div class="ph" style="background-image:url('listing/445-n-school-st/photos/1a.jpg')"><span class="badge pend">Beklemede</span></div>
   <div class="nfo">
     <div class="price">$350,000</div>
     <div class="addr">445 N School St</div>
-    <div class="facts">4 bd · 3.5 ba · 2400 m² · Müstakil Ev · MLS# 1725254</div>
+    <div class="facts">4 bd · 3.5 ba · 2400 sqft · Müstakil Ev · MLS# 1725254</div>
   </div></a><a class="card" href="listing/unionville-rd-portfolio-tuncer/tr.html">
   <div class="ph" style="background-image:url('listing/unionville-rd-portfolio-tuncer/photos/unionville.jpg')"><span class="badge pend">Beklemede</span></div>
   <div class="nfo">
     <div class="price">$4,750,000</div>
     <div class="addr">Unionville Rd Portfolio Tuncer</div>
-    <div class="facts">38800 m² · Depo · MLS# 1738603</div>
+    <div class="facts">38800 sqft · Depo · MLS# 1738603</div>
   </div></a></div><h2 class='sect'>Son Satılanlar</h2><div class='grid'><a class="card" href="listing/502-bon-air/tr.html">
   <div class="ph" style="background-image:url('listing/502-bon-air/photos/1.jpg')"><span class="badge sold">Satıldı</span></div>
   <div class="nfo">
     <div class="price">$129,000</div>
     <div class="addr">502 Bon Air</div>
-    <div class="facts">3 bd · 2 ba · 922 m² · Müstakil Ev · MLS# 1737805</div>
+    <div class="facts">3 bd · 2 ba · 922 sqft · Müstakil Ev · MLS# 1737805</div>
   </div></a><a class="card" href="listing/133-eugene-st/tr.html">
   <div class="ph" style="background-image:url('listing/133-eugene-st/photos/cover.jpg')"><span class="badge sold">Satıldı</span></div>
   <div class="nfo">
     <div class="price">$50,000</div>
     <div class="addr">133 Eugene St</div>
-    <div class="facts">2 bd · 1 ba · 1440 m² · Müstakil Ev · MLS# 1637624</div>
+    <div class="facts">2 bd · 1 ba · 1440 sqft · Müstakil Ev · MLS# 1637624</div>
   </div></a><a class="card" href="listing/680-kessler-st/tr.html">
   <div class="ph" style="background-image:url('listing/680-kessler-st/photos/00.jpg')"><span class="badge sold">Satıldı</span></div>
   <div class="nfo">
     <div class="price">$45,000</div>
     <div class="addr">680 Kessler St</div>
-    <div class="facts">3 bd · 2 ba · 720 m² · Müstakil Ev · MLS# 1686908</div>
+    <div class="facts">3 bd · 2 ba · 720 sqft · Müstakil Ev · MLS# 1686908</div>
   </div></a><a class="card" href="listing/443-n-school-st/tr.html">
   <div class="ph" style="background-image:url('listing/443-n-school-st/photos/01.jpg')"><span class="badge sold">Satıldı</span></div>
   <div class="nfo">
@@ -218,15 +236,15 @@
 </main>
 <footer>
   <div class="fbrand">Bayram Önder <i>KAN</i></div>
-  <nav class="fnav"><a href="https://kan.realtor/#search">Ara</a><a href="https://kan.realtor/#listings">İlanlar</a><a href="https://kan.realtor/#neighborhoods">Bölgeler</a><a href="https://kan.realtor/#tools">Araçlar</a><a href="https://kan.realtor/#testimonials">Değerlendirmeler</a><a href="https://kan.realtor/#blog">Blog</a><a href="https://kan.realtor/#about">Hakkında</a><a href="https://kan.realtor/#contact">İletişim</a><a href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737">Kiralama Başvurusu</a></nav>
+  <nav class="fnav"><a href="https://kan.realtor/#search">Ara</a><a href="https://kan.realtor/#listings">İlanlar</a><a href="neighborhoods/tr.html">Bölgeler</a><a href="https://kan.realtor/#tools">Araçlar</a><a href="https://kan.realtor/#testimonials">Yorumlar</a><a href="blog/tr.html">Blog</a><a href="https://kan.realtor/#about">Hakkında</a><a href="https://kan.realtor/#contact">İletişim</a><a href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737">Kiralama Başvurusu</a></nav>
   <nav class="fprof"><a href="https://www.realtor.com/realestateagents/6520c5af4d827819b1640b9f" target="_blank" rel="noopener">Realtor.com</a><a href="https://www.homes.com/real-estate-agents/bayram-kan/wkzg5ek/" target="_blank" rel="noopener">Homes.com</a><a href="https://www.coldwellbanker.com/pa/pittsburgh/agents/bayram-onder-kan/aid-P00200000GMuX71NMu0PDgRNKFiZeBVDSiAI7yPA" target="_blank" rel="noopener">Coldwell Banker</a></nav>
   <div class="fcopy">© 2026 Bayram Önder Kan · Coldwell Banker Realty · Eşit Konut Fırsatı ⌂<br>
-    Güvenilir olduğu düşünülen ancak garanti edilmeyen bilgiler. Güncellendi 2026-06-21.</div>
+    Bilgiler güvenilir olarak kabul edilir ancak garantili değildir. Güncellendi 2026-06-21.</div>
 </footer>
 <nav class="anav" id="anav">
   <a class="brand" href="https://kan.realtor/">Bayram Önder <i>KAN</i></a>
   <button class="anavtoggle" aria-label="Menu" onclick="document.getElementById('anav').classList.toggle('open')">☰</button>
-  <div class="amenu"><a href="https://kan.realtor/#search">Ev Ara</a><a href="https://kan.realtor/#listings">Benim İlanlarım</a><a href="https://kan.realtor/#neighborhoods">Bölgeler</a><a href="https://kan.realtor/#about">Hakkında</a><a href="https://kan.realtor/#tools">Araçlar</a>
+  <div class="amenu"><a href="https://kan.realtor/#search">Ev Ara</a><a href="https://kan.realtor/#listings">Benim İlanlarım</a><a href="neighborhoods/tr.html">Bölgeler</a><a href="blog/tr.html">Blog</a><a href="https://kan.realtor/#about">Hakkında</a><a href="https://kan.realtor/#tools">Araçlar</a>
     <a class="rental" href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737" target="_blank" rel="noopener">Kiralama Başvurusu</a>
     <a class="cta" href="https://kan.realtor/#contact">İletişim</a>
   </div>

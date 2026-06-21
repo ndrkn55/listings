@@ -118,6 +118,24 @@
   .langtoggle a.on { background:var(--gold); color:var(--deep); }
   .langtoggle a:not(.on):hover { color:var(--gold-soft); }
   @media (max-width:900px) { .langtoggle { bottom:86px; } }
+  /* ── neighborhood section ── */
+  .nbhd { margin-top:10px; }
+  .nbhd .nsub { font-family:var(--serif); color:var(--brand); font-size:19px; font-weight:600; margin:22px 0 6px; }
+  .nstats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:2px; background:#e2e8f0;
+    border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; margin:6px 0 18px; }
+  .nstat { background:#fff; padding:12px 14px; }
+  .nstat b { display:block; font-size:19px; color:var(--brand); font-weight:700; }
+  .nstat span { font-size:11px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
+  .nbhd-more { display:inline-block; margin-top:10px; color:var(--brand); font-weight:700; font-size:14px; }
+  /* ── neighborhoods index ── */
+  .ngrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+  .ncard { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:16px 18px; color:inherit;
+    box-shadow:0 1px 3px rgba(2,6,23,.06); }
+  .ncard:hover { box-shadow:0 4px 14px rgba(2,6,23,.14); }
+  .ncard-nm { font-family:var(--serif); color:var(--brand); font-size:21px; font-weight:600; }
+  .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
+  .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
+  .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
 </style></head><body>
 <div class="cbbar">
   <a class="cblogo" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Coldwell Banker"
@@ -146,14 +164,23 @@
     <h2 class="sect">Konum</h2>
 <div class="mapbox"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
   src="https://www.google.com/maps?q=735%20Boquet%20St%2C%20Pittsburgh%20area%2C%20PA&output=embed"></iframe></div>
-    
+    <div class="nbhd">
+  <h2 class="sect">McKees Rocks&#x27;ta Yaşamak</h2>
+  <div class='nstats' aria-label="Kısa bilgiler"><div class='nstat'><b>~5.600</b><span>Nüfus</span></div><div class='nstat'><b>~$94.000</b><span>Ortalama satış fiyatı</span></div><div class='nstat'><b>~$33.500</b><span>Ortalama hane geliri</span></div><div class='nstat'><b>Sto-Rox</b><span>Okul bölgesi</span></div><div class='nstat'><b>Ohio Nehri</b><span>Konum</span></div><div class='nstat'><b>~10 km</b><span>Merkeze uzaklık</span></div></div>
+  <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>McKees Rocks, Pittsburgh şehir merkezinin yaklaşık 10 km kuzeybatısında, Ohio Nehri kıyısında tarihi bir kasabadır. Bir zamanlar bir sanayi ve demiryolu merkeziyken bugün yaklaşık 5.600 nüfusludur; bölgenin en düşük konut fiyatlarından bazılarını, nehir kıyısı boyunca süren topluluk canlandırma çalışmalarıyla birlikte sunar.</p>
+  <h3 class='nsub'>Okullar ve eğitim</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>McKees Rocks, komşu Stowe Township ile paylaşılan Sto-Rox School District&#x27;e bağlıdır.</p>
+  <h3 class='nsub'>Sağlık ve alışveriş</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Yerel dükkânlar ve hizmetler Chartiers Avenue boyunca yer alır; daha fazla perakende, market ve sağlık hizmeti ise Robinson Township ve yakındaki nehir topluluklarında kısa bir sürüş mesafesindedir.</p>
+  <h3 class='nsub'>Restoranlar, parklar ve gezilecek yerler</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Nehir kıyısı, tarihi &#x27;Bottoms&#x27; bölgesi ve şehir merkezi ile havaalanı koridoruna yakınlık bölgeyi tanımlar; Pittsburgh&#x27;un North Shore stadyumları ve cazibe noktaları nehrin karşısında kısa bir sürüş mesafesindedir.</p>
+  <h3 class='nsub'>Yatırım görünümü</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>McKees Rocks, şehre yakın çok düşük giriş fiyatları ve kira potansiyeli sunar; ancak sokaktan sokağa değişen, gerçek ekonomik zorlukları olan eski bir kasabadır. Burası ödevini yapmanız gereken bir pazardır: kapsamlı ekspertiz yaptırın, sokağı, vergileri ve kiraları inceleyin ve satın almadan önce bölgeyi tanıyan bir danışmana güvenin.</p>
+  <a class='nbhd-more' href='../../neighborhoods/tr.html'>Tüm bölgeleri gör →</a>
+</div>
     
   </div>
   <div class="agentcard">
   <img src="../../assets/headshot.jpg" alt="Bayram Onder Kan" onerror="this.style.display='none'">
   <div class="nm">Bayram Onder Kan</div>
   <div class="tg">REALTOR® · Coldwell Banker Realty · Pittsburgh, PA</div>
-  <a class='btn ghost' href='tel:+14126890035'>📞 412-689-0035</a><a class='btn ghost' href='sms:+14126890035'>💬 Bana Mesaj Gönder</a><a class='btn ghost' href='mailto:bayram.kan@cbrealty.com?subject=Inquiry%3A%20735%20Boquet%20St'>✉ E-posta</a>
+  <a class='btn ghost' href='tel:+14126890035'>📞 412-689-0035</a><a class='btn ghost' href='sms:+14126890035'>💬 Bana Yazı Gönder</a><a class='btn ghost' href='mailto:bayram.kan@cbrealty.com?subject=Inquiry%3A%20735%20Boquet%20St'>✉ E-posta</a>
 </div>
 </div>
 <script>
@@ -184,15 +211,15 @@ mCalc();
 </main>
 <footer>
   <div class="fbrand">Bayram Önder <i>KAN</i></div>
-  <nav class="fnav"><a href="https://kan.realtor/#search">Ara</a><a href="https://kan.realtor/#listings">İlanlar</a><a href="https://kan.realtor/#neighborhoods">Bölgeler</a><a href="https://kan.realtor/#tools">Araçlar</a><a href="https://kan.realtor/#testimonials">Değerlendirmeler</a><a href="https://kan.realtor/#blog">Blog</a><a href="https://kan.realtor/#about">Hakkında</a><a href="https://kan.realtor/#contact">İletişim</a><a href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737">Kiralama Başvurusu</a></nav>
+  <nav class="fnav"><a href="https://kan.realtor/#search">Ara</a><a href="https://kan.realtor/#listings">İlanlar</a><a href="../../neighborhoods/tr.html">Bölgeler</a><a href="https://kan.realtor/#tools">Araçlar</a><a href="https://kan.realtor/#testimonials">Yorumlar</a><a href="../../blog/tr.html">Blog</a><a href="https://kan.realtor/#about">Hakkında</a><a href="https://kan.realtor/#contact">İletişim</a><a href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737">Kiralama Başvurusu</a></nav>
   <nav class="fprof"><a href="https://www.realtor.com/realestateagents/6520c5af4d827819b1640b9f" target="_blank" rel="noopener">Realtor.com</a><a href="https://www.homes.com/real-estate-agents/bayram-kan/wkzg5ek/" target="_blank" rel="noopener">Homes.com</a><a href="https://www.coldwellbanker.com/pa/pittsburgh/agents/bayram-onder-kan/aid-P00200000GMuX71NMu0PDgRNKFiZeBVDSiAI7yPA" target="_blank" rel="noopener">Coldwell Banker</a></nav>
   <div class="fcopy">© 2026 Bayram Önder Kan · Coldwell Banker Realty · Eşit Konut Fırsatı ⌂<br>
-    Güvenilir olduğu düşünülen ancak garanti edilmeyen bilgiler. Güncellendi 2026-06-21.</div>
+    Bilgiler güvenilir olarak kabul edilir ancak garantili değildir. Güncellendi 2026-06-21.</div>
 </footer>
 <nav class="anav" id="anav">
   <a class="brand" href="https://kan.realtor/">Bayram Önder <i>KAN</i></a>
   <button class="anavtoggle" aria-label="Menu" onclick="document.getElementById('anav').classList.toggle('open')">☰</button>
-  <div class="amenu"><a href="https://kan.realtor/#search">Ev Ara</a><a href="https://kan.realtor/#listings">Benim İlanlarım</a><a href="https://kan.realtor/#neighborhoods">Bölgeler</a><a href="https://kan.realtor/#about">Hakkında</a><a href="https://kan.realtor/#tools">Araçlar</a>
+  <div class="amenu"><a href="https://kan.realtor/#search">Ev Ara</a><a href="https://kan.realtor/#listings">Benim İlanlarım</a><a href="../../neighborhoods/tr.html">Bölgeler</a><a href="../../blog/tr.html">Blog</a><a href="https://kan.realtor/#about">Hakkında</a><a href="https://kan.realtor/#tools">Araçlar</a>
     <a class="rental" href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737" target="_blank" rel="noopener">Kiralama Başvurusu</a>
     <a class="cta" href="https://kan.realtor/#contact">İletişim</a>
   </div>

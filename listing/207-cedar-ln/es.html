@@ -118,6 +118,24 @@
   .langtoggle a.on { background:var(--gold); color:var(--deep); }
   .langtoggle a:not(.on):hover { color:var(--gold-soft); }
   @media (max-width:900px) { .langtoggle { bottom:86px; } }
+  /* ── neighborhood section ── */
+  .nbhd { margin-top:10px; }
+  .nbhd .nsub { font-family:var(--serif); color:var(--brand); font-size:19px; font-weight:600; margin:22px 0 6px; }
+  .nstats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:2px; background:#e2e8f0;
+    border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; margin:6px 0 18px; }
+  .nstat { background:#fff; padding:12px 14px; }
+  .nstat b { display:block; font-size:19px; color:var(--brand); font-weight:700; }
+  .nstat span { font-size:11px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
+  .nbhd-more { display:inline-block; margin-top:10px; color:var(--brand); font-weight:700; font-size:14px; }
+  /* ── neighborhoods index ── */
+  .ngrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+  .ncard { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:16px 18px; color:inherit;
+    box-shadow:0 1px 3px rgba(2,6,23,.06); }
+  .ncard:hover { box-shadow:0 4px 14px rgba(2,6,23,.14); }
+  .ncard-nm { font-family:var(--serif); color:var(--brand); font-size:21px; font-weight:600; }
+  .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
+  .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
+  .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
 </style></head><body>
 <div class="cbbar">
   <a class="cblogo" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Coldwell Banker"
@@ -125,7 +143,7 @@
   <nav class="cbnav"><a href="https://kan.realtor/ab/3145525/about-coldwell-banker">Acerca de Coldwell Banker</a><a href="https://kan.realtor/ab/3145525/cbgl">Coldwell Banker Global Luxury</a><a class="acct" href="https://kan.realtor/" aria-label="Account"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-5 0-9 2.5-9 6v2h18v-2c0-3.5-4-6-9-6z"/></svg></a></nav>
 </div>
 <main>
-<a href="../../es.html" style="font-family:var(--ui);font-size:13px;color:var(--brand)">← Todos los listados</a>
+<a href="../../es.html" style="font-family:var(--ui);font-size:13px;color:var(--brand)">← Todos los anuncios</a>
 <h1 style="margin-bottom:2px">207 Cedar Ln</h1>
 <div class="price" style="font-size:25px;margin-bottom:14px">
   <span class="badge " style="position:static;margin-left:10px">Próximamente</span></div>
@@ -141,23 +159,32 @@
 <div class="lightbox" id="lb" onclick="lbClose()"><img id="lbImg" src="photos/000.png" alt="photo"></div>
     
     
-    <h2 class="sect">Tour en Video</h2>
+    <h2 class="sect">Tour en video</h2>
 <div class="vid" id="vid" onclick="playVid('rYNpDfDNM2c')">
   <img src="https://i.ytimg.com/vi/rYNpDfDNM2c/hqdefault.jpg" alt="video tour" loading="lazy">
   <div class="play"><span>▶</span></div>
 </div>
-    <h2 class='sect'>Detalles de la propiedad</h2><div class='dgrid'><div><b>Estado</b>Próximamente</div><div><b>Tipo</b>Casa móvil</div><div><b>Distrito escolar</b>Mars Area</div><div><b>Estacionamiento</b>2</div><div><b>Cuotas de HOA</b>$550</div></div>
+    <h2 class='sect'>Detalles de la Propiedad</h2><div class='dgrid'><div><b>Estado</b>Próximamente</div><div><b>Tipo</b>Casa Móvil</div><div><b>Distrito escolar</b>Mars Area</div><div><b>Estacionamiento</b>2</div><div><b>Cuotas de HOA</b>$550</div></div>
     <h2 class="sect">Ubicación</h2>
 <div class="mapbox"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
   src="https://www.google.com/maps?q=207%20Cedar%20Ln%2C%20Pittsburgh%20area%2C%20PA&output=embed"></iframe></div>
-    <h2 class='sect'>Vivir en Valencia, PA</h2><p style='margin:0 0 12px;line-height:1.65;font-size:15px'>Valencia es una encantadora comunidad residencial en el corazón del área de Pittsburgh, conocida por sus calles arboladas y ubicación conveniente. Los residentes disfrutan de fácil acceso a parques locales y espacios verdes perfectos para actividades al aire libre, mientras que los vecindarios transitables invitan a explorar tiendas y restaurantes cercanos. El área ofrece un equilibrio atractivo entre la comodidad suburbana y la proximidad a las amenidades urbanas, lo que la convierte en una opción atractiva para quienes buscan tanto un entorno tranquilo como una vida conectada.</p><p style='margin:0 0 12px;line-height:1.65;font-size:15px'>El viaje a los distritos comerciales de Pittsburgh es directo, y la posición central de Valencia proporciona acceso conveniente a carreteras principales y destinos regionales. Los puntos de referencia locales y lugares de reunión contribuyen al carácter acogedor de la comunidad, creando un ambiente donde la belleza natural y la accesibilidad del área mejoran la vida cotidiana. Ya sea disfrutando de caminatas matutinas por el vecindario o visitando opciones cercanas de restaurantes y compras, Valencia ofrece el tipo de estilo de vida que atrae a quienes valoran tanto la conveniencia como la comunidad.</p>
+    <div class="nbhd">
+  <h2 class="sect">Vivir en Valencia</h2>
+  <div class='nstats' aria-label="Datos rápidos"><div class='nstat'><b>~540 (municipio)</b><span>Población</span></div><div class='nstat'><b>Butler County</b><span>Condado</span></div><div class='nstat'><b>Mars Area (muy valorado)</b><span>Distrito escolar</span></div><div class='nstat'><b>~$360K–$410K</b><span>Valor medio de vivienda (16059)</span></div><div class='nstat'><b>~$110,800</b><span>Ingreso familiar medio</span></div><div class='nstat'><b>~90%</b><span>Tasa de propiedad</span></div><div class='nstat'><b>~45</b><span>Edad media</span></div></div>
+  <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia es un pequeño y acogedor municipio del condado de Butler, a unos 40 km al norte del centro de Pittsburgh. Combina un entorno tranquilo y semirrural con un acceso rápido al corredor de la Ruta 228 / I-79, una de las zonas de mayor crecimiento de la región. Sus lotes arbolados, las construcciones más nuevas y la cómoda cercanía a Cranberry, Mars y Pittsburgh lo hacen muy popular entre familias y profesionales.</p>
+  <h3 class='nsub'>Escuelas y educación</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia pertenece al distrito escolar de Mars Area, uno de los más valorados de los suburbios del norte, reconocido por su buen nivel académico e instalaciones modernas.</p>
+  <h3 class='nsub'>Salud y compras</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Las compras, la atención médica y los restaurantes están a pocos minutos, en Mars y Cranberry Township, con grandes comercios, supermercados y consultorios médicos de UPMC y AHN sobre el corredor de la Ruta 228.</p>
+  <h3 class='nsub'>Restaurantes, parques y atracciones</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Los residentes disfrutan de parques y senderos cercanos, el encanto de pueblo pequeño de Mars y Valencia, y la cercanía a North Park y al golf, la recreación y la gastronomía de la zona de Cranberry.</p>
+  <h3 class='nsub'>Perspectiva de inversión</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia está en un distrito escolar muy solicitado y un corredor en crecimiento, lo que históricamente ha sostenido una demanda estable. Como siempre, el estado, el terreno y la ubicación exacta varían según la propiedad: una visita, una inspección y un agente local con experiencia son la mejor forma de evaluar su valor real.</p>
+  <a class='nbhd-more' href='../../neighborhoods/es.html'>Ver todos los vecindarios →</a>
+</div>
     
   </div>
   <div class="agentcard">
   <img src="../../assets/headshot.jpg" alt="Bayram Onder Kan" onerror="this.style.display='none'">
   <div class="nm">Bayram Onder Kan</div>
   <div class="tg">REALTOR® · Coldwell Banker Realty · Pittsburgh, PA</div>
-  <a class='btn ghost' href='tel:+14126890035'>📞 412-689-0035</a><a class='btn ghost' href='sms:+14126890035'>💬 Envíame un mensaje</a><a class='btn ghost' href='mailto:bayram.kan@cbrealty.com?subject=Inquiry%3A%20207%20Cedar%20Ln'>✉ Correo electrónico</a>
+  <a class='btn ghost' href='tel:+14126890035'>📞 412-689-0035</a><a class='btn ghost' href='sms:+14126890035'>💬 Envíame un mensaje</a><a class='btn ghost' href='mailto:bayram.kan@cbrealty.com?subject=Inquiry%3A%20207%20Cedar%20Ln'>✉ Correo Electrónico</a>
 </div>
 </div>
 <script>
@@ -188,16 +215,16 @@ mCalc();
 </main>
 <footer>
   <div class="fbrand">Bayram Önder <i>KAN</i></div>
-  <nav class="fnav"><a href="https://kan.realtor/#search">Buscar</a><a href="https://kan.realtor/#listings">Listados</a><a href="https://kan.realtor/#neighborhoods">Áreas</a><a href="https://kan.realtor/#tools">Herramientas</a><a href="https://kan.realtor/#testimonials">Reseñas</a><a href="https://kan.realtor/#blog">Blog</a><a href="https://kan.realtor/#about">Acerca de</a><a href="https://kan.realtor/#contact">Contacto</a><a href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737">Solicitud de Alquiler</a></nav>
+  <nav class="fnav"><a href="https://kan.realtor/#search">Buscar</a><a href="https://kan.realtor/#listings">Propiedades</a><a href="../../neighborhoods/es.html">Áreas</a><a href="https://kan.realtor/#tools">Herramientas</a><a href="https://kan.realtor/#testimonials">Reseñas</a><a href="../../blog/es.html">Blog</a><a href="https://kan.realtor/#about">Acerca de</a><a href="https://kan.realtor/#contact">Contacto</a><a href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737">Solicitud de alquiler</a></nav>
   <nav class="fprof"><a href="https://www.realtor.com/realestateagents/6520c5af4d827819b1640b9f" target="_blank" rel="noopener">Realtor.com</a><a href="https://www.homes.com/real-estate-agents/bayram-kan/wkzg5ek/" target="_blank" rel="noopener">Homes.com</a><a href="https://www.coldwellbanker.com/pa/pittsburgh/agents/bayram-onder-kan/aid-P00200000GMuX71NMu0PDgRNKFiZeBVDSiAI7yPA" target="_blank" rel="noopener">Coldwell Banker</a></nav>
-  <div class="fcopy">© 2026 Bayram Önder Kan · Coldwell Banker Realty · Igualdad de oportunidades en vivienda ⌂<br>
-    La información se considera confiable pero no garantizada. Actualizado 2026-06-21.</div>
+  <div class="fcopy">© 2026 Bayram Önder Kan · Coldwell Banker Realty · Igualdad de Oportunidades en la Vivienda ⌂<br>
+    Información considerada confiable pero no garantizada. Actualizado 2026-06-21.</div>
 </footer>
 <nav class="anav" id="anav">
   <a class="brand" href="https://kan.realtor/">Bayram Önder <i>KAN</i></a>
   <button class="anavtoggle" aria-label="Menu" onclick="document.getElementById('anav').classList.toggle('open')">☰</button>
-  <div class="amenu"><a href="https://kan.realtor/#search">Buscar Casas</a><a href="https://kan.realtor/#listings">Mis listados</a><a href="https://kan.realtor/#neighborhoods">Áreas</a><a href="https://kan.realtor/#about">Acerca de</a><a href="https://kan.realtor/#tools">Herramientas</a>
-    <a class="rental" href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737" target="_blank" rel="noopener">Solicitud de Alquiler</a>
+  <div class="amenu"><a href="https://kan.realtor/#search">Buscar Viviendas</a><a href="https://kan.realtor/#listings">Mis Propiedades</a><a href="../../neighborhoods/es.html">Áreas</a><a href="../../blog/es.html">Blog</a><a href="https://kan.realtor/#about">Acerca de</a><a href="https://kan.realtor/#tools">Herramientas</a>
+    <a class="rental" href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737" target="_blank" rel="noopener">Solicitud de alquiler</a>
     <a class="cta" href="https://kan.realtor/#contact">Contacto</a>
   </div>
 </nav>

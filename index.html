@@ -111,6 +111,24 @@
   .langtoggle a.on { background:var(--gold); color:var(--deep); }
   .langtoggle a:not(.on):hover { color:var(--gold-soft); }
   @media (max-width:900px) { .langtoggle { bottom:86px; } }
+  /* ── neighborhood section ── */
+  .nbhd { margin-top:10px; }
+  .nbhd .nsub { font-family:var(--serif); color:var(--brand); font-size:19px; font-weight:600; margin:22px 0 6px; }
+  .nstats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:2px; background:#e2e8f0;
+    border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; margin:6px 0 18px; }
+  .nstat { background:#fff; padding:12px 14px; }
+  .nstat b { display:block; font-size:19px; color:var(--brand); font-weight:700; }
+  .nstat span { font-size:11px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
+  .nbhd-more { display:inline-block; margin-top:10px; color:var(--brand); font-weight:700; font-size:14px; }
+  /* ── neighborhoods index ── */
+  .ngrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+  .ncard { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:16px 18px; color:inherit;
+    box-shadow:0 1px 3px rgba(2,6,23,.06); }
+  .ncard:hover { box-shadow:0 4px 14px rgba(2,6,23,.14); }
+  .ncard-nm { font-family:var(--serif); color:var(--brand); font-size:21px; font-weight:600; }
+  .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
+  .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
+  .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
 </style></head><body>
 <div class="cbbar">
   <a class="cblogo" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Coldwell Banker"
@@ -218,7 +236,7 @@
 </main>
 <footer>
   <div class="fbrand">Bayram Önder <i>KAN</i></div>
-  <nav class="fnav"><a href="https://kan.realtor/#search">Search</a><a href="https://kan.realtor/#listings">Listings</a><a href="https://kan.realtor/#neighborhoods">Areas</a><a href="https://kan.realtor/#tools">Tools</a><a href="https://kan.realtor/#testimonials">Reviews</a><a href="https://kan.realtor/#blog">Blog</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#contact">Contact</a><a href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737">Rental Application</a></nav>
+  <nav class="fnav"><a href="https://kan.realtor/#search">Search</a><a href="https://kan.realtor/#listings">Listings</a><a href="neighborhoods/">Areas</a><a href="https://kan.realtor/#tools">Tools</a><a href="https://kan.realtor/#testimonials">Reviews</a><a href="blog/">Blog</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#contact">Contact</a><a href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737">Rental Application</a></nav>
   <nav class="fprof"><a href="https://www.realtor.com/realestateagents/6520c5af4d827819b1640b9f" target="_blank" rel="noopener">Realtor.com</a><a href="https://www.homes.com/real-estate-agents/bayram-kan/wkzg5ek/" target="_blank" rel="noopener">Homes.com</a><a href="https://www.coldwellbanker.com/pa/pittsburgh/agents/bayram-onder-kan/aid-P00200000GMuX71NMu0PDgRNKFiZeBVDSiAI7yPA" target="_blank" rel="noopener">Coldwell Banker</a></nav>
   <div class="fcopy">© 2026 Bayram Önder Kan · Coldwell Banker Realty · Equal Housing Opportunity ⌂<br>
     Information deemed reliable but not guaranteed. Updated 2026-06-21.</div>
@@ -226,7 +244,7 @@
 <nav class="anav" id="anav">
   <a class="brand" href="https://kan.realtor/">Bayram Önder <i>KAN</i></a>
   <button class="anavtoggle" aria-label="Menu" onclick="document.getElementById('anav').classList.toggle('open')">☰</button>
-  <div class="amenu"><a href="https://kan.realtor/#search">Search Homes</a><a href="https://kan.realtor/#listings">My Listings</a><a href="https://kan.realtor/#neighborhoods">Areas</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#tools">Tools</a>
+  <div class="amenu"><a href="https://kan.realtor/#search">Search Homes</a><a href="https://kan.realtor/#listings">My Listings</a><a href="neighborhoods/">Areas</a><a href="blog/">Blog</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#tools">Tools</a>
     <a class="rental" href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737" target="_blank" rel="noopener">Rental Application</a>
     <a class="cta" href="https://kan.realtor/#contact">Contact</a>
   </div>

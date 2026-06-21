@@ -118,6 +118,24 @@
   .langtoggle a.on { background:var(--gold); color:var(--deep); }
   .langtoggle a:not(.on):hover { color:var(--gold-soft); }
   @media (max-width:900px) { .langtoggle { bottom:86px; } }
+  /* ── neighborhood section ── */
+  .nbhd { margin-top:10px; }
+  .nbhd .nsub { font-family:var(--serif); color:var(--brand); font-size:19px; font-weight:600; margin:22px 0 6px; }
+  .nstats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:2px; background:#e2e8f0;
+    border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; margin:6px 0 18px; }
+  .nstat { background:#fff; padding:12px 14px; }
+  .nstat b { display:block; font-size:19px; color:var(--brand); font-weight:700; }
+  .nstat span { font-size:11px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
+  .nbhd-more { display:inline-block; margin-top:10px; color:var(--brand); font-weight:700; font-size:14px; }
+  /* ── neighborhoods index ── */
+  .ngrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+  .ncard { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:16px 18px; color:inherit;
+    box-shadow:0 1px 3px rgba(2,6,23,.06); }
+  .ncard:hover { box-shadow:0 4px 14px rgba(2,6,23,.14); }
+  .ncard-nm { font-family:var(--serif); color:var(--brand); font-size:21px; font-weight:600; }
+  .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
+  .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
+  .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
 </style></head><body>
 <div class="cbbar">
   <a class="cblogo" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Coldwell Banker"
@@ -146,7 +164,16 @@
     <h2 class="sect">Location</h2>
 <div class="mapbox"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
   src="https://www.google.com/maps?q=3021%20Zephyr%20Ave%2C%20Pittsburgh%20area%2C%20PA&output=embed"></iframe></div>
-    
+    <div class="nbhd">
+  <h2 class="sect">Living in Sheraden</h2>
+  <div class='nstats' aria-label="Quick facts"><div class='nstat'><b>~7,800</b><span>Population</span></div><div class='nstat'><b>~$86K–$95K</b><span>Median sale price</span></div><div class='nstat'><b>~$54,300</b><span>Median household income</span></div><div class='nstat'><b>~38</b><span>Median age</span></div><div class='nstat'><b>Pittsburgh Public</b><span>School district</span></div><div class='nstat'><b>~6 mi</b><span>Near Downtown</span></div><div class='nstat'><b>1940s</b><span>Median home built</span></div></div>
+  <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Sheraden is a historic streetcar suburb in Pittsburgh&#x27;s West End, roughly 6 miles from Downtown. Its hilly streets are lined with early-1900s homes — the typical house here dates to the 1940s — and low prices plus a quick city commute have drawn a wave of new residents and investors in recent years.</p>
+  <h3 class='nsub'>Schools &amp; Education</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Sheraden is part of Pittsburgh Public Schools; neighborhood children are served by schools including Pittsburgh Langley K-8 and Pittsburgh Brashear High School. Confirm the current feeder pattern for the exact address.</p>
+  <h3 class='nsub'>Healthcare &amp; Shopping</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Everyday shopping and services are nearby in the West End and along the Steubenville Pike (Route 60) retail corridor, with Downtown&#x27;s hospitals and amenities a short drive away.</p>
+  <h3 class='nsub'>Dining, Parks &amp; Attractions</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Sheraden Park is the neighborhood&#x27;s green anchor, with trails, ballfields and a long-term city plan to expand access to Chartiers Creek. The West End Overlook, with its sweeping skyline view, is close by.</p>
+  <h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Sheraden&#x27;s affordability and proximity to Downtown have made it a genuine target for buyers and investors, but the housing stock is old and conditions vary street to street. Budget for inspection and updates, study the specific block, and lean on an agent who knows the West End before committing.</p>
+  <a class='nbhd-more' href='../../neighborhoods/'>See all neighborhoods →</a>
+</div>
     <h2 class="sect">Estimate Your Payment</h2>
 <div class="calc">
   <div class="row">
@@ -194,7 +221,7 @@ mCalc();
 </main>
 <footer>
   <div class="fbrand">Bayram Önder <i>KAN</i></div>
-  <nav class="fnav"><a href="https://kan.realtor/#search">Search</a><a href="https://kan.realtor/#listings">Listings</a><a href="https://kan.realtor/#neighborhoods">Areas</a><a href="https://kan.realtor/#tools">Tools</a><a href="https://kan.realtor/#testimonials">Reviews</a><a href="https://kan.realtor/#blog">Blog</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#contact">Contact</a><a href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737">Rental Application</a></nav>
+  <nav class="fnav"><a href="https://kan.realtor/#search">Search</a><a href="https://kan.realtor/#listings">Listings</a><a href="../../neighborhoods/">Areas</a><a href="https://kan.realtor/#tools">Tools</a><a href="https://kan.realtor/#testimonials">Reviews</a><a href="../../blog/">Blog</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#contact">Contact</a><a href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737">Rental Application</a></nav>
   <nav class="fprof"><a href="https://www.realtor.com/realestateagents/6520c5af4d827819b1640b9f" target="_blank" rel="noopener">Realtor.com</a><a href="https://www.homes.com/real-estate-agents/bayram-kan/wkzg5ek/" target="_blank" rel="noopener">Homes.com</a><a href="https://www.coldwellbanker.com/pa/pittsburgh/agents/bayram-onder-kan/aid-P00200000GMuX71NMu0PDgRNKFiZeBVDSiAI7yPA" target="_blank" rel="noopener">Coldwell Banker</a></nav>
   <div class="fcopy">© 2026 Bayram Önder Kan · Coldwell Banker Realty · Equal Housing Opportunity ⌂<br>
     Information deemed reliable but not guaranteed. Updated 2026-06-21.</div>
@@ -202,7 +229,7 @@ mCalc();
 <nav class="anav" id="anav">
   <a class="brand" href="https://kan.realtor/">Bayram Önder <i>KAN</i></a>
   <button class="anavtoggle" aria-label="Menu" onclick="document.getElementById('anav').classList.toggle('open')">☰</button>
-  <div class="amenu"><a href="https://kan.realtor/#search">Search Homes</a><a href="https://kan.realtor/#listings">My Listings</a><a href="https://kan.realtor/#neighborhoods">Areas</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#tools">Tools</a>
+  <div class="amenu"><a href="https://kan.realtor/#search">Search Homes</a><a href="https://kan.realtor/#listings">My Listings</a><a href="../../neighborhoods/">Areas</a><a href="../../blog/">Blog</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#tools">Tools</a>
     <a class="rental" href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737" target="_blank" rel="noopener">Rental Application</a>
     <a class="cta" href="https://kan.realtor/#contact">Contact</a>
   </div>

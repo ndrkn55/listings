@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sheraden, Pittsburgh — Bayram Onder Kan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root { --brand:#012169; --deep:#0a1733; --gold:#c8a45c; --gold-soft:#e6cf9e;
+           --serif:'Cormorant Garamond',Georgia,serif; --ui:'DM Sans',system-ui,Arial,sans-serif; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:var(--ui); color:#1a1a1a; background:#fdfdfd; padding-top:60px; padding-bottom:78px; }
+  a { text-decoration:none; }
+  /* ── Coldwell Banker corporate bar (fixed top) ── */
+  .cbbar { position:fixed; top:0; left:0; right:0; height:60px; z-index:200; background:var(--brand);
+    display:flex; align-items:center; padding:0 26px; }
+  .cbbar .cblogo img { height:32px; display:block; }
+  .cbbar .cbnav { margin-left:auto; display:flex; align-items:center; gap:34px; }
+  .cbbar .cbnav a { color:#fff; font-size:13px; font-weight:500; letter-spacing:.6px; text-transform:uppercase; }
+  .cbbar .cbnav a:hover { color:var(--gold-soft); }
+  .cbbar .acct { display:flex; align-items:center; color:#fff; }
+  /* ── agent nav (fixed bottom) ── */
+  .anav { position:fixed; bottom:0; left:0; right:0; min-height:78px; z-index:200; background:rgba(13,27,42,.97);
+    display:flex; align-items:center; padding:0 30px; }
+  .anav .brand { font-family:var(--serif); color:var(--gold); font-size:23px; font-weight:600; letter-spacing:.5px; }
+  .anav .brand i { font-style:italic; }
+  .anav .amenu { margin-left:auto; display:flex; align-items:center; gap:30px; }
+  .anav .amenu a { color:#fff; font-size:13px; font-weight:500; letter-spacing:.7px; text-transform:uppercase; }
+  .anav .amenu a:hover { color:var(--gold-soft); }
+  .anav .amenu a.rental { border:1px solid rgba(255,255,255,.55); padding:10px 18px; }
+  .anav .amenu a.rental:hover { border-color:var(--gold); color:var(--gold); }
+  .anav .amenu a.cta { background:var(--gold); color:var(--deep); font-weight:700; padding:11px 22px; }
+  .anav .amenu a.cta:hover { background:var(--gold-soft); color:var(--deep); }
+  .anav .anavtoggle { display:none; margin-left:auto; background:none; border:0; color:#fff; font-size:24px; cursor:pointer; }
+  @media (max-width:900px) {
+    .anav .anavtoggle { display:block; }
+    .anav .amenu { position:absolute; bottom:78px; left:0; right:0; flex-direction:column; align-items:stretch; gap:0;
+      background:rgba(13,27,42,.99); margin:0; display:none; }
+    .anav.open .amenu { display:flex; }
+    .anav .amenu a { padding:15px 26px; border-top:1px solid rgba(255,255,255,.12); }
+    .anav .amenu a.rental, .anav .amenu a.cta { border-radius:0; text-align:center; }
+  }
+  main { max-width:1060px; margin:0 auto; padding:26px 18px 50px; }
+  h1 { font-family:var(--serif); color:var(--brand); font-size:34px; font-weight:600; margin:8px 0 18px; }
+  h2.sect { font-family:var(--serif); color:var(--brand); font-size:26px; font-weight:600; border-bottom:2px solid var(--gold); padding-bottom:6px; margin:30px 0 14px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; }
+  .card { background:#fff; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; text-decoration:none; color:inherit; display:block; box-shadow:0 1px 3px rgba(2,6,23,.06); }
+  .card:hover { box-shadow:0 4px 14px rgba(2,6,23,.14); }
+  .card .ph { height:200px; background:#e2e8f0 center/cover no-repeat; position:relative; }
+  .badge { position:absolute; top:10px; left:10px; background:var(--brand); color:#fff; font-size:11px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; padding:4px 10px; border-radius:4px; font-family:var(--ui); }
+  .badge.sold { background:#7f1d1d; } .badge.pend { background:#b45309; }
+  .card .nfo { padding:12px 14px; }
+  .price { font-size:19px; font-weight:700; color:var(--brand); }
+  .addr { font-size:14px; margin-top:2px; }
+  .facts { font-size:12px; color:#64748b; margin-top:6px; font-family:var(--ui); }
+  .btn { display:inline-block; background:var(--brand); color:#fff; text-decoration:none; padding:11px 22px; border-radius:0; font-family:var(--ui); font-size:14px; font-weight:700; }
+  .btn.ghost { background:#fff; color:var(--brand); border:1px solid var(--brand); }
+  .gallery { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:10px; margin:16px 0; }
+  .gallery img { width:100%; height:170px; object-fit:cover; border-radius:8px; }
+  .hero { width:100%; max-height:440px; object-fit:cover; border-radius:10px; }
+  .ohbox { background:#f5f7fb; border:1px solid #d8dee9; border-left:3px solid var(--brand); border-radius:6px; padding:12px 16px; margin:14px 0; font-family:var(--ui); font-size:14px; }
+  /* ── listing detail layout ── */
+  .lay { display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:26px; align-items:start; }
+  .lay > div { min-width:0; }
+  @media (max-width:820px) { .lay { grid-template-columns:minmax(0,1fr); } }
+  .agentcard { position:sticky; top:76px; background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:20px; text-align:center; font-family:var(--ui); box-shadow:0 2px 8px rgba(2,6,23,.08); }
+  .agentcard img { width:88px; height:88px; border-radius:50%; object-fit:cover; border:3px solid var(--brand); }
+  .agentcard .nm { font-weight:700; color:var(--brand); font-size:16px; margin-top:8px; }
+  .agentcard .tg { font-size:11px; color:#64748b; margin:2px 0 12px; }
+  .agentcard .btn { display:block; margin:8px 0; }
+  .carousel { position:relative; border-radius:10px; overflow:hidden; background:#0f1e40; }
+  .carousel img.main { width:100%; height:430px; object-fit:cover; display:block; cursor:zoom-in; }
+  .carousel .nav { position:absolute; top:50%; transform:translateY(-50%); background:rgba(10,23,51,.65); color:#fff; border:0; font-size:26px; padding:8px 14px; cursor:pointer; border-radius:6px; }
+  .carousel .prev { left:10px; } .carousel .next { right:10px; }
+  .carousel .cnt { position:absolute; bottom:10px; right:12px; background:rgba(10,23,51,.7); color:#fff; font-size:12px; padding:3px 10px; border-radius:10px; font-family:var(--ui); }
+  .thumbs { display:flex; gap:8px; overflow-x:auto; margin-top:8px; padding-bottom:4px; }
+  .thumbs img { width:92px; height:64px; object-fit:cover; border-radius:6px; cursor:pointer; opacity:.6; flex:0 0 auto; }
+  .thumbs img.on { opacity:1; outline:3px solid var(--brand); }
+  .lightbox { position:fixed; inset:0; background:rgba(5,10,25,.93); display:none; align-items:center; justify-content:center; z-index:300; cursor:zoom-out; }
+  .lightbox.open { display:flex; }
+  .lightbox img { max-width:94vw; max-height:92vh; object-fit:contain; }
+  .featlist { columns:2; column-gap:30px; list-style:none; padding:0; font-family:var(--ui); font-size:14px; }
+  .featlist li { padding:5px 0; break-inside:avoid; }
+  .featlist li::before { content:'✓ '; color:var(--brand); font-weight:700; }
+  .dgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:2px; background:#e2e8f0; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; font-family:var(--ui); }
+  .dgrid div { background:#fff; padding:10px 14px; font-size:14px; }
+  .dgrid b { display:block; font-size:11px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; font-weight:700; }
+  .vid { position:relative; border-radius:10px; overflow:hidden; background:#000; aspect-ratio:16/9; cursor:pointer; }
+  .vid img { width:100%; height:100%; object-fit:cover; opacity:.85; }
+  .vid .play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+  .vid .play span { background:rgba(1,33,105,.85); color:#fff; border-radius:50%; width:72px; height:72px; display:flex; align-items:center; justify-content:center; font-size:30px; padding-left:6px; }
+  .vid iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .mapbox iframe { width:100%; height:330px; border:0; border-radius:10px; }
+  .calc { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:16px 18px; font-family:var(--ui); max-width:520px; }
+  .calc label { display:block; font-size:11px; font-weight:700; color:#64748b; text-transform:uppercase; margin:8px 0 3px; }
+  .calc input { width:100%; padding:8px; border:1px solid #cbd5e1; border-radius:6px; font-size:14px; }
+  .calc .row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+  .calc .out { font-size:22px; font-weight:700; color:var(--brand); margin-top:12px; }
+  .calc .sub { font-size:11px; color:#94a3b8; margin-top:4px; }
+  footer { background:#080f18; color:#cbd5e1; padding:34px 22px 28px; text-align:center; font-family:var(--ui); }
+  footer .fbrand { font-family:var(--serif); color:var(--gold); font-size:22px; font-weight:600; margin-bottom:14px; }
+  footer .fnav, footer .fprof { display:flex; flex-wrap:wrap; justify-content:center; gap:8px 22px; margin-bottom:12px; }
+  footer .fnav a { color:#cbd5e1; font-size:13px; }
+  footer .fprof a { color:var(--gold-soft); font-size:13px; }
+  footer .fnav a:hover, footer .fprof a:hover { color:#fff; }
+  footer .fcopy { font-size:11px; color:#8a97aa; margin-top:10px; line-height:1.6; }
+  /* ── floating language toggle (clear of both fixed bars) ── */
+  .langtoggle { position:fixed; left:16px; bottom:94px; z-index:150; display:flex;
+    background:rgba(13,27,42,.97); border:1px solid var(--gold); border-radius:30px; overflow:hidden;
+    box-shadow:0 2px 10px rgba(2,6,23,.35); }
+  .langtoggle a { padding:7px 13px; color:#fff; font-size:12px; font-weight:700; letter-spacing:.5px; }
+  .langtoggle a.on { background:var(--gold); color:var(--deep); }
+  .langtoggle a:not(.on):hover { color:var(--gold-soft); }
+  @media (max-width:900px) { .langtoggle { bottom:86px; } }
+  /* ── neighborhood section ── */
+  .nbhd { margin-top:10px; }
+  .nbhd .nsub { font-family:var(--serif); color:var(--brand); font-size:19px; font-weight:600; margin:22px 0 6px; }
+  .nstats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:2px; background:#e2e8f0;
+    border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; margin:6px 0 18px; }
+  .nstat { background:#fff; padding:12px 14px; }
+  .nstat b { display:block; font-size:19px; color:var(--brand); font-weight:700; }
+  .nstat span { font-size:11px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
+  .nbhd-more { display:inline-block; margin-top:10px; color:var(--brand); font-weight:700; font-size:14px; }
+  /* ── neighborhoods index ── */
+  .ngrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+  .ncard { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:16px 18px; color:inherit;
+    box-shadow:0 1px 3px rgba(2,6,23,.06); }
+  .ncard:hover { box-shadow:0 4px 14px rgba(2,6,23,.14); }
+  .ncard-nm { font-family:var(--serif); color:var(--brand); font-size:21px; font-weight:600; }
+  .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
+  .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
+  .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
+</style></head><body>
+<div class="cbbar">
+  <a class="cblogo" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Coldwell Banker"
+     onerror="this.onerror=null;this.src='../../assets/logo.png'"></a>
+  <nav class="cbnav"><a href="https://kan.realtor/ab/3145525/about-coldwell-banker">Coldwell Banker Hakkında</a><a href="https://kan.realtor/ab/3145525/cbgl">Coldwell Banker Global Luxury</a><a class="acct" href="https://kan.realtor/" aria-label="Account"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-5 0-9 2.5-9 6v2h18v-2c0-3.5-4-6-9-6z"/></svg></a></nav>
+</div>
+<main>
+<a href="../tr.html" style="font-family:var(--ui);font-size:13px;color:var(--brand)">← Bölgeler</a>
+<h1 style="margin-bottom:8px">Sheraden, Pittsburgh</h1>
+<div class="nbhd">
+  <h2 class="sect">Sheraden&#x27;da Yaşamak</h2>
+  <div class='nstats' aria-label="Kısa bilgiler"><div class='nstat'><b>~7.800</b><span>Nüfus</span></div><div class='nstat'><b>~$86K–$95K</b><span>Ortalama satış fiyatı</span></div><div class='nstat'><b>~$54.300</b><span>Ortalama hane geliri</span></div><div class='nstat'><b>~38</b><span>Ortalama yaş</span></div><div class='nstat'><b>Pittsburgh Public</b><span>Okul bölgesi</span></div><div class='nstat'><b>~10 km</b><span>Merkeze uzaklık</span></div><div class='nstat'><b>1940&#x27;lar</b><span>Ortalama yapım yılı</span></div></div>
+  <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Sheraden, Pittsburgh&#x27;un West End bölgesinde, şehir merkezine yaklaşık 10 km uzaklıkta tarihi bir tramvay banliyösüdür. Yokuşlu sokakları 1900&#x27;lerin başına ait evlerle çevrilidir —tipik ev 1940&#x27;lardan kalmadır— ve düşük fiyatlar ile şehre yakınlık, son yıllarda yeni sakinleri ve yatırımcıları buraya çekmiştir.</p>
+  <h3 class='nsub'>Okullar ve eğitim</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Sheraden, Pittsburgh Public Schools&#x27;a bağlıdır; mahalle çocukları Pittsburgh Langley K-8 ve Pittsburgh Brashear High School gibi okullara gider. İlgili adrese atanmış okulları teyit etmek önerilir.</p>
+  <h3 class='nsub'>Sağlık ve alışveriş</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Günlük alışveriş ve hizmetler West End&#x27;de ve Steubenville Pike (Route 60) ticaret koridoru boyunca yakındır; şehir merkezinin hastaneleri ve olanakları kısa bir sürüş mesafesindedir.</p>
+  <h3 class='nsub'>Restoranlar, parklar ve gezilecek yerler</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Sheraden Parkı, yürüyüş yolları, spor sahaları ve Chartiers Deresi&#x27;ne erişimi genişletmeye yönelik uzun vadeli bir kent planıyla mahallenin yeşil kalbidir. Geniş şehir manzaralı West End Overlook da yakındadır.</p>
+  <h3 class='nsub'>Yatırım görünümü</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Sheraden&#x27;ın uygun fiyatları ve merkeze yakınlığı, onu alıcılar ve yatırımcılar için gerçek bir hedef hâline getirmiştir; ancak konut stoğu eskidir ve durum sokaktan sokağa değişir. Ekspertiz ve yenileme için bütçe ayırın, ilgili sokağı inceleyin ve karar vermeden önce West End&#x27;i tanıyan bir danışmana güvenin.</p>
+  
+</div>
+<h2 class='sect'>Bu bölgedeki ilanlara göz atın</h2><div class='nbhd-listings'><a class="card" href="../../listing/3021-zephyr-ave/tr.html">
+  <div class="ph" style="background-image:url('../../listing/3021-zephyr-ave/photos/000.jpg')"><span class="badge ">Satılık</span></div>
+  <div class="nfo">
+    <div class="price">$125,000</div>
+    <div class="addr">3021 Zephyr Ave</div>
+    <div class="facts">4 bd · 2 ba · 2090 sqft · Müstakil Ev</div>
+  </div></a></div>
+</main>
+<footer>
+  <div class="fbrand">Bayram Önder <i>KAN</i></div>
+  <nav class="fnav"><a href="https://kan.realtor/#search">Ara</a><a href="https://kan.realtor/#listings">İlanlar</a><a href="../../neighborhoods/tr.html">Bölgeler</a><a href="https://kan.realtor/#tools">Araçlar</a><a href="https://kan.realtor/#testimonials">Yorumlar</a><a href="../../blog/tr.html">Blog</a><a href="https://kan.realtor/#about">Hakkında</a><a href="https://kan.realtor/#contact">İletişim</a><a href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737">Kiralama Başvurusu</a></nav>
+  <nav class="fprof"><a href="https://www.realtor.com/realestateagents/6520c5af4d827819b1640b9f" target="_blank" rel="noopener">Realtor.com</a><a href="https://www.homes.com/real-estate-agents/bayram-kan/wkzg5ek/" target="_blank" rel="noopener">Homes.com</a><a href="https://www.coldwellbanker.com/pa/pittsburgh/agents/bayram-onder-kan/aid-P00200000GMuX71NMu0PDgRNKFiZeBVDSiAI7yPA" target="_blank" rel="noopener">Coldwell Banker</a></nav>
+  <div class="fcopy">© 2026 Bayram Önder Kan · Coldwell Banker Realty · Eşit Konut Fırsatı ⌂<br>
+    Bilgiler güvenilir olarak kabul edilir ancak garantili değildir. Güncellendi 2026-06-21.</div>
+</footer>
+<nav class="anav" id="anav">
+  <a class="brand" href="https://kan.realtor/">Bayram Önder <i>KAN</i></a>
+  <button class="anavtoggle" aria-label="Menu" onclick="document.getElementById('anav').classList.toggle('open')">☰</button>
+  <div class="amenu"><a href="https://kan.realtor/#search">Ev Ara</a><a href="https://kan.realtor/#listings">Benim İlanlarım</a><a href="../../neighborhoods/tr.html">Bölgeler</a><a href="../../blog/tr.html">Blog</a><a href="https://kan.realtor/#about">Hakkında</a><a href="https://kan.realtor/#tools">Araçlar</a>
+    <a class="rental" href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737" target="_blank" rel="noopener">Kiralama Başvurusu</a>
+    <a class="cta" href="https://kan.realtor/#contact">İletişim</a>
+  </div>
+</nav>
+<div class="langtoggle" role="navigation" aria-label="Language"><a class="lt" href="index.html">EN</a><a class="lt" href="es.html">ES</a><a class="lt on" href="tr.html">TR</a></div>
+<script data-goatcounter="https://kanrealtor.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body></html>

@@ -118,6 +118,24 @@
   .langtoggle a.on { background:var(--gold); color:var(--deep); }
   .langtoggle a:not(.on):hover { color:var(--gold-soft); }
   @media (max-width:900px) { .langtoggle { bottom:86px; } }
+  /* ── neighborhood section ── */
+  .nbhd { margin-top:10px; }
+  .nbhd .nsub { font-family:var(--serif); color:var(--brand); font-size:19px; font-weight:600; margin:22px 0 6px; }
+  .nstats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:2px; background:#e2e8f0;
+    border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; margin:6px 0 18px; }
+  .nstat { background:#fff; padding:12px 14px; }
+  .nstat b { display:block; font-size:19px; color:var(--brand); font-weight:700; }
+  .nstat span { font-size:11px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
+  .nbhd-more { display:inline-block; margin-top:10px; color:var(--brand); font-weight:700; font-size:14px; }
+  /* ── neighborhoods index ── */
+  .ngrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+  .ncard { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:16px 18px; color:inherit;
+    box-shadow:0 1px 3px rgba(2,6,23,.06); }
+  .ncard:hover { box-shadow:0 4px 14px rgba(2,6,23,.14); }
+  .ncard-nm { font-family:var(--serif); color:var(--brand); font-size:21px; font-weight:600; }
+  .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
+  .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
+  .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
 </style></head><body>
 <div class="cbbar">
   <a class="cblogo" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Coldwell Banker"
@@ -150,7 +168,16 @@
     <h2 class="sect">Location</h2>
 <div class="mapbox"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
   src="https://www.google.com/maps?q=207%20Cedar%20Ln%2C%20Pittsburgh%20area%2C%20PA&output=embed"></iframe></div>
-    <h2 class='sect'>Living in Valencia, PA</h2><p style='margin:0 0 12px;line-height:1.65;font-size:15px'>Valencia is a charming residential community in the heart of the Pittsburgh area, known for its tree-lined streets and convenient location. Residents enjoy easy access to local parks and green spaces perfect for outdoor recreation, while the walkable neighborhoods encourage exploration of nearby shops and restaurants. The area strikes an appealing balance between suburban comfort and proximity to urban amenities, making it an attractive choice for those seeking both peaceful surroundings and connected living.</p><p style='margin:0 0 12px;line-height:1.65;font-size:15px'>The commute to Pittsburgh&#x27;s business districts is straightforward, and Valencia&#x27;s central position provides convenient access to major roadways and regional destinations. Local landmarks and gathering spots contribute to the community&#x27;s welcoming character, creating an environment where the natural beauty and accessibility of the area enhance everyday life. Whether enjoying morning walks through the neighborhood or visiting nearby dining and shopping options, Valencia offers the kind of lifestyle that appeals to those valuing both convenience and community.</p>
+    <div class="nbhd">
+  <h2 class="sect">Living in Valencia</h2>
+  <div class='nstats' aria-label="Quick facts"><div class='nstat'><b>~540 (borough)</b><span>Population</span></div><div class='nstat'><b>Butler County</b><span>County</span></div><div class='nstat'><b>Mars Area (highly rated)</b><span>School district</span></div><div class='nstat'><b>~$360K–$410K</b><span>Median home value (16059)</span></div><div class='nstat'><b>~$110,800</b><span>Median household income</span></div><div class='nstat'><b>~90%</b><span>Homeownership</span></div><div class='nstat'><b>~45</b><span>Median age</span></div></div>
+  <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia is a small, friendly borough in Butler County, about 25 miles north of downtown Pittsburgh. It pairs a quiet, semi-rural setting with quick access to the Route 228 / I-79 corridor — one of the region&#x27;s fastest-growing areas. Tree-lined lots, newer construction and an easy commute toward Cranberry, Mars and Pittsburgh make it popular with families and professionals.</p>
+  <h3 class='nsub'>Schools &amp; Education</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia is served by the Mars Area School District, one of the most highly regarded districts in the northern suburbs, known for strong academics and modern facilities.</p>
+  <h3 class='nsub'>Healthcare &amp; Shopping</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Everyday shopping, healthcare and dining sit minutes away in Mars and Cranberry Township, including major retail, groceries and UPMC and AHN medical offices along the Route 228 corridor.</p>
+  <h3 class='nsub'>Dining, Parks &amp; Attractions</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Residents enjoy nearby parks and trails, the small-town charm of Mars and Valencia, and easy access to North Park and the golf, recreation and dining of the greater Cranberry area.</p>
+  <h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia sits in a sought-after school district and a growth corridor, which has historically supported steady demand. As always, condition, lot and exact location vary property to property — a walkthrough, an inspection and a knowledgeable local agent are the best way to judge real value here.</p>
+  <a class='nbhd-more' href='../../neighborhoods/'>See all neighborhoods →</a>
+</div>
     
   </div>
   <div class="agentcard">
@@ -188,7 +215,7 @@ mCalc();
 </main>
 <footer>
   <div class="fbrand">Bayram Önder <i>KAN</i></div>
-  <nav class="fnav"><a href="https://kan.realtor/#search">Search</a><a href="https://kan.realtor/#listings">Listings</a><a href="https://kan.realtor/#neighborhoods">Areas</a><a href="https://kan.realtor/#tools">Tools</a><a href="https://kan.realtor/#testimonials">Reviews</a><a href="https://kan.realtor/#blog">Blog</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#contact">Contact</a><a href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737">Rental Application</a></nav>
+  <nav class="fnav"><a href="https://kan.realtor/#search">Search</a><a href="https://kan.realtor/#listings">Listings</a><a href="../../neighborhoods/">Areas</a><a href="https://kan.realtor/#tools">Tools</a><a href="https://kan.realtor/#testimonials">Reviews</a><a href="../../blog/">Blog</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#contact">Contact</a><a href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737">Rental Application</a></nav>
   <nav class="fprof"><a href="https://www.realtor.com/realestateagents/6520c5af4d827819b1640b9f" target="_blank" rel="noopener">Realtor.com</a><a href="https://www.homes.com/real-estate-agents/bayram-kan/wkzg5ek/" target="_blank" rel="noopener">Homes.com</a><a href="https://www.coldwellbanker.com/pa/pittsburgh/agents/bayram-onder-kan/aid-P00200000GMuX71NMu0PDgRNKFiZeBVDSiAI7yPA" target="_blank" rel="noopener">Coldwell Banker</a></nav>
   <div class="fcopy">© 2026 Bayram Önder Kan · Coldwell Banker Realty · Equal Housing Opportunity ⌂<br>
     Information deemed reliable but not guaranteed. Updated 2026-06-21.</div>
@@ -196,7 +223,7 @@ mCalc();
 <nav class="anav" id="anav">
   <a class="brand" href="https://kan.realtor/">Bayram Önder <i>KAN</i></a>
   <button class="anavtoggle" aria-label="Menu" onclick="document.getElementById('anav').classList.toggle('open')">☰</button>
-  <div class="amenu"><a href="https://kan.realtor/#search">Search Homes</a><a href="https://kan.realtor/#listings">My Listings</a><a href="https://kan.realtor/#neighborhoods">Areas</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#tools">Tools</a>
+  <div class="amenu"><a href="https://kan.realtor/#search">Search Homes</a><a href="https://kan.realtor/#listings">My Listings</a><a href="../../neighborhoods/">Areas</a><a href="../../blog/">Blog</a><a href="https://kan.realtor/#about">About</a><a href="https://kan.realtor/#tools">Tools</a>
     <a class="rental" href="https://nrt.ntnonline.com/index.cfm?AgentID=3006737" target="_blank" rel="noopener">Rental Application</a>
     <a class="cta" href="https://kan.realtor/#contact">Contact</a>
   </div>
