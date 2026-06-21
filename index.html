@@ -103,6 +103,14 @@
   footer .fprof a { color:var(--gold-soft); font-size:13px; }
   footer .fnav a:hover, footer .fprof a:hover { color:#fff; }
   footer .fcopy { font-size:11px; color:#8a97aa; margin-top:10px; line-height:1.6; }
+  /* ── floating language toggle (clear of both fixed bars) ── */
+  .langtoggle { position:fixed; left:16px; bottom:94px; z-index:150; display:flex;
+    background:rgba(13,27,42,.97); border:1px solid var(--gold); border-radius:30px; overflow:hidden;
+    box-shadow:0 2px 10px rgba(2,6,23,.35); }
+  .langtoggle a { padding:7px 13px; color:#fff; font-size:12px; font-weight:700; letter-spacing:.5px; }
+  .langtoggle a.on { background:var(--gold); color:var(--deep); }
+  .langtoggle a:not(.on):hover { color:var(--gold-soft); }
+  @media (max-width:900px) { .langtoggle { bottom:86px; } }
 </style></head><body>
 <div class="cbbar">
   <a class="cblogo" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Coldwell Banker"
@@ -223,6 +231,7 @@
     <a class="cta" href="https://kan.realtor/#contact">Contact</a>
   </div>
 </nav>
+<div class="langtoggle" role="navigation" aria-label="Language"><a class="lt on" href="index.html">EN</a><a class="lt" href="es.html">ES</a><a class="lt" href="tr.html">TR</a></div>
 <script data-goatcounter="https://kanrealtor.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </body></html>
