@@ -136,6 +136,27 @@
   .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
   .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
   .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
+  /* ── blog ── */
+  .bgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; }
+  .bcard { background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; color:inherit;
+    display:flex; flex-direction:column; box-shadow:0 1px 3px rgba(2,6,23,.06); }
+  .bcard:hover { box-shadow:0 6px 18px rgba(2,6,23,.14); transform:translateY(-2px); transition:.15s; }
+  .bcard .bimg { height:172px; background:center/cover no-repeat;
+    background-image:linear-gradient(135deg,var(--brand),var(--deep)); position:relative; }
+  .bcard .bcat { position:absolute; top:12px; left:12px; background:var(--gold); color:var(--deep);
+    font-size:10px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; padding:4px 10px; border-radius:3px; }
+  .bcard .bbody { padding:15px 17px 18px; display:flex; flex-direction:column; flex:1; }
+  .bcard .btitle { font-family:var(--serif); color:var(--brand); font-size:20px; font-weight:600; line-height:1.25; }
+  .bcard .bex { font-size:13px; color:#475569; margin:8px 0 12px; line-height:1.55; flex:1; }
+  .bcard .bmeta { font-size:11px; color:#94a3b8; text-transform:uppercase; letter-spacing:.5px; }
+  .post { max-width:760px; margin:0 auto; }
+  .post .phero { width:100%; max-height:420px; object-fit:cover; border-radius:12px; margin:6px 0 4px; }
+  .post .pmeta { font-family:var(--ui); font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.6px; margin:6px 0 2px; }
+  .post .pbody p { line-height:1.75; font-size:16px; margin:0 0 16px; }
+  .post .pbody h2 { font-family:var(--serif); color:var(--brand); font-size:23px; font-weight:600; margin:26px 0 10px; }
+  .post .pbody ul { margin:0 0 16px; padding-left:22px; line-height:1.7; font-size:16px; }
+  .relposts { margin-top:30px; }
+  .relgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; }
 </style></head><body>
 <div class="cbbar">
   <a class="cblogo" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Coldwell Banker"
@@ -174,6 +195,25 @@
   <h3 class='nsub'>Yatırım görünümü</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Sheraden&#x27;ın uygun fiyatları ve merkeze yakınlığı, onu alıcılar ve yatırımcılar için gerçek bir hedef hâline getirmiştir; ancak konut stoğu eskidir ve durum sokaktan sokağa değişir. Ekspertiz ve yenileme için bütçe ayırın, ilgili sokağı inceleyin ve karar vermeden önce West End&#x27;i tanıyan bir danışmana güvenin.</p>
   <a class='nbhd-more' href='../../neighborhoods/tr.html'>Tüm bölgeleri gör →</a>
 </div>
+    <div class='relposts'><h2 class='sect'>Blogdan</h2><div class='relgrid'><a class="bcard" href="../../blog/pittsburgh-real-estate-what-the-numbers-are-telling-us-this-april-2026/tr.html">
+  <div class="bimg"><span class="bcat">Pazar Güncellemeleri</span></div>
+  <div class="bbody">
+    <div class="btitle">Pittsburgh Emlak Piyasası: Nisan 2026&#x27;da Rakamlar Bize Ne Söylüyor?</div>
+    <div class="bex">Fiyatlar artıyor, piyasada geçen günler de artıyor; ama yalnızca hayalle fiyatlanan evler için. İşte mahalle mahalle, Nisan 2026&#x27;nın dürüst okuması.</div>
+    <div class="bmeta">2026-04-25</div>
+  </div></a><a class="bcard" href="../../blog/navigating-the-north-allegheny-county-real-estate-market-in-2024/tr.html">
+  <div class="bimg"><span class="bcat">Pazar Güncellemeleri</span></div>
+  <div class="bbody">
+    <div class="btitle">2024&#x27;te North Allegheny County Emlak Piyasasında Yol Almak</div>
+    <div class="bex">North Allegheny hâlâ satıcı lehine: düşük arz, hızlı satışlar, en iyi okullar. Alıcı ve satıcıların ne beklemesi gerektiğini ve rakamların ardındaki yaşam tarzını anlatıyorum.</div>
+    <div class="bmeta">2024-04-01</div>
+  </div></a><a class="bcard" href="../../blog/navigating-the-steel-citys-streets/tr.html">
+  <div class="bimg"><span class="bcat">Pazar Güncellemeleri</span></div>
+  <div class="bbody">
+    <div class="btitle">Çelik Şehri&#x27;nin Sokaklarında Yol Almak: 2024&#x27;te Pittsburgh Emlak Piyasasına Bir Bakış</div>
+    <div class="bex">Pittsburgh&#x27;un 2024 piyasasında bir gezinti: istikrarlı fiyat artışı, dar arz ve yakından bakmaya değer yükselen mahalleler.</div>
+    <div class="bmeta">2024-03-15</div>
+  </div></a></div></div>
     <h2 class="sect">Ödemenizi Hesaplayın</h2>
 <div class="calc">
   <div class="row">

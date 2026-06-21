@@ -136,6 +136,27 @@
   .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
   .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
   .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
+  /* ── blog ── */
+  .bgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; }
+  .bcard { background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; color:inherit;
+    display:flex; flex-direction:column; box-shadow:0 1px 3px rgba(2,6,23,.06); }
+  .bcard:hover { box-shadow:0 6px 18px rgba(2,6,23,.14); transform:translateY(-2px); transition:.15s; }
+  .bcard .bimg { height:172px; background:center/cover no-repeat;
+    background-image:linear-gradient(135deg,var(--brand),var(--deep)); position:relative; }
+  .bcard .bcat { position:absolute; top:12px; left:12px; background:var(--gold); color:var(--deep);
+    font-size:10px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; padding:4px 10px; border-radius:3px; }
+  .bcard .bbody { padding:15px 17px 18px; display:flex; flex-direction:column; flex:1; }
+  .bcard .btitle { font-family:var(--serif); color:var(--brand); font-size:20px; font-weight:600; line-height:1.25; }
+  .bcard .bex { font-size:13px; color:#475569; margin:8px 0 12px; line-height:1.55; flex:1; }
+  .bcard .bmeta { font-size:11px; color:#94a3b8; text-transform:uppercase; letter-spacing:.5px; }
+  .post { max-width:760px; margin:0 auto; }
+  .post .phero { width:100%; max-height:420px; object-fit:cover; border-radius:12px; margin:6px 0 4px; }
+  .post .pmeta { font-family:var(--ui); font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.6px; margin:6px 0 2px; }
+  .post .pbody p { line-height:1.75; font-size:16px; margin:0 0 16px; }
+  .post .pbody h2 { font-family:var(--serif); color:var(--brand); font-size:23px; font-weight:600; margin:26px 0 10px; }
+  .post .pbody ul { margin:0 0 16px; padding-left:22px; line-height:1.7; font-size:16px; }
+  .relposts { margin-top:30px; }
+  .relgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; }
 </style></head><body>
 <div class="cbbar">
   <a class="cblogo" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Coldwell Banker"
@@ -174,6 +195,25 @@
   <h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia sits in a sought-after school district and a growth corridor, which has historically supported steady demand. As always, condition, lot and exact location vary property to property — a walkthrough, an inspection and a knowledgeable local agent are the best way to judge real value here.</p>
   <a class='nbhd-more' href='../../neighborhoods/'>See all neighborhoods →</a>
 </div>
+    <div class='relposts'><h2 class='sect'>From the Blog</h2><div class='relgrid'><a class="bcard" href="../../blog/pittsburgh-real-estate-what-the-numbers-are-telling-us-this-april-2026/">
+  <div class="bimg"><span class="bcat">Market Updates</span></div>
+  <div class="bbody">
+    <div class="btitle">Pittsburgh Real Estate: What the Numbers Are Telling Us This April 2026</div>
+    <div class="bex">Prices are up, days on market are up too — but only for homes priced on wishful thinking. Here&#x27;s the honest April 2026 read, neighborhood by neighborhood.</div>
+    <div class="bmeta">2026-04-25</div>
+  </div></a><a class="bcard" href="../../blog/navigating-the-north-allegheny-county-real-estate-market-in-2024/">
+  <div class="bimg"><span class="bcat">Market Updates</span></div>
+  <div class="bbody">
+    <div class="btitle">Navigating the North Allegheny County Real Estate Market in 2024</div>
+    <div class="bex">North Allegheny County still favors sellers — low inventory, fast sales, top schools. Here&#x27;s what buyers and sellers should expect, and the lifestyle behind the numbers.</div>
+    <div class="bmeta">2024-04-01</div>
+  </div></a><a class="bcard" href="../../blog/navigating-the-steel-citys-streets/">
+  <div class="bimg"><span class="bcat">Market Updates</span></div>
+  <div class="bbody">
+    <div class="btitle">Navigating the Steel City&#x27;s Streets: A Look at Pittsburgh Real Estate in 2024</div>
+    <div class="bex">A tour of Pittsburgh&#x27;s 2024 market — steady price growth, tight inventory, and the up-and-coming neighborhoods worth a closer look.</div>
+    <div class="bmeta">2024-03-15</div>
+  </div></a></div></div>
     
   </div>
   <div class="agentcard">
