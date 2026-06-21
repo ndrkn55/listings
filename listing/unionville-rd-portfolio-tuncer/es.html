@@ -157,6 +157,13 @@
   .post .pbody ul { margin:0 0 16px; padding-left:22px; line-height:1.7; font-size:16px; }
   .relposts { margin-top:30px; }
   .relgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; }
+  .discbox { background:#f7f9fc; border:1px solid #e2e8f0; border-radius:12px; padding:18px 20px; }
+  .disc-blurb { margin:0 0 12px; line-height:1.6; font-size:15px; color:#334155; }
+  .disc-form { display:flex; gap:10px; flex-wrap:wrap; }
+  .disc-form input[type=email] { flex:1; min-width:200px; padding:11px 13px; border:1px solid #cbd5e1; border-radius:8px; font-size:15px; }
+  .disc-form button { background:var(--brand); color:#fff; border:none; border-radius:8px; padding:11px 18px; font-size:15px; font-weight:600; cursor:pointer; white-space:nowrap; }
+  .disc-form button:hover { filter:brightness(1.08); }
+  .disc-note { margin-top:10px; font-size:12.5px; color:#94a3b8; }
 </style></head><body>
 <div class="cbbar">
   <a class="cblogo" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Coldwell Banker"
@@ -182,6 +189,7 @@
     
     
     <h2 class='sect'>Detalles de la Propiedad</h2><div class='dgrid'><div><b>Estado</b>Pendiente</div><div><b>Precio</b>$4,750,000</div><div><b>Pies cuadrados</b>38800</div><div><b>Año de construcción</b>1980</div><div><b>Tipo</b>Almacén</div><div><b>MLS #</b>1738603</div></div>
+    
     <h2 class="sect">Ubicación</h2>
 <div class="mapbox"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
   src="https://www.google.com/maps?q=Unionville%20Rd%20Portfolio%20Tuncer%2C%20Pittsburgh%20area%2C%20PA&output=embed"></iframe></div>
@@ -195,24 +203,30 @@
   <h3 class='nsub'>Perspectiva de inversión</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry combina buenas escuelas, una revalorización estable y servicios completos, lo que sostiene una demanda y una reventa sólidas, aunque esa calidad se paga a los precios más altos de la región. Un agente local puede ayudarle a sopesar el valor, los impuestos y el vecindario adecuado dentro del municipio.</p>
   <a class='nbhd-more' href='../../neighborhoods/es.html'>Ver todos los vecindarios →</a>
 </div>
-    <div class='relposts'><h2 class='sect'>Del Blog</h2><div class='relgrid'><a class="bcard" href="../../blog/pittsburgh-real-estate-what-the-numbers-are-telling-us-this-april-2026/es.html">
-  <div class="bimg" style="background-image:url('/blog/assets/pittsburgh-real-estate-what-the-numbers-are-telling-us-this-april-2026.png')"><span class="bcat">Actualizaciones del Mercado</span></div>
+    <div class='relposts'><h2 class='sect'>Del Blog</h2><div class='relgrid'><a class="bcard" href="../../blog/cranberry-township-pa-neighborhood-guide/es.html">
+  <div class="bimg" style="background-image:url('/blog/assets/cranberry-township-pa-neighborhood-guide.jpg')"><span class="bcat">Destacados del Vecindario</span></div>
   <div class="bbody">
-    <div class="btitle">Bienes raíces en Pittsburgh: lo que nos dicen los números en este abril de 2026</div>
-    <div class="bex">Los precios suben, y los días en el mercado también, pero solo para las casas con precios de ilusión. Esta es la lectura honesta de abril de 2026, vecindario por vecindario.</div>
-    <div class="bmeta">2026-04-25</div>
-  </div></a><a class="bcard" href="../../blog/navigating-the-north-allegheny-county-real-estate-market-in-2024/es.html">
-  <div class="bimg" style="background-image:url('/blog/assets/navigating-the-north-allegheny-county-real-estate-market-in-2024.png')"><span class="bcat">Actualizaciones del Mercado</span></div>
+    <div class="btitle">Cranberry Township, PA: excelentes escuelas, grandes servicios y demanda estable</div>
+    <div class="bex">Uno de los suburbios más codiciados de la región, Cranberry combina las escuelas de Seneca Valley con amplios servicios, a los precios más altos de la zona. Aquí, la visión completa.</div>
+    <div class="bmeta">2026-06-07</div>
+  </div></a><a class="bcard" href="../../blog/penn-hills-pa-neighborhood-guide/es.html">
+  <div class="bimg" style="background-image:url('/blog/assets/penn-hills-pa-neighborhood-guide.jpg')"><span class="bcat">Destacados del Vecindario</span></div>
   <div class="bbody">
-    <div class="btitle">Cómo moverse en el mercado inmobiliario del condado de North Allegheny en 2024</div>
-    <div class="bex">North Allegheny sigue favoreciendo a quien vende: poco inventario, ventas rápidas y excelentes escuelas. Esto es lo que pueden esperar compradores y vendedores, y el estilo de vida detrás de los números.</div>
-    <div class="bmeta">2024-04-01</div>
-  </div></a><a class="bcard" href="../../blog/navigating-the-steel-citys-streets/es.html">
-  <div class="bimg" style="background-image:url('/blog/assets/navigating-the-steel-citys-streets.png')"><span class="bcat">Actualizaciones del Mercado</span></div>
+    <div class="btitle">Penn Hills, PA: espacio, variedad y precios de gama media a 16 km al este de la ciudad</div>
+    <div class="bex">Uno de los mayores suburbios de la región, Penn Hills ofrece una gran variedad de viviendas a precios moderados y con acceso rápido por autopista. Te contamos cómo apuntar al sector adecuado.</div>
+    <div class="bmeta">2026-06-14</div>
+  </div></a><a class="bcard" href="../../blog/avalon-pa-neighborhood-guide/es.html">
+  <div class="bimg" style="background-image:url('/blog/assets/avalon-pa-neighborhood-guide.jpg')"><span class="bcat">Destacados del Vecindario</span></div>
   <div class="bbody">
-    <div class="btitle">Recorriendo las calles de la Ciudad del Acero: una mirada al mercado inmobiliario de Pittsburgh en 2024</div>
-    <div class="bex">Un recorrido por el mercado de Pittsburgh en 2024: crecimiento sostenido de precios, inventario ajustado y los vecindarios emergentes que vale la pena mirar.</div>
-    <div class="bmeta">2024-03-15</div>
+    <div class="btitle">Avalon, PA: un municipio peatonal a orillas del río Ohio en los North Boroughs</div>
+    <div class="bex">Calles cuidadas, casas clásicas y las escuelas de Northgate a solo 10 km del centro. Te contamos por qué Avalon sigue siendo popular entre primeros compradores y pequeños inversores.</div>
+    <div class="bmeta">2026-05-31</div>
+  </div></a><a class="bcard" href="../../blog/mt-oliver-pa-neighborhood-guide/es.html">
+  <div class="bimg" style="background-image:url('/blog/assets/mt-oliver-pa-neighborhood-guide.jpg')"><span class="bcat">Destacados del Vecindario</span></div>
+  <div class="bbody">
+    <div class="btitle">Mt. Oliver, PA: un municipio pequeño y asequible rodeado por la ciudad</div>
+    <div class="bex">Completamente rodeado por Pittsburgh, justo al sur del South Side, Mt. Oliver combina precios muy bajos con una ubicación pegada a la ciudad. Aquí, la perspectiva para compradores e inversores.</div>
+    <div class="bmeta">2026-05-24</div>
   </div></a></div></div>
     <h2 class="sect">Estima Tu Pago</h2>
 <div class="calc">

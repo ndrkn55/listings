@@ -157,6 +157,13 @@
   .post .pbody ul { margin:0 0 16px; padding-left:22px; line-height:1.7; font-size:16px; }
   .relposts { margin-top:30px; }
   .relgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; }
+  .discbox { background:#f7f9fc; border:1px solid #e2e8f0; border-radius:12px; padding:18px 20px; }
+  .disc-blurb { margin:0 0 12px; line-height:1.6; font-size:15px; color:#334155; }
+  .disc-form { display:flex; gap:10px; flex-wrap:wrap; }
+  .disc-form input[type=email] { flex:1; min-width:200px; padding:11px 13px; border:1px solid #cbd5e1; border-radius:8px; font-size:15px; }
+  .disc-form button { background:var(--brand); color:#fff; border:none; border-radius:8px; padding:11px 18px; font-size:15px; font-weight:600; cursor:pointer; white-space:nowrap; }
+  .disc-form button:hover { filter:brightness(1.08); }
+  .disc-note { margin-top:10px; font-size:12.5px; color:#94a3b8; }
 </style></head><body>
 <div class="cbbar">
   <a class="cblogo" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Coldwell Banker"
@@ -182,6 +189,7 @@
     
     
     <h2 class='sect'>Property Details</h2><div class='dgrid'><div><b>Status</b>Sold</div><div><b>Price</b>$185,000</div><div><b>Type</b>Condo</div></div>
+    
     <h2 class="sect">Location</h2>
 <div class="mapbox"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
   src="https://www.google.com/maps?q=1265%20Norberry%20Ct%2018%2C%20Pittsburgh%20area%2C%20PA&output=embed"></iframe></div>
@@ -195,24 +203,30 @@
   <h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry combines strong schools, steady appreciation and deep amenities, which supports durable demand and resale — though that quality comes at the region&#x27;s higher price points. A local agent can help you weigh value, taxes and the right neighborhood within the township.</p>
   <a class='nbhd-more' href='../../neighborhoods/'>See all neighborhoods →</a>
 </div>
-    <div class='relposts'><h2 class='sect'>From the Blog</h2><div class='relgrid'><a class="bcard" href="../../blog/pittsburgh-real-estate-what-the-numbers-are-telling-us-this-april-2026/">
-  <div class="bimg" style="background-image:url('/blog/assets/pittsburgh-real-estate-what-the-numbers-are-telling-us-this-april-2026.png')"><span class="bcat">Market Updates</span></div>
+    <div class='relposts'><h2 class='sect'>From the Blog</h2><div class='relgrid'><a class="bcard" href="../../blog/cranberry-township-pa-neighborhood-guide/">
+  <div class="bimg" style="background-image:url('/blog/assets/cranberry-township-pa-neighborhood-guide.jpg')"><span class="bcat">Neighborhood Spotlights</span></div>
   <div class="bbody">
-    <div class="btitle">Pittsburgh Real Estate: What the Numbers Are Telling Us This April 2026</div>
-    <div class="bex">Prices are up, days on market are up too — but only for homes priced on wishful thinking. Here&#x27;s the honest April 2026 read, neighborhood by neighborhood.</div>
-    <div class="bmeta">2026-04-25</div>
-  </div></a><a class="bcard" href="../../blog/navigating-the-north-allegheny-county-real-estate-market-in-2024/">
-  <div class="bimg" style="background-image:url('/blog/assets/navigating-the-north-allegheny-county-real-estate-market-in-2024.png')"><span class="bcat">Market Updates</span></div>
+    <div class="btitle">Cranberry Township, PA: Top Schools, Big Amenities and Steady Demand</div>
+    <div class="bex">One of the region&#x27;s most sought-after suburbs, Cranberry pairs Seneca Valley schools with deep amenities — at the region&#x27;s higher price points. Here&#x27;s the full look.</div>
+    <div class="bmeta">2026-06-07</div>
+  </div></a><a class="bcard" href="../../blog/penn-hills-pa-neighborhood-guide/">
+  <div class="bimg" style="background-image:url('/blog/assets/penn-hills-pa-neighborhood-guide.jpg')"><span class="bcat">Neighborhood Spotlights</span></div>
   <div class="bbody">
-    <div class="btitle">Navigating the North Allegheny County Real Estate Market in 2024</div>
-    <div class="bex">North Allegheny County still favors sellers — low inventory, fast sales, top schools. Here&#x27;s what buyers and sellers should expect, and the lifestyle behind the numbers.</div>
-    <div class="bmeta">2024-04-01</div>
-  </div></a><a class="bcard" href="../../blog/navigating-the-steel-citys-streets/">
-  <div class="bimg" style="background-image:url('/blog/assets/navigating-the-steel-citys-streets.png')"><span class="bcat">Market Updates</span></div>
+    <div class="btitle">Penn Hills, PA: Space, Variety and Mid-Range Prices 10 Miles East of the City</div>
+    <div class="bex">One of the region&#x27;s biggest suburbs, Penn Hills offers a wide range of homes at moderate prices with quick highway access. Here&#x27;s how to target the right pocket.</div>
+    <div class="bmeta">2026-06-14</div>
+  </div></a><a class="bcard" href="../../blog/avalon-pa-neighborhood-guide/">
+  <div class="bimg" style="background-image:url('/blog/assets/avalon-pa-neighborhood-guide.jpg')"><span class="bcat">Neighborhood Spotlights</span></div>
   <div class="bbody">
-    <div class="btitle">Navigating the Steel City&#x27;s Streets: A Look at Pittsburgh Real Estate in 2024</div>
-    <div class="bex">A tour of Pittsburgh&#x27;s 2024 market — steady price growth, tight inventory, and the up-and-coming neighborhoods worth a closer look.</div>
-    <div class="bmeta">2024-03-15</div>
+    <div class="btitle">Avalon, PA: A Walkable Ohio River Borough in the North Boroughs</div>
+    <div class="bex">Tidy streets, classic homes and Northgate schools just 6 miles from Downtown — here&#x27;s why Avalon stays popular with first-time buyers and small investors.</div>
+    <div class="bmeta">2026-05-31</div>
+  </div></a><a class="bcard" href="../../blog/mt-oliver-pa-neighborhood-guide/">
+  <div class="bimg" style="background-image:url('/blog/assets/mt-oliver-pa-neighborhood-guide.jpg')"><span class="bcat">Neighborhood Spotlights</span></div>
+  <div class="bbody">
+    <div class="btitle">Mt. Oliver, PA: A Tiny, Affordable Borough Surrounded by the City</div>
+    <div class="bex">Completely ringed by Pittsburgh just south of the South Side, Mt. Oliver pairs very low prices with a city-adjacent location. Here&#x27;s the buyer-and-investor picture.</div>
+    <div class="bmeta">2026-05-24</div>
   </div></a></div></div>
     
   </div>
