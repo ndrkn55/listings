@@ -89,7 +89,13 @@
 
 <div class="lay">
   <div>
-    
+    <div class="carousel">
+  <img class="main" id="cMain" src="photos/00.JPG" alt="2708 Garbett St" onclick="lbOpen()">
+  <button class="nav prev" onclick="go(cur-1)">‹</button><button class="nav next" onclick="go(cur+1)">›</button>
+  <span class="cnt" id="cCnt">1 / 12</span>
+</div>
+<div class="thumbs" id="cThumbs"><img src='photos/00.JPG' class='on' onclick='go(0)' loading='lazy' alt='photo 1'><img src='photos/02.jpg' class='' onclick='go(1)' loading='lazy' alt='photo 2'><img src='photos/03.jpg' class='' onclick='go(2)' loading='lazy' alt='photo 3'><img src='photos/04.jpg' class='' onclick='go(3)' loading='lazy' alt='photo 4'><img src='photos/05.jpg' class='' onclick='go(4)' loading='lazy' alt='photo 5'><img src='photos/08.jpg' class='' onclick='go(5)' loading='lazy' alt='photo 6'><img src='photos/09.jpg' class='' onclick='go(6)' loading='lazy' alt='photo 7'><img src='photos/10.jpg' class='' onclick='go(7)' loading='lazy' alt='photo 8'><img src='photos/11.jpg' class='' onclick='go(8)' loading='lazy' alt='photo 9'><img src='photos/12.jpg' class='' onclick='go(9)' loading='lazy' alt='photo 10'><img src='photos/13.jpg' class='' onclick='go(10)' loading='lazy' alt='photo 11'><img src='photos/14.jpg' class='' onclick='go(11)' loading='lazy' alt='photo 12'></div>
+<div class="lightbox" id="lb" onclick="lbClose()"><img id="lbImg" src="photos/00.JPG" alt="photo"></div>
     
     
     
@@ -120,7 +126,7 @@
 </div>
 <script>
 let cur=0;
-const imgs=[];
+const imgs=["00.JPG", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "08.jpg", "09.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg"];
 function go(i){if(!imgs.length)return;cur=(i+imgs.length)%imgs.length;
   document.getElementById('cMain').src='photos/'+imgs[cur];
   document.getElementById('lbImg').src='photos/'+imgs[cur];

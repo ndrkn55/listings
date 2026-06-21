@@ -91,10 +91,10 @@
   <div>
     <div class="carousel">
   <img class="main" id="cMain" src="photos/GetMedia.jpeg" alt="203 Cedar Ln" onclick="lbOpen()">
-  
-  <span class="cnt" id="cCnt">1 / 1</span>
+  <button class="nav prev" onclick="go(cur-1)">‹</button><button class="nav next" onclick="go(cur+1)">›</button>
+  <span class="cnt" id="cCnt">1 / 7</span>
 </div>
-<div class="thumbs" id="cThumbs"><img src='photos/GetMedia.jpeg' class='on' onclick='go(0)' loading='lazy' alt='photo 1'></div>
+<div class="thumbs" id="cThumbs"><img src='photos/GetMedia.jpeg' class='on' onclick='go(0)' loading='lazy' alt='photo 1'><img src='photos/010.jpg' class='' onclick='go(1)' loading='lazy' alt='photo 2'><img src='photos/010_upscayl_1x_realesrgan-x4plus.png' class='' onclick='go(2)' loading='lazy' alt='photo 3'><img src='photos/012.jpg' class='' onclick='go(3)' loading='lazy' alt='photo 4'><img src='photos/012_upscayl_1x_realesrgan-x4plus.png' class='' onclick='go(4)' loading='lazy' alt='photo 5'><img src='photos/021.jpg' class='' onclick='go(5)' loading='lazy' alt='photo 6'><img src='photos/050.jpg' class='' onclick='go(6)' loading='lazy' alt='photo 7'></div>
 <div class="lightbox" id="lb" onclick="lbClose()"><img id="lbImg" src="photos/GetMedia.jpeg" alt="photo"></div>
     
     
@@ -115,7 +115,7 @@
 </div>
 <script>
 let cur=0;
-const imgs=["GetMedia.jpeg"];
+const imgs=["GetMedia.jpeg", "010.jpg", "010_upscayl_1x_realesrgan-x4plus.png", "012.jpg", "012_upscayl_1x_realesrgan-x4plus.png", "021.jpg", "050.jpg"];
 function go(i){if(!imgs.length)return;cur=(i+imgs.length)%imgs.length;
   document.getElementById('cMain').src='photos/'+imgs[cur];
   document.getElementById('lbImg').src='photos/'+imgs[cur];

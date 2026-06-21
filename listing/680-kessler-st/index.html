@@ -89,7 +89,13 @@
 
 <div class="lay">
   <div>
-    
+    <div class="carousel">
+  <img class="main" id="cMain" src="photos/00.jpg" alt="680 Kessler St" onclick="lbOpen()">
+  <button class="nav prev" onclick="go(cur-1)">‹</button><button class="nav next" onclick="go(cur+1)">›</button>
+  <span class="cnt" id="cCnt">1 / 8</span>
+</div>
+<div class="thumbs" id="cThumbs"><img src='photos/00.jpg' class='on' onclick='go(0)' loading='lazy' alt='photo 1'><img src='photos/01.jpg' class='' onclick='go(1)' loading='lazy' alt='photo 2'><img src='photos/02.jpg' class='' onclick='go(2)' loading='lazy' alt='photo 3'><img src='photos/03.jpg' class='' onclick='go(3)' loading='lazy' alt='photo 4'><img src='photos/04.jpg' class='' onclick='go(4)' loading='lazy' alt='photo 5'><img src='photos/05.jpg' class='' onclick='go(5)' loading='lazy' alt='photo 6'><img src='photos/06.jpg' class='' onclick='go(6)' loading='lazy' alt='photo 7'><img src='photos/07.jpg' class='' onclick='go(7)' loading='lazy' alt='photo 8'></div>
+<div class="lightbox" id="lb" onclick="lbClose()"><img id="lbImg" src="photos/00.jpg" alt="photo"></div>
     
     
     
@@ -109,7 +115,7 @@
 </div>
 <script>
 let cur=0;
-const imgs=[];
+const imgs=["00.jpg", "01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg"];
 function go(i){if(!imgs.length)return;cur=(i+imgs.length)%imgs.length;
   document.getElementById('cMain').src='photos/'+imgs[cur];
   document.getElementById('lbImg').src='photos/'+imgs[cur];

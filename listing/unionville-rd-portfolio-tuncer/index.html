@@ -91,10 +91,10 @@
   <div>
     <div class="carousel">
   <img class="main" id="cMain" src="photos/unionville.jpg" alt="Unionville Rd Portfolio Tuncer" onclick="lbOpen()">
-  
-  <span class="cnt" id="cCnt">1 / 1</span>
+  <button class="nav prev" onclick="go(cur-1)">‹</button><button class="nav next" onclick="go(cur+1)">›</button>
+  <span class="cnt" id="cCnt">1 / 9</span>
 </div>
-<div class="thumbs" id="cThumbs"><img src='photos/unionville.jpg' class='on' onclick='go(0)' loading='lazy' alt='photo 1'></div>
+<div class="thumbs" id="cThumbs"><img src='photos/unionville.jpg' class='on' onclick='go(0)' loading='lazy' alt='photo 1'><img src='photos/3012_01.jpg' class='' onclick='go(1)' loading='lazy' alt='photo 2'><img src='photos/3012_03.jpg' class='' onclick='go(2)' loading='lazy' alt='photo 3'><img src='photos/3016_00.jpg' class='' onclick='go(3)' loading='lazy' alt='photo 4'><img src='photos/3020_03.jpg' class='' onclick='go(4)' loading='lazy' alt='photo 5'><img src='photos/3020_04.jpg' class='' onclick='go(5)' loading='lazy' alt='photo 6'><img src='photos/4000.jpg' class='' onclick='go(6)' loading='lazy' alt='photo 7'><img src='photos/4003.jpg' class='' onclick='go(7)' loading='lazy' alt='photo 8'><img src='photos/4005.jpg' class='' onclick='go(8)' loading='lazy' alt='photo 9'></div>
 <div class="lightbox" id="lb" onclick="lbClose()"><img id="lbImg" src="photos/unionville.jpg" alt="photo"></div>
     
     
@@ -126,7 +126,7 @@
 </div>
 <script>
 let cur=0;
-const imgs=["unionville.jpg"];
+const imgs=["unionville.jpg", "3012_01.jpg", "3012_03.jpg", "3016_00.jpg", "3020_03.jpg", "3020_04.jpg", "4000.jpg", "4003.jpg", "4005.jpg"];
 function go(i){if(!imgs.length)return;cur=(i+imgs.length)%imgs.length;
   document.getElementById('cMain').src='photos/'+imgs[cur];
   document.getElementById('lbImg').src='photos/'+imgs[cur];
