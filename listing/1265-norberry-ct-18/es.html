@@ -144,7 +144,11 @@
   .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
     text-transform:uppercase; letter-spacing:.5px; }
   .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
-    box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
+    box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; cursor:pointer; }
+  .tour-frame img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.9; }
+  .tour-frame .play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+  .tour-frame .play span { background:rgba(1,33,105,.85); color:#fff; border-radius:50%; width:60px; height:60px;
+    display:flex; align-items:center; justify-content:center; font-size:26px; padding-left:5px; }
   .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
   @media (max-width:760px) { .nbhd-cols { display:block; }
     .nbhd-aside { position:static; margin:18px auto 0; } .tour-embed { margin:0 auto; } }
@@ -208,9 +212,16 @@
     <div class="nbhd">
   <h2 class="sect">Vivir en Cranberry Township</h2>
   <div class='nstats' aria-label="Datos rápidos"><div class='nstat'><b>~34.000</b><span>Población</span></div><div class='nstat'><b>~$421.000</b><span>Valor medio de vivienda</span></div><div class='nstat'><b>~$125.100</b><span>Ingreso familiar medio</span></div><div class='nstat'><b>~40</b><span>Edad media</span></div><div class='nstat'><b>Seneca Valley (muy valorado)</b><span>Distrito escolar</span></div><div class='nstat'><b>Butler County</b><span>Condado</span></div><div class='nstat'><b>~32 km</b><span>Cerca del centro</span></div></div>
-  <div class='nbhd-cols'><div class='nbhd-text'><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry Township es uno de los suburbios más codiciados de la región de Pittsburgh, en el condado de Butler, a unos 32 km al norte del centro, en el cruce de la I-79 y la Pennsylvania Turnpike. Es una comunidad próspera y en crecimiento de unos 34.000 habitantes, conocida por sus excelentes escuelas, su abundante oferta comercial, sus campus corporativos y sus servicios para familias.</p><h3 class='nsub'>Escuelas y educación</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry pertenece al muy valorado Seneca Valley School District, uno de los distritos más grandes y respetados del oeste de Pensilvania.</p><h3 class='nsub'>Salud y compras</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry es un polo regional de comercio y salud: grandes compras a lo largo del corredor de la Ruta 19, amplia oferta gastronómica e instalaciones de UPMC y AHN, incluido el UPMC Lemieux Sports Complex, la pista de entrenamiento de los Pittsburgh Penguins.</p><h3 class='nsub'>Restaurantes, parques y atracciones</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Amplios parques como North Boundary Park (con piscina y toboganes de agua) y Cranberry Community Park ofrecen senderos, campos deportivos y piscinas, y el municipio organiza eventos comunitarios durante todo el año.</p><h3 class='nsub'>Perspectiva de inversión</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry combina buenas escuelas, una revalorización estable y servicios completos, lo que sostiene una demanda y una reventa sólidas, aunque esa calidad se paga a los precios más altos de la región. Un agente local puede ayudarle a sopesar el valor, los impuestos y el vecindario adecuado dentro del municipio.</p></div><aside class='nbhd-aside'><div class='tour-embed'><div class='tour-cap'>Recorrido 3D del vecindario</div><div class='tour-frame'><iframe src='https://www.youtube-nocookie.com/embed/smgkcEypXDw?autoplay=1&mute=1&loop=1&playlist=smgkcEypXDw&controls=1&playsinline=1&rel=0&modestbranding=1' loading='lazy' allowfullscreen allow='autoplay; encrypted-media; picture-in-picture'></iframe></div></div></aside></div>
+  <div class='nbhd-cols'><div class='nbhd-text'><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry Township es uno de los suburbios más codiciados de la región de Pittsburgh, en el condado de Butler, a unos 32 km al norte del centro, en el cruce de la I-79 y la Pennsylvania Turnpike. Es una comunidad próspera y en crecimiento de unos 34.000 habitantes, conocida por sus excelentes escuelas, su abundante oferta comercial, sus campus corporativos y sus servicios para familias.</p><h3 class='nsub'>Escuelas y educación</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry pertenece al muy valorado Seneca Valley School District, uno de los distritos más grandes y respetados del oeste de Pensilvania.</p><h3 class='nsub'>Salud y compras</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry es un polo regional de comercio y salud: grandes compras a lo largo del corredor de la Ruta 19, amplia oferta gastronómica e instalaciones de UPMC y AHN, incluido el UPMC Lemieux Sports Complex, la pista de entrenamiento de los Pittsburgh Penguins.</p><h3 class='nsub'>Restaurantes, parques y atracciones</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Amplios parques como North Boundary Park (con piscina y toboganes de agua) y Cranberry Community Park ofrecen senderos, campos deportivos y piscinas, y el municipio organiza eventos comunitarios durante todo el año.</p><h3 class='nsub'>Perspectiva de inversión</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry combina buenas escuelas, una revalorización estable y servicios completos, lo que sostiene una demanda y una reventa sólidas, aunque esa calidad se paga a los precios más altos de la región. Un agente local puede ayudarle a sopesar el valor, los impuestos y el vecindario adecuado dentro del municipio.</p></div><aside class='nbhd-aside'><div class='tour-embed'><div class='tour-cap'>Recorrido 3D del vecindario</div><div class='tour-frame' onclick="playTour(this,'smgkcEypXDw')"><img src='https://i.ytimg.com/vi/smgkcEypXDw/hqdefault.jpg' alt='Recorrido 3D del vecindario' loading='lazy'><div class='play'><span>▶</span></div></div></div></aside></div>
   <a class='nbhd-more' href='../../neighborhoods/es.html'>Ver todos los vecindarios →</a>
 </div>
+    <h2 class='sect'>Ver propiedades en esta zona</h2><div class='nbhd-listings'><a class="card" href="../../listing/unionville-rd-portfolio-tuncer/es.html">
+  <div class="ph" style="background-image:url('../../listing/unionville-rd-portfolio-tuncer/photos/unionville.jpg')"><span class="badge pend">Pendiente</span></div>
+  <div class="nfo">
+    <div class="price">$4,750,000</div>
+    <div class="addr">Unionville Rd. Cranberry Twp., PA 16066</div>
+    <div class="facts">38800 sqft · Almacén · MLS# 1738603</div>
+  </div></a></div>
     <div class='relposts'><h2 class='sect'>Del Blog</h2><div class='relgrid'><a class="bcard" href="../../blog/cranberry-township-pa-neighborhood-guide/es.html">
   <div class="bimg" style="background-image:url('/blog/assets/cranberry-township-pa-neighborhood-guide.jpg')"><span class="bcat">Destacados del Vecindario</span></div>
   <div class="bbody">
@@ -260,6 +271,10 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')lbClose();
 function playVid(id){document.getElementById('vid').outerHTML=
   '<div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/'+id+
   '?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe></div>';}
+function playTour(el,id){el.outerHTML=
+  '<div class="tour-frame"><iframe src="https://www.youtube-nocookie.com/embed/'+id+
+  '?autoplay=1&mute=1&loop=1&playlist='+id+'&controls=1&playsinline=1&rel=0&modestbranding=1" '+
+  'allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>';}
 function mCalc(){const o=document.getElementById('mOut');if(!o)return;
   const p=+document.getElementById('mPrice').value||0,
         d=+document.getElementById('mDown').value||0,

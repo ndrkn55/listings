@@ -144,7 +144,11 @@
   .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
     text-transform:uppercase; letter-spacing:.5px; }
   .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
-    box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
+    box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; cursor:pointer; }
+  .tour-frame img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.9; }
+  .tour-frame .play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+  .tour-frame .play span { background:rgba(1,33,105,.85); color:#fff; border-radius:50%; width:60px; height:60px;
+    display:flex; align-items:center; justify-content:center; font-size:26px; padding-left:5px; }
   .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
   @media (max-width:760px) { .nbhd-cols { display:block; }
     .nbhd-aside { position:static; margin:18px auto 0; } .tour-embed { margin:0 auto; } }
@@ -208,9 +212,16 @@
     <div class="nbhd">
   <h2 class="sect">Cranberry Township&#x27;te Yaşamak</h2>
   <div class='nstats' aria-label="Kısa bilgiler"><div class='nstat'><b>~34.000</b><span>Nüfus</span></div><div class='nstat'><b>~$421.000</b><span>Ortalama konut değeri</span></div><div class='nstat'><b>~$125.100</b><span>Ortalama hane geliri</span></div><div class='nstat'><b>~40</b><span>Ortalama yaş</span></div><div class='nstat'><b>Seneca Valley (yüksek puanlı)</b><span>Okul bölgesi</span></div><div class='nstat'><b>Butler County</b><span>İlçe</span></div><div class='nstat'><b>~32 km</b><span>Merkeze uzaklık</span></div></div>
-  <div class='nbhd-cols'><div class='nbhd-text'><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry Township, Butler County&#x27;de, şehir merkezinin yaklaşık 32 km kuzeyinde, I-79 ile Pennsylvania Turnpike kavşağında, Pittsburgh bölgesinin en gözde banliyölerinden biridir. Üst düzey okulları, bol alışveriş olanakları, kurumsal kampüsleri ve aile dostu hizmetleriyle tanınan, yaklaşık 34.000 nüfuslu, gelişen ve büyüyen bir topluluktur.</p><h3 class='nsub'>Okullar ve eğitim</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry, batı Pensilvanya&#x27;nın en büyük ve saygın bölgelerinden biri olan, çok beğenilen Seneca Valley School District&#x27;e bağlıdır.</p><h3 class='nsub'>Sağlık ve alışveriş</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry bölgesel bir perakende ve sağlık merkezidir: Route 19 koridoru boyunca büyük alışveriş, geniş yeme-içme seçenekleri ve Pittsburgh Penguins&#x27;in antrenman buz pisti UPMC Lemieux Sports Complex dâhil UPMC ile AHN tesisleri.</p><h3 class='nsub'>Restoranlar, parklar ve gezilecek yerler</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>North Boundary Park (havuzu ve su kaydıraklarıyla) ve Cranberry Community Park gibi geniş parklar yürüyüş yolları, spor sahaları ve havuzlar sunar; kasaba yıl boyunca topluluk etkinlikleri düzenler.</p><h3 class='nsub'>Yatırım görünümü</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry; güçlü okulları, istikrarlı değer artışını ve kapsamlı olanakları bir araya getirerek kalıcı talebi ve yeniden satışı destekler; ancak bu kalite bölgenin en yüksek fiyatlarıyla gelir. Yerel bir danışman, değeri, vergileri ve kasaba içindeki doğru mahalleyi tartmanıza yardımcı olabilir.</p></div><aside class='nbhd-aside'><div class='tour-embed'><div class='tour-cap'>3D Mahalle Turu</div><div class='tour-frame'><iframe src='https://www.youtube-nocookie.com/embed/smgkcEypXDw?autoplay=1&mute=1&loop=1&playlist=smgkcEypXDw&controls=1&playsinline=1&rel=0&modestbranding=1' loading='lazy' allowfullscreen allow='autoplay; encrypted-media; picture-in-picture'></iframe></div></div></aside></div>
+  <div class='nbhd-cols'><div class='nbhd-text'><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry Township, Butler County&#x27;de, şehir merkezinin yaklaşık 32 km kuzeyinde, I-79 ile Pennsylvania Turnpike kavşağında, Pittsburgh bölgesinin en gözde banliyölerinden biridir. Üst düzey okulları, bol alışveriş olanakları, kurumsal kampüsleri ve aile dostu hizmetleriyle tanınan, yaklaşık 34.000 nüfuslu, gelişen ve büyüyen bir topluluktur.</p><h3 class='nsub'>Okullar ve eğitim</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry, batı Pensilvanya&#x27;nın en büyük ve saygın bölgelerinden biri olan, çok beğenilen Seneca Valley School District&#x27;e bağlıdır.</p><h3 class='nsub'>Sağlık ve alışveriş</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry bölgesel bir perakende ve sağlık merkezidir: Route 19 koridoru boyunca büyük alışveriş, geniş yeme-içme seçenekleri ve Pittsburgh Penguins&#x27;in antrenman buz pisti UPMC Lemieux Sports Complex dâhil UPMC ile AHN tesisleri.</p><h3 class='nsub'>Restoranlar, parklar ve gezilecek yerler</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>North Boundary Park (havuzu ve su kaydıraklarıyla) ve Cranberry Community Park gibi geniş parklar yürüyüş yolları, spor sahaları ve havuzlar sunar; kasaba yıl boyunca topluluk etkinlikleri düzenler.</p><h3 class='nsub'>Yatırım görünümü</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry; güçlü okulları, istikrarlı değer artışını ve kapsamlı olanakları bir araya getirerek kalıcı talebi ve yeniden satışı destekler; ancak bu kalite bölgenin en yüksek fiyatlarıyla gelir. Yerel bir danışman, değeri, vergileri ve kasaba içindeki doğru mahalleyi tartmanıza yardımcı olabilir.</p></div><aside class='nbhd-aside'><div class='tour-embed'><div class='tour-cap'>3D Mahalle Turu</div><div class='tour-frame' onclick="playTour(this,'smgkcEypXDw')"><img src='https://i.ytimg.com/vi/smgkcEypXDw/hqdefault.jpg' alt='3D Mahalle Turu' loading='lazy'><div class='play'><span>▶</span></div></div></div></aside></div>
   <a class='nbhd-more' href='../../neighborhoods/tr.html'>Tüm bölgeleri gör →</a>
 </div>
+    <h2 class='sect'>Bu bölgedeki ilanlara göz atın</h2><div class='nbhd-listings'><a class="card" href="../../listing/unionville-rd-portfolio-tuncer/tr.html">
+  <div class="ph" style="background-image:url('../../listing/unionville-rd-portfolio-tuncer/photos/unionville.jpg')"><span class="badge pend">Beklemede</span></div>
+  <div class="nfo">
+    <div class="price">$4,750,000</div>
+    <div class="addr">Unionville Rd. Cranberry Twp., PA 16066</div>
+    <div class="facts">38800 sqft · Depo · MLS# 1738603</div>
+  </div></a></div>
     <div class='relposts'><h2 class='sect'>Blogdan</h2><div class='relgrid'><a class="bcard" href="../../blog/cranberry-township-pa-neighborhood-guide/tr.html">
   <div class="bimg" style="background-image:url('/blog/assets/cranberry-township-pa-neighborhood-guide.jpg')"><span class="bcat">Mahalle Spotlights</span></div>
   <div class="bbody">
@@ -260,6 +271,10 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')lbClose();
 function playVid(id){document.getElementById('vid').outerHTML=
   '<div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/'+id+
   '?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe></div>';}
+function playTour(el,id){el.outerHTML=
+  '<div class="tour-frame"><iframe src="https://www.youtube-nocookie.com/embed/'+id+
+  '?autoplay=1&mute=1&loop=1&playlist='+id+'&controls=1&playsinline=1&rel=0&modestbranding=1" '+
+  'allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>';}
 function mCalc(){const o=document.getElementById('mOut');if(!o)return;
   const p=+document.getElementById('mPrice').value||0,
         d=+document.getElementById('mDown').value||0,

@@ -144,7 +144,11 @@
   .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
     text-transform:uppercase; letter-spacing:.5px; }
   .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
-    box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
+    box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; cursor:pointer; }
+  .tour-frame img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.9; }
+  .tour-frame .play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+  .tour-frame .play span { background:rgba(1,33,105,.85); color:#fff; border-radius:50%; width:60px; height:60px;
+    display:flex; align-items:center; justify-content:center; font-size:26px; padding-left:5px; }
   .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
   @media (max-width:760px) { .nbhd-cols { display:block; }
     .nbhd-aside { position:static; margin:18px auto 0; } .tour-embed { margin:0 auto; } }
@@ -211,6 +215,7 @@
   <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Penn Hills is a large, leafy township of roughly 36,000 about 10 miles east of Downtown Pittsburgh. One of the region&#x27;s biggest suburbs, it offers a wide range of housing — from modest post-war homes to larger properties — at generally moderate prices with quick highway access to the city.</p><h3 class='nsub'>Schools &amp; Education</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Penn Hills is served by the Penn Hills School District, which educates over 3,000 students across a central elementary, a middle school and a high school.</p><h3 class='nsub'>Healthcare &amp; Shopping</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Shopping, groceries and services are spread along the township&#x27;s main corridors — William Penn Highway, Frankstown and Rodi roads — with additional retail and healthcare a short drive toward Monroeville and the city.</p><h3 class='nsub'>Dining, Parks &amp; Attractions</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Penn Hills offers extensive parkland, including Universal and Duff parks, plus golf, trails and easy access to the larger shopping and dining of nearby Monroeville.</p><h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Penn Hills offers more space and mid-range pricing than many city neighborhoods, with a large, varied housing stock. Values and condition vary by section of the township, so review the specific area, taxes and schools — a local agent can help target the right pocket.</p>
   <a class='nbhd-more' href='../../neighborhoods/'>See all neighborhoods →</a>
 </div>
+    
     <div class='relposts'><h2 class='sect'>From the Blog</h2><div class='relgrid'><a class="bcard" href="../../blog/penn-hills-pa-neighborhood-guide/">
   <div class="bimg" style="background-image:url('/blog/assets/penn-hills-pa-neighborhood-guide.jpg')"><span class="bcat">Neighborhood Spotlights</span></div>
   <div class="bbody">
@@ -260,6 +265,10 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')lbClose();
 function playVid(id){document.getElementById('vid').outerHTML=
   '<div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/'+id+
   '?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe></div>';}
+function playTour(el,id){el.outerHTML=
+  '<div class="tour-frame"><iframe src="https://www.youtube-nocookie.com/embed/'+id+
+  '?autoplay=1&mute=1&loop=1&playlist='+id+'&controls=1&playsinline=1&rel=0&modestbranding=1" '+
+  'allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>';}
 function mCalc(){const o=document.getElementById('mOut');if(!o)return;
   const p=+document.getElementById('mPrice').value||0,
         d=+document.getElementById('mDown').value||0,

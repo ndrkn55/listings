@@ -144,7 +144,11 @@
   .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
     text-transform:uppercase; letter-spacing:.5px; }
   .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
-    box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
+    box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; cursor:pointer; }
+  .tour-frame img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.9; }
+  .tour-frame .play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+  .tour-frame .play span { background:rgba(1,33,105,.85); color:#fff; border-radius:50%; width:60px; height:60px;
+    display:flex; align-items:center; justify-content:center; font-size:26px; padding-left:5px; }
   .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
   @media (max-width:760px) { .nbhd-cols { display:block; }
     .nbhd-aside { position:static; margin:18px auto 0; } .tour-embed { margin:0 auto; } }
@@ -208,9 +212,16 @@
     <div class="nbhd">
   <h2 class="sect">Vivir en Mt. Oliver</h2>
   <div class='nstats' aria-label="Datos rápidos"><div class='nstat'><b>~3.300</b><span>Población</span></div><div class='nstat'><b>~$103.000</b><span>Valor medio de vivienda</span></div><div class='nstat'><b>~$54.000</b><span>Ingreso familiar medio</span></div><div class='nstat'><b>~37</b><span>Edad media</span></div><div class='nstat'><b>Pittsburgh Public</b><span>Distrito escolar</span></div><div class='nstat'><b>Rodeado por Pittsburgh</b><span>Entorno</span></div></div>
-  <div class='nbhd-cols'><div class='nbhd-text'><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Mt. Oliver es un municipio pequeño y de construcción densa de unos 3.300 habitantes, completamente rodeado por la ciudad de Pittsburgh, justo al sur del South Side. Diverso y muy asequible, ha despertado un interés renovado entre compradores e inversores que buscan precios bajos cerca de la ciudad.</p><h3 class='nsub'>Escuelas y educación</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Aunque es un municipio independiente, los estudiantes de Mt. Oliver asisten a las Escuelas Públicas de Pittsburgh, incluida la Pittsburgh Carrick High School.</p><h3 class='nsub'>Salud y compras</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Brownsville Road es la calle principal peatonal del municipio, con comercios y restaurantes locales, y el South Side, Allentown y el comercio y los hospitales más grandes de Pittsburgh quedan a pocos minutos.</p><h3 class='nsub'>Restaurantes, parques y atracciones</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Las calles en alto de Mt. Oliver ofrecen vistas de la ciudad, y los residentes están cerca de la ribera y la vida nocturna del South Side, la creciente escena artística de Allentown y el centro.</p><h3 class='nsub'>Perspectiva de inversión</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Los precios muy bajos de Mt. Oliver y su ubicación pegada a la ciudad lo convierten en un mercado activo para inversores y primeros compradores, pero es un municipio antiguo y denso donde el estado y el valor varían mucho según la cuadra. Una inspección a fondo, mirar bien la calle concreta y los impuestos, y un agente con experiencia son imprescindibles.</p></div><aside class='nbhd-aside'><div class='tour-embed'><div class='tour-cap'>Recorrido 3D del vecindario</div><div class='tour-frame'><iframe src='https://www.youtube-nocookie.com/embed/cPjqAC5m7Ug?autoplay=1&mute=1&loop=1&playlist=cPjqAC5m7Ug&controls=1&playsinline=1&rel=0&modestbranding=1' loading='lazy' allowfullscreen allow='autoplay; encrypted-media; picture-in-picture'></iframe></div></div></aside></div>
+  <div class='nbhd-cols'><div class='nbhd-text'><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Mt. Oliver es un municipio pequeño y de construcción densa de unos 3.300 habitantes, completamente rodeado por la ciudad de Pittsburgh, justo al sur del South Side. Diverso y muy asequible, ha despertado un interés renovado entre compradores e inversores que buscan precios bajos cerca de la ciudad.</p><h3 class='nsub'>Escuelas y educación</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Aunque es un municipio independiente, los estudiantes de Mt. Oliver asisten a las Escuelas Públicas de Pittsburgh, incluida la Pittsburgh Carrick High School.</p><h3 class='nsub'>Salud y compras</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Brownsville Road es la calle principal peatonal del municipio, con comercios y restaurantes locales, y el South Side, Allentown y el comercio y los hospitales más grandes de Pittsburgh quedan a pocos minutos.</p><h3 class='nsub'>Restaurantes, parques y atracciones</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Las calles en alto de Mt. Oliver ofrecen vistas de la ciudad, y los residentes están cerca de la ribera y la vida nocturna del South Side, la creciente escena artística de Allentown y el centro.</p><h3 class='nsub'>Perspectiva de inversión</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Los precios muy bajos de Mt. Oliver y su ubicación pegada a la ciudad lo convierten en un mercado activo para inversores y primeros compradores, pero es un municipio antiguo y denso donde el estado y el valor varían mucho según la cuadra. Una inspección a fondo, mirar bien la calle concreta y los impuestos, y un agente con experiencia son imprescindibles.</p></div><aside class='nbhd-aside'><div class='tour-embed'><div class='tour-cap'>Recorrido 3D del vecindario</div><div class='tour-frame' onclick="playTour(this,'cPjqAC5m7Ug')"><img src='https://i.ytimg.com/vi/cPjqAC5m7Ug/hqdefault.jpg' alt='Recorrido 3D del vecindario' loading='lazy'><div class='play'><span>▶</span></div></div></div></aside></div>
   <a class='nbhd-more' href='../../neighborhoods/es.html'>Ver todos los vecindarios →</a>
 </div>
+    <h2 class='sect'>Ver propiedades en esta zona</h2><div class='nbhd-listings'><a class="card" href="../../listing/680-kessler-st/es.html">
+  <div class="ph" style="background-image:url('../../listing/680-kessler-st/photos/00.jpg')"><span class="badge sold">Vendido</span></div>
+  <div class="nfo">
+    <div class="price">$45,000</div>
+    <div class="addr">680 Kessler St. Pittsburgh, PA 15210</div>
+    <div class="facts">3 bd · 2 ba · 720 sqft · Casa Unifamiliar · MLS# 1686908</div>
+  </div></a></div>
     <div class='relposts'><h2 class='sect'>Del Blog</h2><div class='relgrid'><a class="bcard" href="../../blog/mt-oliver-pa-neighborhood-guide/es.html">
   <div class="bimg" style="background-image:url('/blog/assets/mt-oliver-pa-neighborhood-guide.jpg')"><span class="bcat">Destacados del Vecindario</span></div>
   <div class="bbody">
@@ -260,6 +271,10 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')lbClose();
 function playVid(id){document.getElementById('vid').outerHTML=
   '<div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/'+id+
   '?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe></div>';}
+function playTour(el,id){el.outerHTML=
+  '<div class="tour-frame"><iframe src="https://www.youtube-nocookie.com/embed/'+id+
+  '?autoplay=1&mute=1&loop=1&playlist='+id+'&controls=1&playsinline=1&rel=0&modestbranding=1" '+
+  'allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>';}
 function mCalc(){const o=document.getElementById('mOut');if(!o)return;
   const p=+document.getElementById('mPrice').value||0,
         d=+document.getElementById('mDown').value||0,

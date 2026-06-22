@@ -144,7 +144,11 @@
   .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
     text-transform:uppercase; letter-spacing:.5px; }
   .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
-    box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
+    box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; cursor:pointer; }
+  .tour-frame img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.9; }
+  .tour-frame .play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+  .tour-frame .play span { background:rgba(1,33,105,.85); color:#fff; border-radius:50%; width:60px; height:60px;
+    display:flex; align-items:center; justify-content:center; font-size:26px; padding-left:5px; }
   .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
   @media (max-width:760px) { .nbhd-cols { display:block; }
     .nbhd-aside { position:static; margin:18px auto 0; } .tour-embed { margin:0 auto; } }
@@ -211,6 +215,7 @@
   <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Penn Hills es un municipio amplio y arbolado de unos 36.000 habitantes, a unos 16 km al este del centro de Pittsburgh. Uno de los mayores suburbios de la región, ofrece una gran variedad de viviendas —desde casas modestas de posguerra hasta propiedades más grandes— a precios en general moderados y con acceso rápido por autopista a la ciudad.</p><h3 class='nsub'>Escuelas y educación</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Penn Hills pertenece al Penn Hills School District, que educa a más de 3.000 estudiantes en una primaria central, una secundaria media y una preparatoria.</p><h3 class='nsub'>Salud y compras</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Las compras, los supermercados y los servicios se reparten por los principales corredores del municipio —William Penn Highway y las vías Frankstown y Rodi—, con más comercio y atención médica a poca distancia hacia Monroeville y la ciudad.</p><h3 class='nsub'>Restaurantes, parques y atracciones</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Penn Hills cuenta con amplias zonas verdes, como los parques Universal y Duff, además de golf, senderos y fácil acceso a la mayor oferta comercial y gastronómica de la cercana Monroeville.</p><h3 class='nsub'>Perspectiva de inversión</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Penn Hills ofrece más espacio y precios de gama media que muchos barrios de la ciudad, con un parque de viviendas grande y variado. El valor y el estado varían según la zona del municipio, así que revise el área concreta, los impuestos y las escuelas: un agente local puede ayudarle a apuntar al sector adecuado.</p>
   <a class='nbhd-more' href='../../neighborhoods/es.html'>Ver todos los vecindarios →</a>
 </div>
+    
     <div class='relposts'><h2 class='sect'>Del Blog</h2><div class='relgrid'><a class="bcard" href="../../blog/penn-hills-pa-neighborhood-guide/es.html">
   <div class="bimg" style="background-image:url('/blog/assets/penn-hills-pa-neighborhood-guide.jpg')"><span class="bcat">Destacados del Vecindario</span></div>
   <div class="bbody">
@@ -260,6 +265,10 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')lbClose();
 function playVid(id){document.getElementById('vid').outerHTML=
   '<div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/'+id+
   '?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe></div>';}
+function playTour(el,id){el.outerHTML=
+  '<div class="tour-frame"><iframe src="https://www.youtube-nocookie.com/embed/'+id+
+  '?autoplay=1&mute=1&loop=1&playlist='+id+'&controls=1&playsinline=1&rel=0&modestbranding=1" '+
+  'allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>';}
 function mCalc(){const o=document.getElementById('mOut');if(!o)return;
   const p=+document.getElementById('mPrice').value||0,
         d=+document.getElementById('mDown').value||0,

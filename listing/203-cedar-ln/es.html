@@ -144,7 +144,11 @@
   .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
     text-transform:uppercase; letter-spacing:.5px; }
   .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
-    box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
+    box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; cursor:pointer; }
+  .tour-frame img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.9; }
+  .tour-frame .play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+  .tour-frame .play span { background:rgba(1,33,105,.85); color:#fff; border-radius:50%; width:60px; height:60px;
+    display:flex; align-items:center; justify-content:center; font-size:26px; padding-left:5px; }
   .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
   @media (max-width:760px) { .nbhd-cols { display:block; }
     .nbhd-aside { position:static; margin:18px auto 0; } .tour-embed { margin:0 auto; } }
@@ -208,9 +212,16 @@
     <div class="nbhd">
   <h2 class="sect">Vivir en Valencia</h2>
   <div class='nstats' aria-label="Datos rápidos"><div class='nstat'><b>~540 (municipio)</b><span>Población</span></div><div class='nstat'><b>Butler County</b><span>Condado</span></div><div class='nstat'><b>Mars Area (muy valorado)</b><span>Distrito escolar</span></div><div class='nstat'><b>~$360K–$410K</b><span>Valor medio de vivienda (16059)</span></div><div class='nstat'><b>~$110,800</b><span>Ingreso familiar medio</span></div><div class='nstat'><b>~90%</b><span>Tasa de propiedad</span></div><div class='nstat'><b>~45</b><span>Edad media</span></div></div>
-  <div class='nbhd-cols'><div class='nbhd-text'><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia es un pequeño y acogedor municipio del condado de Butler, a unos 40 km al norte del centro de Pittsburgh. Combina un entorno tranquilo y semirrural con un acceso rápido al corredor de la Ruta 228 / I-79, una de las zonas de mayor crecimiento de la región. Sus lotes arbolados, las construcciones más nuevas y la cómoda cercanía a Cranberry, Mars y Pittsburgh lo hacen muy popular entre familias y profesionales.</p><h3 class='nsub'>Escuelas y educación</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia pertenece al distrito escolar de Mars Area, uno de los más valorados de los suburbios del norte, reconocido por su buen nivel académico e instalaciones modernas.</p><h3 class='nsub'>Salud y compras</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Las compras, la atención médica y los restaurantes están a pocos minutos, en Mars y Cranberry Township, con grandes comercios, supermercados y consultorios médicos de UPMC y AHN sobre el corredor de la Ruta 228.</p><h3 class='nsub'>Restaurantes, parques y atracciones</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Los residentes disfrutan de parques y senderos cercanos, el encanto de pueblo pequeño de Mars y Valencia, y la cercanía a North Park y al golf, la recreación y la gastronomía de la zona de Cranberry.</p><h3 class='nsub'>Perspectiva de inversión</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia está en un distrito escolar muy solicitado y un corredor en crecimiento, lo que históricamente ha sostenido una demanda estable. Como siempre, el estado, el terreno y la ubicación exacta varían según la propiedad: una visita, una inspección y un agente local con experiencia son la mejor forma de evaluar su valor real.</p></div><aside class='nbhd-aside'><div class='tour-embed'><div class='tour-cap'>Recorrido 3D del vecindario</div><div class='tour-frame'><iframe src='https://www.youtube-nocookie.com/embed/_iqJ77zf3bY?autoplay=1&mute=1&loop=1&playlist=_iqJ77zf3bY&controls=1&playsinline=1&rel=0&modestbranding=1' loading='lazy' allowfullscreen allow='autoplay; encrypted-media; picture-in-picture'></iframe></div></div></aside></div>
+  <div class='nbhd-cols'><div class='nbhd-text'><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia es un pequeño y acogedor municipio del condado de Butler, a unos 40 km al norte del centro de Pittsburgh. Combina un entorno tranquilo y semirrural con un acceso rápido al corredor de la Ruta 228 / I-79, una de las zonas de mayor crecimiento de la región. Sus lotes arbolados, las construcciones más nuevas y la cómoda cercanía a Cranberry, Mars y Pittsburgh lo hacen muy popular entre familias y profesionales.</p><h3 class='nsub'>Escuelas y educación</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia pertenece al distrito escolar de Mars Area, uno de los más valorados de los suburbios del norte, reconocido por su buen nivel académico e instalaciones modernas.</p><h3 class='nsub'>Salud y compras</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Las compras, la atención médica y los restaurantes están a pocos minutos, en Mars y Cranberry Township, con grandes comercios, supermercados y consultorios médicos de UPMC y AHN sobre el corredor de la Ruta 228.</p><h3 class='nsub'>Restaurantes, parques y atracciones</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Los residentes disfrutan de parques y senderos cercanos, el encanto de pueblo pequeño de Mars y Valencia, y la cercanía a North Park y al golf, la recreación y la gastronomía de la zona de Cranberry.</p><h3 class='nsub'>Perspectiva de inversión</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia está en un distrito escolar muy solicitado y un corredor en crecimiento, lo que históricamente ha sostenido una demanda estable. Como siempre, el estado, el terreno y la ubicación exacta varían según la propiedad: una visita, una inspección y un agente local con experiencia son la mejor forma de evaluar su valor real.</p></div><aside class='nbhd-aside'><div class='tour-embed'><div class='tour-cap'>Recorrido 3D del vecindario</div><div class='tour-frame' onclick="playTour(this,'_iqJ77zf3bY')"><img src='https://i.ytimg.com/vi/_iqJ77zf3bY/hqdefault.jpg' alt='Recorrido 3D del vecindario' loading='lazy'><div class='play'><span>▶</span></div></div></div></aside></div>
   <a class='nbhd-more' href='../../neighborhoods/es.html'>Ver todos los vecindarios →</a>
 </div>
+    <h2 class='sect'>Ver propiedades en esta zona</h2><div class='nbhd-listings'><a class="card" href="../../listing/207-cedar-ln/es.html">
+  <div class="ph" style="background-image:url('../../listing/207-cedar-ln/photos/000.png')"><span class="badge ">Próximamente</span></div>
+  <div class="nfo">
+    <div class="price">&nbsp;</div>
+    <div class="addr">207 Cedar Ln. Valencia, PA 16056</div>
+    <div class="facts">Casa Móvil</div>
+  </div></a></div>
     <div class='relposts'><h2 class='sect'>Del Blog</h2><div class='relgrid'><a class="bcard" href="../../blog/valencia-pa-neighborhood-guide/es.html">
   <div class="bimg" style="background-image:url('/blog/assets/valencia-pa-neighborhood-guide.jpg')"><span class="bcat">Destacados del Vecindario</span></div>
   <div class="bbody">
@@ -260,6 +271,10 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')lbClose();
 function playVid(id){document.getElementById('vid').outerHTML=
   '<div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/'+id+
   '?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe></div>';}
+function playTour(el,id){el.outerHTML=
+  '<div class="tour-frame"><iframe src="https://www.youtube-nocookie.com/embed/'+id+
+  '?autoplay=1&mute=1&loop=1&playlist='+id+'&controls=1&playsinline=1&rel=0&modestbranding=1" '+
+  'allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>';}
 function mCalc(){const o=document.getElementById('mOut');if(!o)return;
   const p=+document.getElementById('mPrice').value||0,
         d=+document.getElementById('mDown').value||0,

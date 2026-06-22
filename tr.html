@@ -137,7 +137,11 @@
   .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
     text-transform:uppercase; letter-spacing:.5px; }
   .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
-    box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
+    box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; cursor:pointer; }
+  .tour-frame img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.9; }
+  .tour-frame .play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+  .tour-frame .play span { background:rgba(1,33,105,.85); color:#fff; border-radius:50%; width:60px; height:60px;
+    display:flex; align-items:center; justify-content:center; font-size:26px; padding-left:5px; }
   .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
   @media (max-width:760px) { .nbhd-cols { display:block; }
     .nbhd-aside { position:static; margin:18px auto 0; } .tour-embed { margin:0 auto; } }
@@ -222,7 +226,7 @@
   <div class="ph" style="background-image:url('listing/343-woodward-ave/photos/00.jpg')"><span class="badge buyer">Alıcı Temsilcisi</span></div>
   <div class="nfo">
     <div class="price">$57,900</div>
-    <div class="addr">343 Woodward Ave</div>
+    <div class="addr">343 Woodward Ave. McKees Rocks, PA 15136</div>
     <div class="facts">Müstakil Ev</div>
   </div></a><a class="card" href="listing/502-bon-air/tr.html">
   <div class="ph" style="background-image:url('listing/502-bon-air/photos/1.jpg')"><span class="badge sold">Satıldı</span></div>
@@ -246,13 +250,13 @@
   <div class="ph" style="background-image:url('listing/1626-painters-run-rd/photos/00.jpg')"><span class="badge buyer">Alıcı Temsilcisi</span></div>
   <div class="nfo">
     <div class="price">$40,000</div>
-    <div class="addr">1626 Painters Run Rd</div>
+    <div class="addr">1626 Painters Run Rd. Pittsburgh, PA 15243</div>
     <div class="facts">3 bd · 1 ba · 1188 sqft · Müstakil Ev · MLS# 1741282</div>
   </div></a><a class="card" href="listing/149-aberdeen-dr/tr.html">
   <div class="ph" style="background-image:url('listing/149-aberdeen-dr/photos/00.jpg')"><span class="badge buyer">Alıcı Temsilcisi</span></div>
   <div class="nfo">
     <div class="price">$290,000</div>
-    <div class="addr">149 Aberdeen Dr</div>
+    <div class="addr">149 Aberdeen Dr. Pittsburgh, PA 15237</div>
     <div class="facts">3 bd · 3 ba · 1432 sqft · Şehir Evi · MLS# 1695352</div>
   </div></a><a class="card" href="listing/443-n-school-st/tr.html">
   <div class="ph" style="background-image:url('listing/443-n-school-st/photos/01.jpg')"><span class="badge sold">Satıldı</span></div>
@@ -264,13 +268,13 @@
   <div class="ph" style="background-image:url('listing/282-carmell-dr/photos/00.jpg')"><span class="badge buyer">Alıcı Temsilcisi</span></div>
   <div class="nfo">
     <div class="price">$415,000</div>
-    <div class="addr">282 Carmell Dr</div>
+    <div class="addr">282 Carmell Dr. Pittsburgh, PA 15241</div>
     <div class="facts">4 bd · 3 ba · 1782 sqft · Müstakil Ev · MLS# 1702116</div>
   </div></a><a class="card" href="listing/3434-colby/tr.html">
   <div class="ph" style="background-image:url('listing/3434-colby/photos/PXL_20240823_192430370.MP.jpg')"><span class="badge buyer">Alıcı Temsilcisi</span></div>
   <div class="nfo">
     <div class="price">$158,000</div>
-    <div class="addr">3434 Colby</div>
+    <div class="addr">3434 Colby St. Pittsburgh, PA 15214</div>
     <div class="facts">Müstakil Ev</div>
   </div></a><a class="card" href="listing/735-boquet-st/tr.html">
   <div class="ph" style="background-image:url('listing/735-boquet-st/photos/00.jpg')"><span class="badge sold">Satıldı</span></div>
@@ -282,19 +286,19 @@
   <div class="ph" style="background-image:url('listing/212-214-friday-rd/photos/00.jpg')"><span class="badge buyer">Alıcı Temsilcisi</span></div>
   <div class="nfo">
     <div class="price">$160,000</div>
-    <div class="addr">212 214 Friday Rd</div>
+    <div class="addr">212-214 Friday Rd. Pittsburgh, PA 15209</div>
     <div class="facts">Şehir Evi</div>
   </div></a><a class="card" href="listing/1733-evans-ave/tr.html">
   <div class="ph" style="background-image:url('listing/1733-evans-ave/photos/00.jpg')"><span class="badge buyer">Alıcı Temsilcisi</span></div>
   <div class="nfo">
     <div class="price">$12,000</div>
-    <div class="addr">1733 Evans Ave</div>
+    <div class="addr">1733 Evans Ave. McKeesport, PA 15132</div>
     <div class="facts">Müstakil Ev</div>
   </div></a><a class="card" href="listing/1824-butler-st/tr.html">
   <div class="ph" style="background-image:url('listing/1824-butler-st/photos/00.jpg')"><span class="badge buyer">Alıcı Temsilcisi</span></div>
   <div class="nfo">
     <div class="price">$13,000</div>
-    <div class="addr">1824 Butler St</div>
+    <div class="addr">1824 Butler St. McKeesport, PA 15132</div>
     <div class="facts">2 bd · 1 ba · 864 sqft · Müstakil Ev · MLS# 1621465</div>
   </div></a><a class="card" href="listing/334-jucunda-st/tr.html">
   <div class="ph" style="background-image:url('listing/334-jucunda-st/photos/334_Jucunda_Street_1.jpg')"><span class="badge sold">Satıldı</span></div>
@@ -306,7 +310,7 @@
   <div class="ph" style="background-image:url('listing/1304-8th-st/photos/00.jpg')"><span class="badge buyer">Alıcı Temsilcisi</span></div>
   <div class="nfo">
     <div class="price">$31,000</div>
-    <div class="addr">1304 8th St</div>
+    <div class="addr">1304 8th Ave. Natrona Heights, PA 15065</div>
     <div class="facts">3 bd · 1 ba · 1400 sqft · Müstakil Ev · MLS# 1689443</div>
   </div></a><a class="card" href="listing/203-cedar-ln/tr.html">
   <div class="ph" style="background-image:url('listing/203-cedar-ln/photos/GetMedia.jpeg')"><span class="badge sold">Satıldı</span></div>
@@ -324,25 +328,25 @@
   <div class="ph" style="background-image:url('listing/1423-towne-square-dr/photos/GetMedia.jpeg')"><span class="badge buyer">Alıcı Temsilcisi</span></div>
   <div class="nfo">
     <div class="price">$318,500</div>
-    <div class="addr">1423 Towne Square Dr</div>
+    <div class="addr">1423 Towne Square Dr. Allison Park, PA 15101</div>
     <div class="facts">Şehir Evi</div>
   </div></a><a class="card" href="listing/304-pine-st/tr.html">
   <div class="ph" style="background-image:url('listing/304-pine-st/photos/ext_front_1.jpg')"><span class="badge buyer">Alıcı Temsilcisi</span></div>
   <div class="nfo">
     <div class="price">$62,500</div>
-    <div class="addr">304 Pine St</div>
+    <div class="addr">304 Pine St. McKeesport, PA 15132</div>
     <div class="facts">Müstakil Ev</div>
   </div></a><a class="card" href="listing/3221-stafford-st/tr.html">
   <div class="ph" style="background-image:url('listing/3221-stafford-st/photos/00.jpg')"><span class="badge buyer">Alıcı Temsilcisi</span></div>
   <div class="nfo">
     <div class="price">$55,000</div>
-    <div class="addr">3221 Stafford St</div>
+    <div class="addr">3221 Stafford St. Pittsburgh, PA 15204</div>
     <div class="facts">Diğer</div>
   </div></a><a class="card" href="listing/500-bevington-rd/tr.html">
   <div class="ph" style="background-image:url('listing/500-bevington-rd/photos/00.jpg')"><span class="badge buyer">Alıcı Temsilcisi</span></div>
   <div class="nfo">
     <div class="price">$175,000</div>
-    <div class="addr">500 Bevington Rd</div>
+    <div class="addr">500 Bevington Rd. Pittsburgh, PA 15221</div>
     <div class="facts">3 bd · 3 ba · 1700 sqft · Müstakil Ev · MLS# 1630361</div>
   </div></a><a class="card" href="listing/1707-grandview-ave/tr.html">
   <div class="ph" style="background-image:url('listing/1707-grandview-ave/photos/01.jpg')"><span class="badge sold">Satıldı</span></div>
