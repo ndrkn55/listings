@@ -129,6 +129,12 @@
   .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
   .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
   .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
+  .tour-embed { margin:10px auto 24px; max-width:340px; }
+  .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
+    text-transform:uppercase; letter-spacing:.5px; }
+  .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
+    box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
+  .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
   /* ── blog ── */
   .bgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; }
   .bcard { background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; color:inherit;
@@ -168,6 +174,7 @@
 <h1 style="margin-bottom:8px">Penn Hills, PA</h1>
 <div class="nbhd">
   <h2 class="sect">Vivir en Penn Hills</h2>
+  
   <div class='nstats' aria-label="Datos rápidos"><div class='nstat'><b>~36.000</b><span>Población</span></div><div class='nstat'><b>~$201.000</b><span>Valor medio de vivienda</span></div><div class='nstat'><b>~$84.500</b><span>Ingreso familiar medio</span></div><div class='nstat'><b>Penn Hills</b><span>Distrito escolar</span></div><div class='nstat'><b>Allegheny County</b><span>Condado</span></div><div class='nstat'><b>~16 km</b><span>Cerca del centro</span></div></div>
   <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Penn Hills es un municipio amplio y arbolado de unos 36.000 habitantes, a unos 16 km al este del centro de Pittsburgh. Uno de los mayores suburbios de la región, ofrece una gran variedad de viviendas —desde casas modestas de posguerra hasta propiedades más grandes— a precios en general moderados y con acceso rápido por autopista a la ciudad.</p>
   <h3 class='nsub'>Escuelas y educación</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Penn Hills pertenece al Penn Hills School District, que educa a más de 3.000 estudiantes en una primaria central, una secundaria media y una preparatoria.</p>
