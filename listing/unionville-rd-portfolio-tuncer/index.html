@@ -136,12 +136,18 @@
   .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
   .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
   .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
-  .tour-embed { margin:10px auto 24px; max-width:340px; }
+  /* neighborhood page: text left, 3D tour reel in a sticky right column under the stats */
+  .nbhd-cols { display:flex; gap:28px; align-items:flex-start; }
+  .nbhd-text { flex:1 1 auto; min-width:0; }
+  .nbhd-aside { flex:0 0 300px; position:sticky; top:16px; }
+  .tour-embed { margin:0; max-width:300px; }
   .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
     text-transform:uppercase; letter-spacing:.5px; }
   .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
     box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
   .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  @media (max-width:760px) { .nbhd-cols { display:block; }
+    .nbhd-aside { position:static; margin:18px auto 0; } .tour-embed { margin:0 auto; } }
   /* ── blog ── */
   .bgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; }
   .bcard { background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; color:inherit;
@@ -201,13 +207,8 @@
   src="https://www.google.com/maps?q=Unionville%20Rd%20Portfolio%20Tuncer%2C%20Pittsburgh%20area%2C%20PA&output=embed"></iframe></div>
     <div class="nbhd">
   <h2 class="sect">Living in Cranberry Township</h2>
-  
   <div class='nstats' aria-label="Quick facts"><div class='nstat'><b>~34,000</b><span>Population</span></div><div class='nstat'><b>~$421,000</b><span>Median home value</span></div><div class='nstat'><b>~$125,100</b><span>Median household income</span></div><div class='nstat'><b>~40</b><span>Median age</span></div><div class='nstat'><b>Seneca Valley (top-rated)</b><span>School district</span></div><div class='nstat'><b>Butler County</b><span>County</span></div><div class='nstat'><b>~20 mi</b><span>Near Downtown</span></div></div>
-  <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry Township is one of the Pittsburgh region&#x27;s most sought-after suburbs, in Butler County about 20 miles north of Downtown at the I-79 / Pennsylvania Turnpike crossroads. It&#x27;s a thriving, growing community of about 34,000 known for top schools, abundant shopping, corporate campuses and family-friendly amenities.</p>
-  <h3 class='nsub'>Schools &amp; Education</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry is served by the highly regarded Seneca Valley School District, one of the largest and most respected districts in western Pennsylvania.</p>
-  <h3 class='nsub'>Healthcare &amp; Shopping</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry is a regional retail and healthcare hub: major shopping along the Route 19 corridor, extensive dining, and UPMC and AHN facilities including the UPMC Lemieux Sports Complex, the Pittsburgh Penguins&#x27; practice rink.</p>
-  <h3 class='nsub'>Dining, Parks &amp; Attractions</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Sprawling parks such as North Boundary Park (with its pool and waterslides) and Cranberry Community Park offer trails, athletic fields and pools, and the township hosts community events year-round.</p>
-  <h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry combines strong schools, steady appreciation and deep amenities, which supports durable demand and resale — though that quality comes at the region&#x27;s higher price points. A local agent can help you weigh value, taxes and the right neighborhood within the township.</p>
+  <div class='nbhd-cols'><div class='nbhd-text'><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry Township is one of the Pittsburgh region&#x27;s most sought-after suburbs, in Butler County about 20 miles north of Downtown at the I-79 / Pennsylvania Turnpike crossroads. It&#x27;s a thriving, growing community of about 34,000 known for top schools, abundant shopping, corporate campuses and family-friendly amenities.</p><h3 class='nsub'>Schools &amp; Education</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry is served by the highly regarded Seneca Valley School District, one of the largest and most respected districts in western Pennsylvania.</p><h3 class='nsub'>Healthcare &amp; Shopping</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry is a regional retail and healthcare hub: major shopping along the Route 19 corridor, extensive dining, and UPMC and AHN facilities including the UPMC Lemieux Sports Complex, the Pittsburgh Penguins&#x27; practice rink.</p><h3 class='nsub'>Dining, Parks &amp; Attractions</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Sprawling parks such as North Boundary Park (with its pool and waterslides) and Cranberry Community Park offer trails, athletic fields and pools, and the township hosts community events year-round.</p><h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Cranberry combines strong schools, steady appreciation and deep amenities, which supports durable demand and resale — though that quality comes at the region&#x27;s higher price points. A local agent can help you weigh value, taxes and the right neighborhood within the township.</p></div><aside class='nbhd-aside'><div class='tour-embed'><div class='tour-cap'>3D Neighborhood Tour</div><div class='tour-frame'><iframe src='https://www.youtube-nocookie.com/embed/smgkcEypXDw?autoplay=1&mute=1&loop=1&playlist=smgkcEypXDw&controls=1&playsinline=1&rel=0&modestbranding=1' loading='lazy' allowfullscreen allow='autoplay; encrypted-media; picture-in-picture'></iframe></div></div></aside></div>
   <a class='nbhd-more' href='../../neighborhoods/'>See all neighborhoods →</a>
 </div>
     <div class='relposts'><h2 class='sect'>From the Blog</h2><div class='relgrid'><a class="bcard" href="../../blog/cranberry-township-pa-neighborhood-guide/">

@@ -136,12 +136,18 @@
   .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
   .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
   .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
-  .tour-embed { margin:10px auto 24px; max-width:340px; }
+  /* neighborhood page: text left, 3D tour reel in a sticky right column under the stats */
+  .nbhd-cols { display:flex; gap:28px; align-items:flex-start; }
+  .nbhd-text { flex:1 1 auto; min-width:0; }
+  .nbhd-aside { flex:0 0 300px; position:sticky; top:16px; }
+  .tour-embed { margin:0; max-width:300px; }
   .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
     text-transform:uppercase; letter-spacing:.5px; }
   .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
     box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
   .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  @media (max-width:760px) { .nbhd-cols { display:block; }
+    .nbhd-aside { position:static; margin:18px auto 0; } .tour-embed { margin:0 auto; } }
   /* ── blog ── */
   .bgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; }
   .bcard { background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; color:inherit;
@@ -201,13 +207,8 @@
   src="https://www.google.com/maps?q=601%20Allegheny%20Ave%2C%20Pittsburgh%20area%2C%20PA&output=embed"></iframe></div>
     <div class="nbhd">
   <h2 class="sect">Living in Glassport</h2>
-  
   <div class='nstats' aria-label="Quick facts"><div class='nstat'><b>~4,470</b><span>Population</span></div><div class='nstat'><b>~$88,000</b><span>Median home value</span></div><div class='nstat'><b>~$45,400</b><span>Median household income</span></div><div class='nstat'><b>~$820/mo</b><span>Median gross rent</span></div><div class='nstat'><b>~64%</b><span>Owner-occupied</span></div><div class='nstat'><b>~38</b><span>Median age</span></div><div class='nstat'><b>South Allegheny</b><span>School district</span></div></div>
-  <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Glassport is a small Monongahela River borough about 12 miles southeast of Pittsburgh, named for the glass industry that once anchored it. Today it&#x27;s a quiet, affordable working-class community where most homes were built in the 1940s and prices are among the lowest in Allegheny County.</p>
-  <h3 class='nsub'>Schools &amp; Education</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Glassport is served by the South Allegheny School District, which covers several nearby river communities.</p>
-  <h3 class='nsub'>Healthcare &amp; Shopping</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Local shops and services line the borough&#x27;s Monongahela Avenue, with larger retail, groceries and healthcare a short drive away in McKeesport and the Century III / West Mifflin area.</p>
-  <h3 class='nsub'>Dining, Parks &amp; Attractions</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Riverfront access, community parks and a tight-knit small-town feel are the draw here, with Kennywood amusement park and the Mon Valley trails a short trip away.</p>
-  <h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Glassport&#x27;s very low entry prices and roughly two-thirds owner-occupancy can make for steady, affordable rentals or starter homes, but the housing is old and block-by-block condition varies. A careful inspection, a look at taxes and rents, and a knowledgeable local agent are essential before buying.</p>
+  <div class='nbhd-cols'><div class='nbhd-text'><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Glassport is a small Monongahela River borough about 12 miles southeast of Pittsburgh, named for the glass industry that once anchored it. Today it&#x27;s a quiet, affordable working-class community where most homes were built in the 1940s and prices are among the lowest in Allegheny County.</p><h3 class='nsub'>Schools &amp; Education</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Glassport is served by the South Allegheny School District, which covers several nearby river communities.</p><h3 class='nsub'>Healthcare &amp; Shopping</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Local shops and services line the borough&#x27;s Monongahela Avenue, with larger retail, groceries and healthcare a short drive away in McKeesport and the Century III / West Mifflin area.</p><h3 class='nsub'>Dining, Parks &amp; Attractions</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Riverfront access, community parks and a tight-knit small-town feel are the draw here, with Kennywood amusement park and the Mon Valley trails a short trip away.</p><h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Glassport&#x27;s very low entry prices and roughly two-thirds owner-occupancy can make for steady, affordable rentals or starter homes, but the housing is old and block-by-block condition varies. A careful inspection, a look at taxes and rents, and a knowledgeable local agent are essential before buying.</p></div><aside class='nbhd-aside'><div class='tour-embed'><div class='tour-cap'>3D Neighborhood Tour</div><div class='tour-frame'><iframe src='https://www.youtube-nocookie.com/embed/SSuqvDOUA08?autoplay=1&mute=1&loop=1&playlist=SSuqvDOUA08&controls=1&playsinline=1&rel=0&modestbranding=1' loading='lazy' allowfullscreen allow='autoplay; encrypted-media; picture-in-picture'></iframe></div></div></aside></div>
   <a class='nbhd-more' href='../../neighborhoods/'>See all neighborhoods →</a>
 </div>
     <div class='relposts'><h2 class='sect'>From the Blog</h2><div class='relgrid'><a class="bcard" href="../../blog/glassport-pa-neighborhood-guide/">

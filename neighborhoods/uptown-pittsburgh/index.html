@@ -129,12 +129,18 @@
   .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
   .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
   .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
-  .tour-embed { margin:10px auto 24px; max-width:340px; }
+  /* neighborhood page: text left, 3D tour reel in a sticky right column under the stats */
+  .nbhd-cols { display:flex; gap:28px; align-items:flex-start; }
+  .nbhd-text { flex:1 1 auto; min-width:0; }
+  .nbhd-aside { flex:0 0 300px; position:sticky; top:16px; }
+  .tour-embed { margin:0; max-width:300px; }
   .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
     text-transform:uppercase; letter-spacing:.5px; }
   .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
     box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
   .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  @media (max-width:760px) { .nbhd-cols { display:block; }
+    .nbhd-aside { position:static; margin:18px auto 0; } .tour-embed { margin:0 auto; } }
   /* ── blog ── */
   .bgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; }
   .bcard { background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; color:inherit;
@@ -174,13 +180,8 @@
 <h1 style="margin-bottom:8px">Uptown, Pittsburgh</h1>
 <div class="nbhd">
   <h2 class="sect">Living in Uptown</h2>
-  
   <div class='nstats' aria-label="Quick facts"><div class='nstat'><b>Downtown-adjacent</b><span>Setting</span></div><div class='nstat'><b>$880M+</b><span>Investment since 2017</span></div><div class='nstat'><b>Duquesne U · UPMC Mercy</b><span>Anchors</span></div><div class='nstat'><b>$510M (2023)</b><span>UPMC Mercy expansion</span></div><div class='nstat'><b>Bus Rapid Transit</b><span>Transit</span></div><div class='nstat'><b>PPG Paints Arena</b><span>Venue</span></div><div class='nstat'><b>Pittsburgh Public</b><span>School district</span></div></div>
-  <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Uptown — also branded the EcoInnovation District — is a compact neighborhood wedged between Downtown Pittsburgh and Oakland, along the Fifth and Forbes avenue corridors. Long overlooked, it&#x27;s now one of the city&#x27;s most actively redeveloping areas, anchored by Duquesne University, UPMC Mercy and PPG Paints Arena, with a city-adopted plan guiding new housing, transit and green space.</p>
-  <h3 class='nsub'>Schools &amp; Education</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Uptown is part of Pittsburgh Public Schools, and its central location puts it minutes from Downtown and the universities of Oakland. Buyers with school-age children should confirm the current feeder schools for the specific address.</p>
-  <h3 class='nsub'>Healthcare &amp; Shopping</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>UPMC Mercy — which completed a $510M expansion in 2023 — is right in the neighborhood, and Downtown&#x27;s shopping, groceries and services are a short walk or ride away. A new Bus Rapid Transit line further links Uptown to Downtown and Oakland.</p>
-  <h3 class='nsub'>Dining, Parks &amp; Attractions</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>PPG Paints Arena (Penguins hockey and concerts) sits at the edge of Uptown, with Downtown&#x27;s cultural district, stadiums and riverfront parks all close by. Duquesne University&#x27;s campus adds green space and energy.</p>
-  <h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Uptown has drawn more than $880M in investment in recent years — an unusual concentration for a small Pittsburgh neighborhood — which makes it one to watch. That said, redevelopment is uneven and parcel-by-parcel, and values, zoning and building condition vary widely. Careful research and a knowledgeable agent are essential to separate genuine opportunity from risk here.</p>
+  <div class='nbhd-cols'><div class='nbhd-text'><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Uptown — also branded the EcoInnovation District — is a compact neighborhood wedged between Downtown Pittsburgh and Oakland, along the Fifth and Forbes avenue corridors. Long overlooked, it&#x27;s now one of the city&#x27;s most actively redeveloping areas, anchored by Duquesne University, UPMC Mercy and PPG Paints Arena, with a city-adopted plan guiding new housing, transit and green space.</p><h3 class='nsub'>Schools &amp; Education</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Uptown is part of Pittsburgh Public Schools, and its central location puts it minutes from Downtown and the universities of Oakland. Buyers with school-age children should confirm the current feeder schools for the specific address.</p><h3 class='nsub'>Healthcare &amp; Shopping</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>UPMC Mercy — which completed a $510M expansion in 2023 — is right in the neighborhood, and Downtown&#x27;s shopping, groceries and services are a short walk or ride away. A new Bus Rapid Transit line further links Uptown to Downtown and Oakland.</p><h3 class='nsub'>Dining, Parks &amp; Attractions</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>PPG Paints Arena (Penguins hockey and concerts) sits at the edge of Uptown, with Downtown&#x27;s cultural district, stadiums and riverfront parks all close by. Duquesne University&#x27;s campus adds green space and energy.</p><h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Uptown has drawn more than $880M in investment in recent years — an unusual concentration for a small Pittsburgh neighborhood — which makes it one to watch. That said, redevelopment is uneven and parcel-by-parcel, and values, zoning and building condition vary widely. Careful research and a knowledgeable agent are essential to separate genuine opportunity from risk here.</p></div><aside class='nbhd-aside'><div class='tour-embed'><div class='tour-cap'>3D Neighborhood Tour</div><div class='tour-frame'><iframe src='https://www.youtube-nocookie.com/embed/effNr52yqmE?autoplay=1&mute=1&loop=1&playlist=effNr52yqmE&controls=1&playsinline=1&rel=0&modestbranding=1' loading='lazy' allowfullscreen allow='autoplay; encrypted-media; picture-in-picture'></iframe></div></div></aside></div>
   
 </div>
 <h2 class='sect'>Browse listings in this area</h2><div class='nbhd-listings'><a class="card" href="../../listing/223-lombard-st/">

@@ -136,12 +136,18 @@
   .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
   .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
   .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
-  .tour-embed { margin:10px auto 24px; max-width:340px; }
+  /* neighborhood page: text left, 3D tour reel in a sticky right column under the stats */
+  .nbhd-cols { display:flex; gap:28px; align-items:flex-start; }
+  .nbhd-text { flex:1 1 auto; min-width:0; }
+  .nbhd-aside { flex:0 0 300px; position:sticky; top:16px; }
+  .tour-embed { margin:0; max-width:300px; }
   .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
     text-transform:uppercase; letter-spacing:.5px; }
   .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
     box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
   .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  @media (max-width:760px) { .nbhd-cols { display:block; }
+    .nbhd-aside { position:static; margin:18px auto 0; } .tour-embed { margin:0 auto; } }
   /* ── blog ── */
   .bgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; }
   .bcard { background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; color:inherit;
@@ -201,13 +207,8 @@
   src="https://www.google.com/maps?q=735%20Boquet%20St%2C%20Pittsburgh%20area%2C%20PA&output=embed"></iframe></div>
     <div class="nbhd">
   <h2 class="sect">Living in McKees Rocks</h2>
-  
   <div class='nstats' aria-label="Quick facts"><div class='nstat'><b>~5,600</b><span>Population</span></div><div class='nstat'><b>~$94,000</b><span>Median sale price</span></div><div class='nstat'><b>~$33,500</b><span>Median household income</span></div><div class='nstat'><b>Sto-Rox</b><span>School district</span></div><div class='nstat'><b>Ohio River</b><span>Setting</span></div><div class='nstat'><b>~6 mi</b><span>Near Downtown</span></div></div>
-  <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>McKees Rocks is a historic Ohio River borough about 6 miles northwest of Downtown Pittsburgh. A former industrial and railroad hub of around 5,600 today, it offers some of the lowest home prices in the area alongside ongoing community revitalization efforts along the riverfront.</p>
-  <h3 class='nsub'>Schools &amp; Education</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>McKees Rocks is served by the Sto-Rox School District, shared with neighboring Stowe Township.</p>
-  <h3 class='nsub'>Healthcare &amp; Shopping</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Local shops and services line Chartiers Avenue, with additional retail, groceries and healthcare a short drive away in Robinson Township and the nearby river communities.</p>
-  <h3 class='nsub'>Dining, Parks &amp; Attractions</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>The riverfront, the historic &#x27;Bottoms&#x27; district and proximity to Downtown and the airport corridor define the area, with Pittsburgh&#x27;s North Shore stadiums and attractions a short drive across the river.</p>
-  <h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>McKees Rocks has very low entry prices and rental potential close to the city, but it&#x27;s an older borough with block-by-block variation and real economic challenges. This is a do-your-homework market: inspect thoroughly, study the street, taxes and rents, and rely on an agent who knows the area before buying.</p>
+  <div class='nbhd-cols'><div class='nbhd-text'><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>McKees Rocks is a historic Ohio River borough about 6 miles northwest of Downtown Pittsburgh. A former industrial and railroad hub of around 5,600 today, it offers some of the lowest home prices in the area alongside ongoing community revitalization efforts along the riverfront.</p><h3 class='nsub'>Schools &amp; Education</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>McKees Rocks is served by the Sto-Rox School District, shared with neighboring Stowe Township.</p><h3 class='nsub'>Healthcare &amp; Shopping</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Local shops and services line Chartiers Avenue, with additional retail, groceries and healthcare a short drive away in Robinson Township and the nearby river communities.</p><h3 class='nsub'>Dining, Parks &amp; Attractions</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>The riverfront, the historic &#x27;Bottoms&#x27; district and proximity to Downtown and the airport corridor define the area, with Pittsburgh&#x27;s North Shore stadiums and attractions a short drive across the river.</p><h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>McKees Rocks has very low entry prices and rental potential close to the city, but it&#x27;s an older borough with block-by-block variation and real economic challenges. This is a do-your-homework market: inspect thoroughly, study the street, taxes and rents, and rely on an agent who knows the area before buying.</p></div><aside class='nbhd-aside'><div class='tour-embed'><div class='tour-cap'>3D Neighborhood Tour</div><div class='tour-frame'><iframe src='https://www.youtube-nocookie.com/embed/GWRNByuxM04?autoplay=1&mute=1&loop=1&playlist=GWRNByuxM04&controls=1&playsinline=1&rel=0&modestbranding=1' loading='lazy' allowfullscreen allow='autoplay; encrypted-media; picture-in-picture'></iframe></div></div></aside></div>
   <a class='nbhd-more' href='../../neighborhoods/'>See all neighborhoods →</a>
 </div>
     <div class='relposts'><h2 class='sect'>From the Blog</h2><div class='relgrid'><a class="bcard" href="../../blog/mckees-rocks-pa-neighborhood-guide/">

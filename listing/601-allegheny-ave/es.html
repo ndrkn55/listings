@@ -136,12 +136,18 @@
   .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
   .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
   .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
-  .tour-embed { margin:10px auto 24px; max-width:340px; }
+  /* neighborhood page: text left, 3D tour reel in a sticky right column under the stats */
+  .nbhd-cols { display:flex; gap:28px; align-items:flex-start; }
+  .nbhd-text { flex:1 1 auto; min-width:0; }
+  .nbhd-aside { flex:0 0 300px; position:sticky; top:16px; }
+  .tour-embed { margin:0; max-width:300px; }
   .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
     text-transform:uppercase; letter-spacing:.5px; }
   .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
     box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
   .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  @media (max-width:760px) { .nbhd-cols { display:block; }
+    .nbhd-aside { position:static; margin:18px auto 0; } .tour-embed { margin:0 auto; } }
   /* ── blog ── */
   .bgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; }
   .bcard { background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; color:inherit;
@@ -201,13 +207,8 @@
   src="https://www.google.com/maps?q=601%20Allegheny%20Ave%2C%20Pittsburgh%20area%2C%20PA&output=embed"></iframe></div>
     <div class="nbhd">
   <h2 class="sect">Vivir en Glassport</h2>
-  
   <div class='nstats' aria-label="Datos rápidos"><div class='nstat'><b>~4.470</b><span>Población</span></div><div class='nstat'><b>~$88.000</b><span>Valor medio de vivienda</span></div><div class='nstat'><b>~$45.400</b><span>Ingreso familiar medio</span></div><div class='nstat'><b>~$820/mes</b><span>Alquiler medio</span></div><div class='nstat'><b>~64%</b><span>Viviendas en propiedad</span></div><div class='nstat'><b>~38</b><span>Edad media</span></div><div class='nstat'><b>South Allegheny</b><span>Distrito escolar</span></div></div>
-  <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Glassport es un pequeño municipio a orillas del río Monongahela, a unos 19 km al sureste de Pittsburgh, que debe su nombre a la industria del vidrio que lo sostuvo. Hoy es una comunidad obrera tranquila y asequible, donde la mayoría de las casas son de los años 40 y los precios están entre los más bajos del condado de Allegheny.</p>
-  <h3 class='nsub'>Escuelas y educación</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Glassport pertenece al South Allegheny School District, que abarca varias comunidades ribereñas cercanas.</p>
-  <h3 class='nsub'>Salud y compras</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Comercios y servicios locales se ubican en la avenida Monongahela del municipio, con grandes tiendas, supermercados y atención médica a poca distancia en McKeesport y la zona de Century III / West Mifflin.</p>
-  <h3 class='nsub'>Restaurantes, parques y atracciones</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>El acceso al río, los parques comunitarios y el ambiente de pueblo pequeño son su atractivo, con el parque de diversiones Kennywood y los senderos del valle del Mon a corta distancia.</p>
-  <h3 class='nsub'>Perspectiva de inversión</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Los precios de entrada muy bajos de Glassport y una propiedad ocupada en cerca de dos tercios pueden dar lugar a alquileres asequibles y estables o a primeras viviendas, pero las casas son antiguas y el estado varía de una cuadra a otra. Una inspección cuidadosa, revisar impuestos y alquileres, y un agente local con experiencia son imprescindibles antes de comprar.</p>
+  <div class='nbhd-cols'><div class='nbhd-text'><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Glassport es un pequeño municipio a orillas del río Monongahela, a unos 19 km al sureste de Pittsburgh, que debe su nombre a la industria del vidrio que lo sostuvo. Hoy es una comunidad obrera tranquila y asequible, donde la mayoría de las casas son de los años 40 y los precios están entre los más bajos del condado de Allegheny.</p><h3 class='nsub'>Escuelas y educación</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Glassport pertenece al South Allegheny School District, que abarca varias comunidades ribereñas cercanas.</p><h3 class='nsub'>Salud y compras</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Comercios y servicios locales se ubican en la avenida Monongahela del municipio, con grandes tiendas, supermercados y atención médica a poca distancia en McKeesport y la zona de Century III / West Mifflin.</p><h3 class='nsub'>Restaurantes, parques y atracciones</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>El acceso al río, los parques comunitarios y el ambiente de pueblo pequeño son su atractivo, con el parque de diversiones Kennywood y los senderos del valle del Mon a corta distancia.</p><h3 class='nsub'>Perspectiva de inversión</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Los precios de entrada muy bajos de Glassport y una propiedad ocupada en cerca de dos tercios pueden dar lugar a alquileres asequibles y estables o a primeras viviendas, pero las casas son antiguas y el estado varía de una cuadra a otra. Una inspección cuidadosa, revisar impuestos y alquileres, y un agente local con experiencia son imprescindibles antes de comprar.</p></div><aside class='nbhd-aside'><div class='tour-embed'><div class='tour-cap'>Recorrido 3D del vecindario</div><div class='tour-frame'><iframe src='https://www.youtube-nocookie.com/embed/SSuqvDOUA08?autoplay=1&mute=1&loop=1&playlist=SSuqvDOUA08&controls=1&playsinline=1&rel=0&modestbranding=1' loading='lazy' allowfullscreen allow='autoplay; encrypted-media; picture-in-picture'></iframe></div></div></aside></div>
   <a class='nbhd-more' href='../../neighborhoods/es.html'>Ver todos los vecindarios →</a>
 </div>
     <div class='relposts'><h2 class='sect'>Del Blog</h2><div class='relgrid'><a class="bcard" href="../../blog/glassport-pa-neighborhood-guide/es.html">

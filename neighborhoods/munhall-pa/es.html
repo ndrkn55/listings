@@ -129,12 +129,18 @@
   .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
   .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
   .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
-  .tour-embed { margin:10px auto 24px; max-width:340px; }
+  /* neighborhood page: text left, 3D tour reel in a sticky right column under the stats */
+  .nbhd-cols { display:flex; gap:28px; align-items:flex-start; }
+  .nbhd-text { flex:1 1 auto; min-width:0; }
+  .nbhd-aside { flex:0 0 300px; position:sticky; top:16px; }
+  .tour-embed { margin:0; max-width:300px; }
   .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
     text-transform:uppercase; letter-spacing:.5px; }
   .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
     box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
   .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  @media (max-width:760px) { .nbhd-cols { display:block; }
+    .nbhd-aside { position:static; margin:18px auto 0; } .tour-embed { margin:0 auto; } }
   /* ── blog ── */
   .bgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; }
   .bcard { background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; color:inherit;
@@ -174,13 +180,8 @@
 <h1 style="margin-bottom:8px">Munhall, PA</h1>
 <div class="nbhd">
   <h2 class="sect">Vivir en Munhall</h2>
-  
   <div class='nstats' aria-label="Datos rápidos"><div class='nstat'><b>~10.800</b><span>Población</span></div><div class='nstat'><b>~$132.000</b><span>Valor medio de vivienda</span></div><div class='nstat'><b>~$52.200</b><span>Ingreso familiar medio</span></div><div class='nstat'><b>~67%</b><span>Viviendas en propiedad</span></div><div class='nstat'><b>Steel Valley</b><span>Distrito escolar</span></div><div class='nstat'><b>The Waterfront</b><span>Compras</span></div><div class='nstat'><b>~11 km</b><span>Cerca del centro</span></div></div>
-  <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Munhall es un municipio a orillas del río Monongahela, a unos 11 km al sureste de Pittsburgh, en el corazón del histórico distrito siderúrgico de Homestead. Hoy es una comunidad obrera estable de unos 10.800 habitantes, con viviendas asequibles y uno de los mayores destinos de compras de la región justo al lado.</p>
-  <h3 class='nsub'>Escuelas y educación</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Munhall pertenece al Steel Valley School District, que comparte con Homestead y West Homestead.</p>
-  <h3 class='nsub'>Salud y compras</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>The Waterfront —un gran centro de compras, restaurantes y ocio construido sobre el antiguo emplazamiento siderúrgico Homestead Works— está a las puertas de Munhall, con supermercados, grandes tiendas, cine y paseos junto al río.</p>
-  <h3 class='nsub'>Restaurantes, parques y atracciones</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Aquí la historia es profunda: la Pump House y la torre de agua, escenario de la Batalla de Homestead de 1892, y los conservados Carrie Blast Furnaces cercanos atraen visitantes, y el parque Kennywood está a pocos minutos.</p>
-  <h3 class='nsub'>Perspectiva de inversión</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Munhall ofrece viviendas asequibles, una propiedad ocupada en cerca de dos tercios y un acceso inmejorable a The Waterfront, lo que sostiene una demanda estable. Las viviendas son antiguas, así que inspeccione con cuidado y revise la calle concreta y los impuestos: un agente local con experiencia es la mejor guía.</p>
+  <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Munhall es un municipio a orillas del río Monongahela, a unos 11 km al sureste de Pittsburgh, en el corazón del histórico distrito siderúrgico de Homestead. Hoy es una comunidad obrera estable de unos 10.800 habitantes, con viviendas asequibles y uno de los mayores destinos de compras de la región justo al lado.</p><h3 class='nsub'>Escuelas y educación</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Munhall pertenece al Steel Valley School District, que comparte con Homestead y West Homestead.</p><h3 class='nsub'>Salud y compras</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>The Waterfront —un gran centro de compras, restaurantes y ocio construido sobre el antiguo emplazamiento siderúrgico Homestead Works— está a las puertas de Munhall, con supermercados, grandes tiendas, cine y paseos junto al río.</p><h3 class='nsub'>Restaurantes, parques y atracciones</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Aquí la historia es profunda: la Pump House y la torre de agua, escenario de la Batalla de Homestead de 1892, y los conservados Carrie Blast Furnaces cercanos atraen visitantes, y el parque Kennywood está a pocos minutos.</p><h3 class='nsub'>Perspectiva de inversión</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Munhall ofrece viviendas asequibles, una propiedad ocupada en cerca de dos tercios y un acceso inmejorable a The Waterfront, lo que sostiene una demanda estable. Las viviendas son antiguas, así que inspeccione con cuidado y revise la calle concreta y los impuestos: un agente local con experiencia es la mejor guía.</p>
   
 </div>
 <h2 class='sect'>Ver propiedades en esta zona</h2><div class='nbhd-listings'><a class="card" href="../../listing/133-eugene-st/es.html">

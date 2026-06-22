@@ -136,12 +136,18 @@
   .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
   .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
   .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
-  .tour-embed { margin:10px auto 24px; max-width:340px; }
+  /* neighborhood page: text left, 3D tour reel in a sticky right column under the stats */
+  .nbhd-cols { display:flex; gap:28px; align-items:flex-start; }
+  .nbhd-text { flex:1 1 auto; min-width:0; }
+  .nbhd-aside { flex:0 0 300px; position:sticky; top:16px; }
+  .tour-embed { margin:0; max-width:300px; }
   .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
     text-transform:uppercase; letter-spacing:.5px; }
   .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
     box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
   .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  @media (max-width:760px) { .nbhd-cols { display:block; }
+    .nbhd-aside { position:static; margin:18px auto 0; } .tour-embed { margin:0 auto; } }
   /* ── blog ── */
   .bgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; }
   .bcard { background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; color:inherit;
@@ -205,13 +211,8 @@
   src="https://www.google.com/maps?q=207%20Cedar%20Ln%2C%20Pittsburgh%20area%2C%20PA&output=embed"></iframe></div>
     <div class="nbhd">
   <h2 class="sect">Living in Valencia</h2>
-  
   <div class='nstats' aria-label="Quick facts"><div class='nstat'><b>~540 (borough)</b><span>Population</span></div><div class='nstat'><b>Butler County</b><span>County</span></div><div class='nstat'><b>Mars Area (highly rated)</b><span>School district</span></div><div class='nstat'><b>~$360K–$410K</b><span>Median home value (16059)</span></div><div class='nstat'><b>~$110,800</b><span>Median household income</span></div><div class='nstat'><b>~90%</b><span>Homeownership</span></div><div class='nstat'><b>~45</b><span>Median age</span></div></div>
-  <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia is a small, friendly borough in Butler County, about 25 miles north of downtown Pittsburgh. It pairs a quiet, semi-rural setting with quick access to the Route 228 / I-79 corridor — one of the region&#x27;s fastest-growing areas. Tree-lined lots, newer construction and an easy commute toward Cranberry, Mars and Pittsburgh make it popular with families and professionals.</p>
-  <h3 class='nsub'>Schools &amp; Education</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia is served by the Mars Area School District, one of the most highly regarded districts in the northern suburbs, known for strong academics and modern facilities.</p>
-  <h3 class='nsub'>Healthcare &amp; Shopping</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Everyday shopping, healthcare and dining sit minutes away in Mars and Cranberry Township, including major retail, groceries and UPMC and AHN medical offices along the Route 228 corridor.</p>
-  <h3 class='nsub'>Dining, Parks &amp; Attractions</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Residents enjoy nearby parks and trails, the small-town charm of Mars and Valencia, and easy access to North Park and the golf, recreation and dining of the greater Cranberry area.</p>
-  <h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia sits in a sought-after school district and a growth corridor, which has historically supported steady demand. As always, condition, lot and exact location vary property to property — a walkthrough, an inspection and a knowledgeable local agent are the best way to judge real value here.</p>
+  <div class='nbhd-cols'><div class='nbhd-text'><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia is a small, friendly borough in Butler County, about 25 miles north of downtown Pittsburgh. It pairs a quiet, semi-rural setting with quick access to the Route 228 / I-79 corridor — one of the region&#x27;s fastest-growing areas. Tree-lined lots, newer construction and an easy commute toward Cranberry, Mars and Pittsburgh make it popular with families and professionals.</p><h3 class='nsub'>Schools &amp; Education</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia is served by the Mars Area School District, one of the most highly regarded districts in the northern suburbs, known for strong academics and modern facilities.</p><h3 class='nsub'>Healthcare &amp; Shopping</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Everyday shopping, healthcare and dining sit minutes away in Mars and Cranberry Township, including major retail, groceries and UPMC and AHN medical offices along the Route 228 corridor.</p><h3 class='nsub'>Dining, Parks &amp; Attractions</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Residents enjoy nearby parks and trails, the small-town charm of Mars and Valencia, and easy access to North Park and the golf, recreation and dining of the greater Cranberry area.</p><h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Valencia sits in a sought-after school district and a growth corridor, which has historically supported steady demand. As always, condition, lot and exact location vary property to property — a walkthrough, an inspection and a knowledgeable local agent are the best way to judge real value here.</p></div><aside class='nbhd-aside'><div class='tour-embed'><div class='tour-cap'>3D Neighborhood Tour</div><div class='tour-frame'><iframe src='https://www.youtube-nocookie.com/embed/_iqJ77zf3bY?autoplay=1&mute=1&loop=1&playlist=_iqJ77zf3bY&controls=1&playsinline=1&rel=0&modestbranding=1' loading='lazy' allowfullscreen allow='autoplay; encrypted-media; picture-in-picture'></iframe></div></div></aside></div>
   <a class='nbhd-more' href='../../neighborhoods/'>See all neighborhoods →</a>
 </div>
     <div class='relposts'><h2 class='sect'>From the Blog</h2><div class='relgrid'><a class="bcard" href="../../blog/valencia-pa-neighborhood-guide/">

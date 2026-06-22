@@ -129,12 +129,18 @@
   .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
   .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
   .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
-  .tour-embed { margin:10px auto 24px; max-width:340px; }
+  /* neighborhood page: text left, 3D tour reel in a sticky right column under the stats */
+  .nbhd-cols { display:flex; gap:28px; align-items:flex-start; }
+  .nbhd-text { flex:1 1 auto; min-width:0; }
+  .nbhd-aside { flex:0 0 300px; position:sticky; top:16px; }
+  .tour-embed { margin:0; max-width:300px; }
   .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
     text-transform:uppercase; letter-spacing:.5px; }
   .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
     box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
   .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  @media (max-width:760px) { .nbhd-cols { display:block; }
+    .nbhd-aside { position:static; margin:18px auto 0; } .tour-embed { margin:0 auto; } }
   /* ── blog ── */
   .bgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; }
   .bcard { background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; color:inherit;
@@ -174,13 +180,8 @@
 <h1 style="margin-bottom:8px">Avalon, PA</h1>
 <div class="nbhd">
   <h2 class="sect">Vivir en Avalon</h2>
-  <div class='tour-embed'><div class='tour-cap'>Recorrido 3D del vecindario</div><div class='tour-frame'><iframe src='https://www.youtube-nocookie.com/embed/pd91_d6OjG8?autoplay=1&mute=1&loop=1&playlist=pd91_d6OjG8&controls=1&playsinline=1&rel=0&modestbranding=1' loading='lazy' allowfullscreen allow='autoplay; encrypted-media; picture-in-picture'></iframe></div></div>
   <div class='nstats' aria-label="Datos rápidos"><div class='nstat'><b>~4.500</b><span>Población</span></div><div class='nstat'><b>~$180K–$198K</b><span>Valor medio de vivienda</span></div><div class='nstat'><b>~$51.200</b><span>Ingreso familiar medio</span></div><div class='nstat'><b>~$938/mes</b><span>Alquiler medio</span></div><div class='nstat'><b>~46</b><span>Edad media</span></div><div class='nstat'><b>Northgate</b><span>Distrito escolar</span></div><div class='nstat'><b>~10 km</b><span>Cerca del centro</span></div></div>
-  <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Avalon es un municipio compacto y peatonal a orillas del río Ohio, a unos 10 km al noroeste del centro de Pittsburgh. Forma parte de los consolidados &#x27;North Boroughs&#x27; del anillo interior y ofrece calles cuidadas, casas clásicas de principios del siglo XX y un entorno ribereño con un trayecto cómodo a la ciudad.</p>
-  <h3 class='nsub'>Escuelas y educación</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Avalon pertenece al Northgate School District, que comparte con la vecina Bellevue: un distrito pequeño con una escuela primaria en Avalon y la Northgate Junior–Senior High School.</p>
-  <h3 class='nsub'>Salud y compras</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>La avenida California reúne comercios y restaurantes locales, con el distrito comercial de Bellevue, supermercados y atención médica a pocos minutos, y el centro a corta distancia en auto o autobús siguiendo el río.</p>
-  <h3 class='nsub'>Restaurantes, parques y atracciones</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Los residentes disfrutan del acceso al río, parques cercanos y la rápida llegada a las tiendas, la gastronomía y el ambiente peatonal de Bellevue y Ben Avon.</p>
-  <h3 class='nsub'>Perspectiva de inversión</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>La combinación en Avalon de precios moderados, un distrito escolar definido y una ubicación de anillo interior ha mantenido una demanda estable, lo que lo hace popular entre quienes compran su primera vivienda y pequeños inversores. Como siempre, las casas antiguas varían en su estado: inspeccione con cuidado, revise la cuadra y trabaje con un agente que conozca los North Boroughs.</p>
+  <div class='nbhd-cols'><div class='nbhd-text'><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Avalon es un municipio compacto y peatonal a orillas del río Ohio, a unos 10 km al noroeste del centro de Pittsburgh. Forma parte de los consolidados &#x27;North Boroughs&#x27; del anillo interior y ofrece calles cuidadas, casas clásicas de principios del siglo XX y un entorno ribereño con un trayecto cómodo a la ciudad.</p><h3 class='nsub'>Escuelas y educación</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Avalon pertenece al Northgate School District, que comparte con la vecina Bellevue: un distrito pequeño con una escuela primaria en Avalon y la Northgate Junior–Senior High School.</p><h3 class='nsub'>Salud y compras</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>La avenida California reúne comercios y restaurantes locales, con el distrito comercial de Bellevue, supermercados y atención médica a pocos minutos, y el centro a corta distancia en auto o autobús siguiendo el río.</p><h3 class='nsub'>Restaurantes, parques y atracciones</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Los residentes disfrutan del acceso al río, parques cercanos y la rápida llegada a las tiendas, la gastronomía y el ambiente peatonal de Bellevue y Ben Avon.</p><h3 class='nsub'>Perspectiva de inversión</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>La combinación en Avalon de precios moderados, un distrito escolar definido y una ubicación de anillo interior ha mantenido una demanda estable, lo que lo hace popular entre quienes compran su primera vivienda y pequeños inversores. Como siempre, las casas antiguas varían en su estado: inspeccione con cuidado, revise la cuadra y trabaje con un agente que conozca los North Boroughs.</p></div><aside class='nbhd-aside'><div class='tour-embed'><div class='tour-cap'>Recorrido 3D del vecindario</div><div class='tour-frame'><iframe src='https://www.youtube-nocookie.com/embed/pd91_d6OjG8?autoplay=1&mute=1&loop=1&playlist=pd91_d6OjG8&controls=1&playsinline=1&rel=0&modestbranding=1' loading='lazy' allowfullscreen allow='autoplay; encrypted-media; picture-in-picture'></iframe></div></div></aside></div>
   
 </div>
 <h2 class='sect'>Ver propiedades en esta zona</h2><div class='nbhd-listings'><a class="card" href="../../listing/445-n-school-st/es.html">

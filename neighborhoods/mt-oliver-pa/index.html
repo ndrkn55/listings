@@ -129,12 +129,18 @@
   .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
   .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
   .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
-  .tour-embed { margin:10px auto 24px; max-width:340px; }
+  /* neighborhood page: text left, 3D tour reel in a sticky right column under the stats */
+  .nbhd-cols { display:flex; gap:28px; align-items:flex-start; }
+  .nbhd-text { flex:1 1 auto; min-width:0; }
+  .nbhd-aside { flex:0 0 300px; position:sticky; top:16px; }
+  .tour-embed { margin:0; max-width:300px; }
   .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
     text-transform:uppercase; letter-spacing:.5px; }
   .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
     box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
   .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  @media (max-width:760px) { .nbhd-cols { display:block; }
+    .nbhd-aside { position:static; margin:18px auto 0; } .tour-embed { margin:0 auto; } }
   /* ── blog ── */
   .bgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; }
   .bcard { background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; color:inherit;
@@ -174,13 +180,8 @@
 <h1 style="margin-bottom:8px">Mt Oliver, PA</h1>
 <div class="nbhd">
   <h2 class="sect">Living in Mt. Oliver</h2>
-  
   <div class='nstats' aria-label="Quick facts"><div class='nstat'><b>~3,300</b><span>Population</span></div><div class='nstat'><b>~$103,000</b><span>Median home value</span></div><div class='nstat'><b>~$54,000</b><span>Median household income</span></div><div class='nstat'><b>~37</b><span>Median age</span></div><div class='nstat'><b>Pittsburgh Public</b><span>School district</span></div><div class='nstat'><b>Surrounded by Pittsburgh</b><span>Setting</span></div></div>
-  <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Mt. Oliver is a small, densely-built borough of about 3,300 completely surrounded by the City of Pittsburgh, just south of the South Side. Ethnically diverse and very affordable, it has drawn renewed interest from buyers and investors looking for low prices close to the city.</p>
-  <h3 class='nsub'>Schools &amp; Education</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Although an independent borough, Mt. Oliver&#x27;s students attend Pittsburgh Public Schools, including Pittsburgh Carrick High School.</p>
-  <h3 class='nsub'>Healthcare &amp; Shopping</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Brownsville Road is the borough&#x27;s walkable main street, with local shops and restaurants, and the South Side, Allentown and Pittsburgh&#x27;s larger retail and hospitals are all minutes away.</p>
-  <h3 class='nsub'>Dining, Parks &amp; Attractions</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Mt. Oliver&#x27;s hilltop streets offer city views, and residents are close to the South Side&#x27;s riverfront and nightlife, Allentown&#x27;s growing arts scene, and Downtown.</p>
-  <h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Mt. Oliver&#x27;s very low prices and city-adjacent location make it an active investor and first-time-buyer market, but it&#x27;s an older, dense borough where condition and value vary sharply by block. Thorough inspection, a hard look at the specific street and taxes, and a knowledgeable agent are essential.</p>
+  <div class='nbhd-cols'><div class='nbhd-text'><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Mt. Oliver is a small, densely-built borough of about 3,300 completely surrounded by the City of Pittsburgh, just south of the South Side. Ethnically diverse and very affordable, it has drawn renewed interest from buyers and investors looking for low prices close to the city.</p><h3 class='nsub'>Schools &amp; Education</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Although an independent borough, Mt. Oliver&#x27;s students attend Pittsburgh Public Schools, including Pittsburgh Carrick High School.</p><h3 class='nsub'>Healthcare &amp; Shopping</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Brownsville Road is the borough&#x27;s walkable main street, with local shops and restaurants, and the South Side, Allentown and Pittsburgh&#x27;s larger retail and hospitals are all minutes away.</p><h3 class='nsub'>Dining, Parks &amp; Attractions</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Mt. Oliver&#x27;s hilltop streets offer city views, and residents are close to the South Side&#x27;s riverfront and nightlife, Allentown&#x27;s growing arts scene, and Downtown.</p><h3 class='nsub'>Investment Outlook</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Mt. Oliver&#x27;s very low prices and city-adjacent location make it an active investor and first-time-buyer market, but it&#x27;s an older, dense borough where condition and value vary sharply by block. Thorough inspection, a hard look at the specific street and taxes, and a knowledgeable agent are essential.</p></div><aside class='nbhd-aside'><div class='tour-embed'><div class='tour-cap'>3D Neighborhood Tour</div><div class='tour-frame'><iframe src='https://www.youtube-nocookie.com/embed/cPjqAC5m7Ug?autoplay=1&mute=1&loop=1&playlist=cPjqAC5m7Ug&controls=1&playsinline=1&rel=0&modestbranding=1' loading='lazy' allowfullscreen allow='autoplay; encrypted-media; picture-in-picture'></iframe></div></div></aside></div>
   
 </div>
 <h2 class='sect'>Browse listings in this area</h2><div class='nbhd-listings'><a class="card" href="../../listing/680-kessler-st/">

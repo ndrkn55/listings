@@ -129,12 +129,18 @@
   .ncard-bl { font-size:13px; color:#475569; margin:6px 0; line-height:1.55; }
   .ncard-ct { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.5px; }
   .nbhd-listings { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; margin-top:6px; }
-  .tour-embed { margin:10px auto 24px; max-width:340px; }
+  /* neighborhood page: text left, 3D tour reel in a sticky right column under the stats */
+  .nbhd-cols { display:flex; gap:28px; align-items:flex-start; }
+  .nbhd-text { flex:1 1 auto; min-width:0; }
+  .nbhd-aside { flex:0 0 300px; position:sticky; top:16px; }
+  .tour-embed { margin:0; max-width:300px; }
   .tour-cap { font-family:var(--ui); font-size:12px; color:#64748b; text-align:center; margin:0 0 8px;
     text-transform:uppercase; letter-spacing:.5px; }
   .tour-frame { position:relative; width:100%; aspect-ratio:9/16; border-radius:14px; overflow:hidden;
     box-shadow:0 2px 12px rgba(2,6,23,.16); background:#000; }
   .tour-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  @media (max-width:760px) { .nbhd-cols { display:block; }
+    .nbhd-aside { position:static; margin:18px auto 0; } .tour-embed { margin:0 auto; } }
   /* ── blog ── */
   .bgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; }
   .bcard { background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; color:inherit;
@@ -174,13 +180,8 @@
 <h1 style="margin-bottom:8px">Uptown, Pittsburgh</h1>
 <div class="nbhd">
   <h2 class="sect">Vivir en Uptown</h2>
-  
   <div class='nstats' aria-label="Datos rápidos"><div class='nstat'><b>Junto al centro</b><span>Entorno</span></div><div class='nstat'><b>$880M+</b><span>Inversión desde 2017</span></div><div class='nstat'><b>Duquesne U · UPMC Mercy</b><span>Anclas</span></div><div class='nstat'><b>$510M (2023)</b><span>Ampliación UPMC Mercy</span></div><div class='nstat'><b>Autobús rápido (BRT)</b><span>Transporte</span></div><div class='nstat'><b>PPG Paints Arena</b><span>Recinto</span></div><div class='nstat'><b>Pittsburgh Public</b><span>Distrito escolar</span></div></div>
-  <p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Uptown —también llamado EcoInnovation District— es un barrio compacto entre el centro de Pittsburgh y Oakland, a lo largo de las avenidas Fifth y Forbes. Durante mucho tiempo ignorado, hoy es una de las zonas en redesarrollo más activas de la ciudad, con la Universidad de Duquesne, UPMC Mercy y el PPG Paints Arena como anclas, y un plan municipal que guía nueva vivienda, transporte y espacios verdes.</p>
-  <h3 class='nsub'>Escuelas y educación</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Uptown forma parte de las Escuelas Públicas de Pittsburgh y su ubicación central lo deja a minutos del centro y de las universidades de Oakland. Quienes tengan hijos en edad escolar deben confirmar las escuelas asignadas a cada dirección.</p>
-  <h3 class='nsub'>Salud y compras</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>UPMC Mercy —que completó una ampliación de $510M en 2023— está en el propio barrio, y las compras y servicios del centro quedan a pocos pasos. Una nueva línea de autobús rápido (BRT) conecta aún más Uptown con el centro y Oakland.</p>
-  <h3 class='nsub'>Restaurantes, parques y atracciones</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>El PPG Paints Arena (hockey de los Penguins y conciertos) está al borde de Uptown, con el distrito cultural, los estadios y los parques ribereños del centro muy cerca. El campus de Duquesne aporta espacios verdes y vida.</p>
-  <h3 class='nsub'>Perspectiva de inversión</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Uptown ha atraído más de $880M en inversión en los últimos años —una concentración inusual para un barrio pequeño de Pittsburgh— lo que lo convierte en una zona a seguir. Dicho esto, el redesarrollo es desigual y lote por lote, y el valor, la zonificación y el estado de los edificios varían mucho. Investigar con cuidado y contar con un agente experto son claves para distinguir la oportunidad real del riesgo.</p>
+  <div class='nbhd-cols'><div class='nbhd-text'><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Uptown —también llamado EcoInnovation District— es un barrio compacto entre el centro de Pittsburgh y Oakland, a lo largo de las avenidas Fifth y Forbes. Durante mucho tiempo ignorado, hoy es una de las zonas en redesarrollo más activas de la ciudad, con la Universidad de Duquesne, UPMC Mercy y el PPG Paints Arena como anclas, y un plan municipal que guía nueva vivienda, transporte y espacios verdes.</p><h3 class='nsub'>Escuelas y educación</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Uptown forma parte de las Escuelas Públicas de Pittsburgh y su ubicación central lo deja a minutos del centro y de las universidades de Oakland. Quienes tengan hijos en edad escolar deben confirmar las escuelas asignadas a cada dirección.</p><h3 class='nsub'>Salud y compras</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>UPMC Mercy —que completó una ampliación de $510M en 2023— está en el propio barrio, y las compras y servicios del centro quedan a pocos pasos. Una nueva línea de autobús rápido (BRT) conecta aún más Uptown con el centro y Oakland.</p><h3 class='nsub'>Restaurantes, parques y atracciones</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>El PPG Paints Arena (hockey de los Penguins y conciertos) está al borde de Uptown, con el distrito cultural, los estadios y los parques ribereños del centro muy cerca. El campus de Duquesne aporta espacios verdes y vida.</p><h3 class='nsub'>Perspectiva de inversión</h3><p style='margin:0 0 12px;line-height:1.7;font-size:15px'>Uptown ha atraído más de $880M en inversión en los últimos años —una concentración inusual para un barrio pequeño de Pittsburgh— lo que lo convierte en una zona a seguir. Dicho esto, el redesarrollo es desigual y lote por lote, y el valor, la zonificación y el estado de los edificios varían mucho. Investigar con cuidado y contar con un agente experto son claves para distinguir la oportunidad real del riesgo.</p></div><aside class='nbhd-aside'><div class='tour-embed'><div class='tour-cap'>Recorrido 3D del vecindario</div><div class='tour-frame'><iframe src='https://www.youtube-nocookie.com/embed/effNr52yqmE?autoplay=1&mute=1&loop=1&playlist=effNr52yqmE&controls=1&playsinline=1&rel=0&modestbranding=1' loading='lazy' allowfullscreen allow='autoplay; encrypted-media; picture-in-picture'></iframe></div></div></aside></div>
   
 </div>
 <h2 class='sect'>Ver propiedades en esta zona</h2><div class='nbhd-listings'><a class="card" href="../../listing/223-lombard-st/es.html">
