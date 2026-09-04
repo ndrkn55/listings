@@ -8,7 +8,9 @@
 <meta property="og:description" content="Alıcı Temsilcisi — 110 N Main St">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:url" content="https://listings.kan.realtor/listing/110-n-main-st/tr.html">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateListing", "name": "110 N Main St", "description": "Al\u0131c\u0131 Temsilcisi \u2014 110 N Main St", "url": "https://listings.kan.realtor/listing/110-n-main-st/tr.html"}</script>
+<meta property="og:image" content="https://listings.kan.realtor/listing/110-n-main-st/tr.htmlphotos/01.jpg">
+<meta name="twitter:image" content="https://listings.kan.realtor/listing/110-n-main-st/tr.htmlphotos/01.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateListing", "name": "110 N Main St", "description": "Al\u0131c\u0131 Temsilcisi \u2014 110 N Main St", "url": "https://listings.kan.realtor/listing/110-n-main-st/tr.html", "image": "https://listings.kan.realtor/listing/110-n-main-st/tr.htmlphotos/01.jpg"}</script>
 <style>
   :root { --brand:#012169; --deep:#0a1733; --gold:#c8a45c; --gold-soft:#e6cf9e;
            --serif:'Cormorant Garamond',Georgia,serif; --ui:'DM Sans',system-ui,Arial,sans-serif; }
@@ -193,7 +195,13 @@
 
 <div class="lay">
   <div>
-    
+    <div class="carousel">
+  <img class="main" id="cMain" src="photos/01.jpg" alt="110 N Main St" onclick="lbOpen()">
+  
+  <span class="cnt" id="cCnt">1 / 1</span>
+</div>
+<div class="thumbs" id="cThumbs"><img src='photos/01.jpg' class='on' onclick='go(0)' loading='lazy' alt='photo 1'></div>
+<div class="lightbox" id="lb" onclick="lbClose()"><img id="lbImg" src="photos/01.jpg" alt="photo"></div>
     
     
     
@@ -330,7 +338,7 @@
 </div>
 <script>
 let cur=0;
-const imgs=[];
+const imgs=["01.jpg"];
 function go(i){if(!imgs.length)return;cur=(i+imgs.length)%imgs.length;
   document.getElementById('cMain').src='photos/'+imgs[cur];
   document.getElementById('lbImg').src='photos/'+imgs[cur];
