@@ -180,6 +180,13 @@
   .disc-form button { background:var(--brand); color:#fff; border:none; border-radius:8px; padding:11px 18px; font-size:15px; font-weight:600; cursor:pointer; white-space:nowrap; }
   .disc-form button:hover { filter:brightness(1.08); }
   .disc-note { margin-top:10px; font-size:12.5px; color:#94a3b8; }
+  .inq-form { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .inq-form input, .inq-form textarea { width:100%; padding:11px 13px; border:1px solid #cbd5e1; border-radius:8px; font-size:15px; font-family:inherit; }
+  .inq-form textarea { grid-column:1 / -1; min-height:90px; resize:vertical; }
+  .inq-form button { grid-column:1 / -1; justify-self:start; background:var(--brand); color:#fff; border:none; border-radius:8px; padding:11px 22px; font-size:15px; font-weight:600; cursor:pointer; }
+  .inq-form button:hover { filter:brightness(1.08); }
+  .inq-thanks { display:none; padding:12px 14px; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:8px; color:#065f46; font-size:15px; line-height:1.5; }
+  @media (max-width:560px) { .inq-form { grid-template-columns:1fr; } }
 </style></head><body>
 <div class="cbbar">
   <a class="cblogo" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Coldwell Banker"

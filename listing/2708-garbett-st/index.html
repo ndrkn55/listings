@@ -181,6 +181,13 @@
   .disc-form button { background:var(--brand); color:#fff; border:none; border-radius:8px; padding:11px 18px; font-size:15px; font-weight:600; cursor:pointer; white-space:nowrap; }
   .disc-form button:hover { filter:brightness(1.08); }
   .disc-note { margin-top:10px; font-size:12.5px; color:#94a3b8; }
+  .inq-form { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .inq-form input, .inq-form textarea { width:100%; padding:11px 13px; border:1px solid #cbd5e1; border-radius:8px; font-size:15px; font-family:inherit; }
+  .inq-form textarea { grid-column:1 / -1; min-height:90px; resize:vertical; }
+  .inq-form button { grid-column:1 / -1; justify-self:start; background:var(--brand); color:#fff; border:none; border-radius:8px; padding:11px 22px; font-size:15px; font-weight:600; cursor:pointer; }
+  .inq-form button:hover { filter:brightness(1.08); }
+  .inq-thanks { display:none; padding:12px 14px; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:8px; color:#065f46; font-size:15px; line-height:1.5; }
+  @media (max-width:560px) { .inq-form { grid-template-columns:1fr; } }
 </style></head><body>
 <div class="cbbar">
   <a class="cblogo" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Coldwell Banker"
@@ -206,7 +213,29 @@
     <h2 class='sect'>Highlights</h2><ul class='featlist'><li>Spacious two-story layout</li><li>Two bedrooms, 1.5 baths</li><li>Detached two-car garage</li><li>Walk-out unfinished basement</li><li>Central location near major routes</li><li>Flexible layout for updates</li><li>Great renovation or investment potential</li></ul>
     
     <h2 class='sect'>Property Details</h2><div class='dgrid'><div><b>Status</b>For Sale</div><div><b>Price</b>$12,000</div><div><b>Bedrooms</b>2</div><div><b>Bathrooms</b>1</div><div><b>Square feet</b>1280</div><div><b>Year built</b>1899</div><div><b>Type</b>Single Family</div><div><b>Lot size</b>0.0574 acres</div><div><b>Annual taxes</b>$824</div><div><b>School district</b>McKeesport Area</div><div><b>Parking</b>Detached two-car garage; on-street parking</div><div><b>MLS #</b>1682824</div></div>
-    
+    <h2 class="sect">Ask About This Home</h2>
+<div class="discbox">
+  <p class="disc-blurb">Interested? Send me a message and I&#x27;ll get back to you personally.</p>
+  <form class="inq-form" id="inquiry-form" name="inquiry" novalidate>
+    <input type="hidden" name="listing" value="2708 Garbett St">
+    <input type="text" name="name" required placeholder="Your name" autocomplete="name">
+    <input type="email" name="email" required placeholder="Your email address" autocomplete="email">
+    <input type="tel" name="phone" placeholder="Phone (optional)" autocomplete="tel">
+    <textarea name="message" aria-label="Message">I&#x27;d like more information about this home. 2708 Garbett St</textarea>
+    <button type="submit">Send message</button>
+  </form>
+  <div class="inq-thanks" id="inquiry-thanks">Thank you! I&#x27;ll be in touch soon. If it&#x27;s urgent, call or text me.</div>
+  <div class="disc-note">We respect your privacy and never share your information.</div>
+</div>
+<script>
+(function(){var f=document.getElementById('inquiry-form');if(!f)return;
+f.addEventListener('submit',function(e){
+  var n=f.elements.name.value.trim(),m=f.elements.email.value.trim();
+  e.preventDefault();
+  if(!n||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m)){(!n?f.elements.name:f.elements.email).focus();return;}
+  f.style.display='none';document.getElementById('inquiry-thanks').style.display='block';
+});})();
+</script>
     <h2 class="sect">Location</h2>
 <div class="mapbox"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
   src="https://www.google.com/maps?q=2708%20Garbett%20St%2C%20Pittsburgh%20area%2C%20PA&output=embed"></iframe></div>

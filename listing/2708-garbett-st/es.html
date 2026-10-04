@@ -181,6 +181,13 @@
   .disc-form button { background:var(--brand); color:#fff; border:none; border-radius:8px; padding:11px 18px; font-size:15px; font-weight:600; cursor:pointer; white-space:nowrap; }
   .disc-form button:hover { filter:brightness(1.08); }
   .disc-note { margin-top:10px; font-size:12.5px; color:#94a3b8; }
+  .inq-form { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .inq-form input, .inq-form textarea { width:100%; padding:11px 13px; border:1px solid #cbd5e1; border-radius:8px; font-size:15px; font-family:inherit; }
+  .inq-form textarea { grid-column:1 / -1; min-height:90px; resize:vertical; }
+  .inq-form button { grid-column:1 / -1; justify-self:start; background:var(--brand); color:#fff; border:none; border-radius:8px; padding:11px 22px; font-size:15px; font-weight:600; cursor:pointer; }
+  .inq-form button:hover { filter:brightness(1.08); }
+  .inq-thanks { display:none; padding:12px 14px; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:8px; color:#065f46; font-size:15px; line-height:1.5; }
+  @media (max-width:560px) { .inq-form { grid-template-columns:1fr; } }
 </style></head><body>
 <div class="cbbar">
   <a class="cblogo" href="https://kan.realtor/"><img src="https://images-static.moxiworks.com/static/images/br/cb/CB_W_PNS_Horizontal.png" alt="Coldwell Banker"
@@ -206,7 +213,29 @@
     <h2 class='sect'>Destacados</h2><ul class='featlist'><li>Distribución espaciosa de dos pisos</li><li>Dos dormitorios, 1.5 baños</li><li>Garaje separado para dos autos</li><li>Sótano sin terminar con salida al exterior</li><li>Ubicación central cerca de rutas principales</li><li>Diseño flexible para actualizaciones</li><li>Excelente potencial de renovación o inversión</li></ul>
     
     <h2 class='sect'>Detalles de la Propiedad</h2><div class='dgrid'><div><b>Estado</b>En Venta</div><div><b>Precio</b>$12,000</div><div><b>Recámaras</b>2</div><div><b>Baños</b>1</div><div><b>Pies cuadrados</b>1280</div><div><b>Año de construcción</b>1899</div><div><b>Tipo</b>Casa Unifamiliar</div><div><b>Tamaño del lote</b>0.0574 acres</div><div><b>Impuestos anuales</b>$824</div><div><b>Distrito escolar</b>McKeesport Area</div><div><b>Estacionamiento</b>Detached two-car garage; on-street parking</div><div><b>MLS #</b>1682824</div></div>
-    
+    <h2 class="sect">Consulta sobre esta propiedad</h2>
+<div class="discbox">
+  <p class="disc-blurb">¿Interesado? Envíame un mensaje y te responderé personalmente.</p>
+  <form class="inq-form" id="inquiry-form" name="inquiry" novalidate>
+    <input type="hidden" name="listing" value="2708 Garbett St">
+    <input type="text" name="name" required placeholder="Tu nombre" autocomplete="name">
+    <input type="email" name="email" required placeholder="Tu dirección de correo electrónico" autocomplete="email">
+    <input type="tel" name="phone" placeholder="Teléfono (opcional)" autocomplete="tel">
+    <textarea name="message" aria-label="Mensaje">Me gustaría obtener más información sobre esta propiedad. 2708 Garbett St</textarea>
+    <button type="submit">Enviar mensaje</button>
+  </form>
+  <div class="inq-thanks" id="inquiry-thanks">¡Gracias! Me pondré en contacto pronto. Si es urgente, llámame o envíame un texto.</div>
+  <div class="disc-note">Respetamos tu privacidad y nunca compartimos tu información.</div>
+</div>
+<script>
+(function(){var f=document.getElementById('inquiry-form');if(!f)return;
+f.addEventListener('submit',function(e){
+  var n=f.elements.name.value.trim(),m=f.elements.email.value.trim();
+  e.preventDefault();
+  if(!n||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m)){(!n?f.elements.name:f.elements.email).focus();return;}
+  f.style.display='none';document.getElementById('inquiry-thanks').style.display='block';
+});})();
+</script>
     <h2 class="sect">Ubicación</h2>
 <div class="mapbox"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
   src="https://www.google.com/maps?q=2708%20Garbett%20St%2C%20Pittsburgh%20area%2C%20PA&output=embed"></iframe></div>
